@@ -1,21 +1,20 @@
 import React, { useState } from "react";
 import Chart from "react-apexcharts";
 import './dashboard.css';
-import { GiTeacher, GiWhiteBook, GiBookmarklet } from "react-icons/gi";
-import { HiUserGroup } from "react-icons/hi";
+import {AiFillSound} from "react-icons/ai";
 import WithLayout from "../../../components/common/comstudent/Stusidebar";
+import { GiNotebook } from "react-icons/gi";
+import { FaClipboardList, FaUserAlt } from "react-icons/fa";
+
 
 function StuDashBoard() {
-
- 
-
 
   const options1 = {
     chart: {
       width: 380,
       type: "pie",
     },
-    labels: ["Students", "Staff"],
+    labels: ["Present", "Absent"],
     responsive: [
       {
         breakpoint: 480,
@@ -35,22 +34,23 @@ function StuDashBoard() {
 
   const series2 = [
     {
-      name: "BCA",
+      name: "Java",
       data: [45, 75, 38],
     },
     {
-      name: "BBA",
+      name: "PHP",
       data: [70, 30, 62],
     },
     {
-      name: "B.Com(Guj)",
+      name: ".NET",
       data: [80, 40, 74],
     },
     {
-      name: "B.Com(Enj)",
+      name: "WEb-2",
       data: [35, 65, 28],
     },
   ];
+  
   const options2 = {
     chart: {
       height: 450,
@@ -99,12 +99,18 @@ function StuDashBoard() {
     },
   };
 
+  
+
+
+
+
+
   const options3 = {
     chart: {
       width: 380,
       type: "pie",
     },
-    labels: ["BBA", "BCA", "B.Com(Guj)", "B.Com(Eng)"],
+    labels: ["PHP", "JAVA", ".NET", "WEB-2"],
     responsive: [
       {
         breakpoint: 480,
@@ -180,19 +186,19 @@ function StuDashBoard() {
             <div className="row">
               <div className="col-xl-3  col-md-6 mb-4">
                 <div className="card border-left-danger shadow h-100 py-2">
-                  <a href="/ourstudent" style={{ textDecoration: "none" }}>
+                  <a href="/stuattendance" style={{ textDecoration: "none" }}>
                     <div className="card-body">
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
                           <div className="text-xs font-weight-bold red text-uppercase mb-1">
-                            Our Students
+                            My attandance
                           </div>
                           <div className="h5 mb-0 font-weight-bold text-gray-800">
-                            4,000
+                            60%
                           </div>
                         </div>
                         <div className="col-auto">
-                          <HiUserGroup className="fa-2x text-gray-300" />
+                          <FaUserAlt className="fa-2x text-gray-300" />
                         </div>
                       </div>
                     </div>
@@ -201,19 +207,19 @@ function StuDashBoard() {
               </div>
               <div className="col-xl-3 col-md-6 mb-4">
                 <div className="card border-left-success shadow h-100 py-2">
-                  <a href="/ourstaff" style={{ textDecoration: "none" }}>
+                  <a href="/leavenotice" style={{ textDecoration: "none" }}>
                     <div className="card-body">
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
                           <div className="text-xs font-weight-bold text-success text-uppercase mb-1">
-                            Our Staff
+                          My leave
                           </div>
                           <div className="h5 mb-0 font-weight-bold text-gray-800">
-                            100
+                            2
                           </div>
                         </div>
                         <div className="col-auto">
-                          <GiTeacher className="fa-2x text-gray-300" />
+                          <FaClipboardList className="fa-2x text-gray-300" />
                         </div>
                       </div>
                     </div>
@@ -223,19 +229,19 @@ function StuDashBoard() {
 
               <div className="col-xl-3 col-md-6 mb-4">
                 <div className="card border-left-info shadow h-100 py-2">
-                  <a href="/courses" style={{ textDecoration: "none" }}>
+                  <a href="/stunotice" style={{ textDecoration: "none" }}>
                     <div className="card-body">
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
                           <div className="text-xs font-weight-bold text-info text-uppercase mb-1">
-                            Courses
+                            Notice
                           </div>
                           <div className="h5 mb-0 mr-3 font-weight-bold text-gray-800">
-                            3
+                            678
                           </div>
                         </div>
                         <div className="col-auto">
-                          <GiWhiteBook className="fa-2x text-gray-300" />
+                          <AiFillSound className="fa-2x text-gray-300" />
                         </div>
                       </div>
                     </div>
@@ -250,14 +256,14 @@ function StuDashBoard() {
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
                           <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                            Subjects
+                            Syllabus
                           </div>
                           <div className="h5 mb-0 font-weight-bold text-gray-800">
-                            300
+                         
                           </div>
                         </div>
                         <div className="col-auto">
-                          <GiBookmarklet className="fa-2x text-gray-300" />
+                          <GiNotebook className="fa-2x text-gray-300" />
                         </div>
                       </div>
                     </div>
@@ -283,7 +289,7 @@ function StuDashBoard() {
               >
                 <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 className="m-0 font-weight-bold text-primary">
-                    Students and Staff
+                  Attandance
                   </h6>
                 </div>
                 <div className="pie">
@@ -302,7 +308,7 @@ function StuDashBoard() {
                   width: "500px",
                   height: "450px",
                   // paddingLeft: "20px",
-                  backgroundColor: "white",
+                  backgroundColor: "#fff",
                   border: "1px solid #e3e6f0",
                   backgroundClip: "border-box",
                   borderRadius: "5px",
@@ -314,7 +320,7 @@ function StuDashBoard() {
               >
                 <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 className="m-0 font-weight-bold text-primary">
-                    Course Wise Subjects
+                 Exam result
                   </h6>
                 </div>
                 <div className="line">
@@ -345,7 +351,7 @@ function StuDashBoard() {
               >
                 <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 className="m-0 font-weight-bold text-primary">
-                    Couese wise Students
+                  All sujects
                   </h6>
                 </div>
                 <div className="pie">
@@ -374,7 +380,7 @@ function StuDashBoard() {
               >
                 <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 className="m-0 font-weight-bold text-primary">
-                    Total Students in Each Year
+                Exam result
                   </h6>
                 </div>
                 <div className="area">

@@ -24,6 +24,7 @@ import Password from "../Pages/Student/password change/Password";
 import Studentlist from "../Pages/faculty/student list/Studentlist";
 import Facleaveform from "../Pages/faculty/Leave notice/Facleaveform";
 import Notice from "../Pages/faculty/Leave notice/Notice";
+import Facultyattandance from "../Pages/faculty/my attanance/Facultyattandance";
 
 
 
@@ -84,6 +85,12 @@ export const faculty = [
         name: "fac leaveform",
         icon: <FaUsers />,
         element:<Facleaveform/>
+    },
+    {
+        path: "/facultyattandance",
+        name: "My attandance",
+        icon: <FaUsers />,
+        element:<Facultyattandance/>
     },
  
     
