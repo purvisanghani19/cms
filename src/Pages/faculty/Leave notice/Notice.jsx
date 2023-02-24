@@ -26,6 +26,7 @@ const Notice = () => {
           <div class="card-body">
             <h5 class="card-title">
               <b>Notice title</b>
+              <b>Notice</b>
             </h5>
             <p class="card-text" style={{ textAlign: "start" }}>
               notice description Lorem Ipsum is simply dummy text of the
