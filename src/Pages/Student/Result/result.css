@@ -1,0 +1,31 @@
+.student-container{
+    width: 1000px;
+    height: 440px;
+    margin: 0 auto;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-top: 40px;
+    border-radius: 12px;
+    /* background-color: #90a4ae; */
+    font-family: Lato;
+  }
+  
+   h2{
+    text-align: center;
+    color:black;
+  }
+  
+  table{
+    width: 900px;
+    height: 440px;
+    margin: 0 auto;
+    margin-top: 50px;
+  }
+  
+  td, th {
+    padding: 12px;
+    color:black;
+    border: 2px solid black;
+  }
+
+  

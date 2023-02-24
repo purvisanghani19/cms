@@ -1,0 +1,150 @@
+.main-home {
+  position: relative;
+}
+
+.contant {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  z-index: 1;
+  font-size: 25px;
+  word-spacing: 7px;
+  letter-spacing: 7px;
+}
+
+.btn-1 {
+  text-align: center;
+  display: inline-block;
+  padding: 10px 25px;
+  border: 1px solid rgb(207, 205, 205);
+  cursor: pointer;
+  letter-spacing: 2px;
+  position: relative;
+  overflow: hidden;
+  margin: 0 20px;
+}
+
+.btn-1:before {
+  content: "";
+  position: absolute;
+  height: 150px;
+  width: 50px;
+  background: rgb(243, 238, 238);
+  left: -55px;
+  top: -40px;
+  transform: rotate(37deg);
+  transition: all .3s;
+  opacity: 0.3;
+}
+
+.btn-1:hover:before {
+  left: 95%;
+}
+
+
+.navbar {
+  display: flex;
+  z-index: 1;
+  justify-content: center;
+  align-items: center;
+  height: 70px;
+  background-color: rgb(40, 44, 52);
+  color: black;
+
+}
+
+.nav-links {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  width: 100%;
+}
+
+.item {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  padding: 10px 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  justify-content: center;
+
+}
+
+.mobile_menu_icon {
+  display: none;
+  z-index: 2;
+}
+
+@media screen and (max-width:630px) {
+  .nav-links {
+    display: none;
+    /* flex-direction: column; */
+  }
+
+  .nav-links-mobile {
+    position: absolute;
+    display: block;
+    list-style: none;
+    /* background-color: rgb(167, 115, 36); */
+    left: 10;
+    top: 75px;
+    transition: all .5s ease-in-out;
+    z-index: 2;
+    color: white;
+    justify-content: center;
+  }
+
+  .item {
+    color: rgb(225, 220, 220);
+    /* flex-direction: column; */
+    height: 60%;
+    text-align: center;
+    padding: 32px;
+    width: 100%;
+    font-size: 25px;
+    transition: all .6s ease-in-out;
+    font-weight: bold;
+  }
+
+  .mobile_menu_icon {
+    display: block;
+    position: absolute;
+    font-size: 30px;
+    color: black;
+    border: none;
+    outline: none;
+    top: 15px;
+    right: 25px;
+  }
+
+}
+
+
+@media screen and (max-width:730px) {
+  .index-contant {
+    display: none;
+  }
+
+  .btn-1 {
+    margin-top: 240px;
+    transition: all .7s ease-in-out;
+  }
+}
+
+.image {
+  width: 100vw;
+  max-width: 100% !important;
+  height: 100vh;
+  margin: 0 !important;
+  object-fit: cover;
+  filter: brightness(30%);
+  z-index: 1;
+  position: relative;
+}

@@ -1,0 +1,25 @@
+.mainnotice{
+    margin-left: 350px;
+}
+.btn{
+    margin: 5px;
+}
+.card-notice{
+    max-width: 1000px;
+}
+.notice-viewmore{
+    margin-top: 50px;
+}
+.facviewmore{
+    margin-left: 268px;
+}
+.notice-icon{
+    display: flex;
+}
+.notice-plus{
+    margin-left: 20px;
+}
+.add-notice-icon{
+    height: 40px;
+    margin-left:70%;
+}

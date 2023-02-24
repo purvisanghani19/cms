@@ -1,0 +1,50 @@
+.facultylevnoti{
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    margin-left: 400px;
+}
+h1 {
+    text-align: center;
+    margin-top: 10px;
+}
+form {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+label {
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+input, select {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+}
+textarea {
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    width: 100%;
+    height: 200px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+.course{
+    background-color:#ECF9FF;
+}
+.leavenotice-btn{
+    background-color: #263159;
+}
