@@ -314,8 +314,6 @@ function StuDashBoard() {
                   borderRadius: "5px",
                   boxShadow: "0 .15rem 1.75rem 0 rgba(58,59,69,.15)",
                   marginTop: "50px",
-                  
-               
                 }}
               >
                 <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">

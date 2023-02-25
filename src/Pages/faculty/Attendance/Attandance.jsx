@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
 import './facatt.css';
 
 
 
 const Attandance = () => {
+  const [btnColor, setBtnColor] = useState("green");
   return (
     <>
       <div
@@ -87,12 +88,20 @@ const Attandance = () => {
       </div>
       <div className="attandancebox" >
         <div className="card" style={{ width: "10rem" }}>
-          <div className="card-body info" style={{backgroundColor:"#349e4b",color:"white",borderRadius:"7px"}}>
-            <h5 className="attno" >Number</h5>
-            <p className="card-text">
-             name
-            </p>
-          </div>
+        <button
+            className="card-body info"
+            onClick={() => {
+              btnColor === "red" ? setBtnColor("green") : setBtnColor("red");
+            }}
+            style={{
+              backgroundColor: btnColor,
+              color: "white",
+              borderRadius: "7px",
+            }}
+          >
+            <h5 className="attno">no</h5>
+            <p className="card-text">101</p>
+          </button>
         </div>
       </div>
     </>
