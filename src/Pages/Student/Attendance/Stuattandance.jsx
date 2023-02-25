@@ -4,7 +4,7 @@ import WithLayout from "../../../components/common/comstudent/Stusidebar";
 const Result = () => {
   return (
     <>
-      sdfgnbm
+    sxdfgvbhnjmk,l
    
     </>
   )
