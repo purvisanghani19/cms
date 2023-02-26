@@ -17,10 +17,7 @@ const WithLayout = (Stusidebar) => {
     const activeLink = "nav-link active";
     const normalLink = "nav-link";
 
-    const passchange = () => {
-      console.log("hiiiii")
-      navigate("/changepass");
-    };
+   
     return (
       <>
         <aside
@@ -205,14 +202,9 @@ const WithLayout = (Stusidebar) => {
                       <li>
                         <a
                           className="dropdown-item"
-                          href="studentpro"
+                          href="/studentpro"
                         >
                           Profile
-                        </a>
-                      </li>
-                      <li>
-                        <a onclick={passchange} className="dropdown-item" href="">
-                          password change
                         </a>
                       </li>
                       <li>

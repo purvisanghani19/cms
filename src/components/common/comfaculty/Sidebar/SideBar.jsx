@@ -201,11 +201,6 @@ const WithLayout = (Sidebar) => {
                         </a>
                       </li>
                       <li>
-                        <a  className="dropdown-item" href="">
-                          password change
-                        </a>
-                      </li>
-                      <li>
                         <a className="dropdown-item" href="">
                           Log out
                         </a>
