@@ -128,6 +128,8 @@ const Faculty = () => {
         </div>
       </div>
     )}
+
+
     </>
   );
 };

@@ -1,5 +1,5 @@
 .mainnotice{
-    margin-left: 350px;
+    margin-left: 300px;
 }
 .btn{
     margin: 5px;
@@ -21,5 +21,28 @@
 }
 .add-notice-icon{
     height: 40px;
-    margin-left:70%;
+    margin-left:65%;
+}
+.notice-icon{
+    display: flex;
+}
+.facnotice-icon {
+    text-align: start;
+    margin-left: 25px;
+    font-size: 34px;
+    margin-bottom: 26px;
+}
+.row-notice{
+    width: auto;
+}
+@media only screen and  (max-width:1024px) {
+    .mainnotice{
+        overflow: hidden;
+    }
+    .row-notice{
+       max-width:758px ;
+    }
+    .add-notice-icon{
+        margin-left: 52%;
+    }
 }

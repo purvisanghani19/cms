@@ -3,10 +3,13 @@ import "../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { SiShopware } from "react-icons/si";
 // import { user } from '../../../Routes/route';
 import { NavItem } from "react-bootstrap";
-import { Link, NavLink, useNavigate } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaBell } from "react-icons/fa";
 import { faculty } from "../../../../Routes/route";
 import "./sidebar.css";
+
+
+
 
 const WithLayout = (Sidebar) => {
   return function WithPage() {
@@ -15,11 +18,7 @@ const WithLayout = (Sidebar) => {
 
     const activeLink = "nav-link active";
     const normalLink = "nav-link";
-const navigate=useNavigate();
-    const handleprofile=()=>{
-      navigate("/studentpro");
-    }
-
+    
     return (
       <>
         <aside
@@ -96,8 +95,8 @@ const navigate=useNavigate();
                       role="menu"
                       style={{ paddingLeft: "0px" }}
                     >
-                   {faculty.map((link) => 
-                       ( link.name !== "fac leaveform" && link.name !== "faculty" ) ?(<NavItem
+                      {faculty.map((link) =>
+                        (link.name !== "fac leaveform" && link.name !== "faculty") ? (<NavItem
                           className="nav-item"
                           style={{ textAlign: "left" }}
                         >
@@ -110,14 +109,12 @@ const navigate=useNavigate();
                           >
                             <span className="icon"> {link.icon}</span>
                             {isOpen ? (
-                              <span className="capitalize" style={{padding:"10px"}}>{link.name}</span>
+                              <span className="capitalize" style={{ padding: "10px" }}>{link.name}</span>
                             ) : (
                               ""
                             )}
                           </NavLink>
-                        </NavItem>):""
-                      
-                        
+                        </NavItem>) : ""
                       )}
                     </ul>
                   </div>
@@ -142,7 +139,7 @@ const navigate=useNavigate();
               </a>
             </li>
           </ul>
-    
+
           <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <div className="btn-group nav-link d-flex">
@@ -154,7 +151,7 @@ const navigate=useNavigate();
                       aria-expanded="false"
                       style={{ "font-size": "30px" }}
                     >
-                      <FaBell style={{marginBottom:"21px",marginLeft:"10px",color:"#263159"}}/>
+                      <FaBell style={{ marginBottom: "21px", marginLeft: "10px", color: "#263159" }} />
                     </div>
 
                     <ul className="dropdown-menu">
@@ -162,7 +159,6 @@ const navigate=useNavigate();
                         <a
                           className="dropdown-item"
                           href="#"
-                          
                         >
                           Profile
                         </a>
@@ -183,12 +179,13 @@ const navigate=useNavigate();
               </div>
             </li>
             <li className="nav-item">
-              <div className="btn-group nav-link d-flex"   data-bs-toggle="dropdown"
-                      aria-expanded="false" style={{marginLeft:"-20px"}}>
+              <div className="btn-group nav-link d-flex" data-bs-toggle="dropdown"
+                aria-expanded="false" style={{ marginLeft: "-20px" }}>
                 <span>
-                  <div className="dropdown">
+                  <div className="dropdown show">
                     <img
-                    
+                      data-toggle="dropdown"
+                      aria-expanded="false"
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU"
                       className="img-circle elevation-2 user-img dropdown-toggle"
                       alt="User Image"
@@ -198,14 +195,13 @@ const navigate=useNavigate();
                       <li>
                         <a
                           className="dropdown-item"
-                          href=""
-                        
+                          href="/faculty"
                         >
                           Profile
                         </a>
                       </li>
                       <li>
-                        <a onclick={handleprofile} className="dropdown-item" href="">
+                        <a  className="dropdown-item" href="">
                           password change
                         </a>
                       </li>
@@ -215,9 +211,10 @@ const navigate=useNavigate();
                         </a>
                       </li>
                     </ul>
+                    <span className="ml-3" data-toggle="dropdown"
+                      aria-expanded="false">Avni Zalavadiya</span>
                   </div>
                 </span>
-                <span className="ml-3">Avni Zalavadiya</span>
               </div>
             </li>
           </ul>

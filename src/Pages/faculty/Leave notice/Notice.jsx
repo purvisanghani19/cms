@@ -1,26 +1,33 @@
 import React from 'react';
-import { HiPlusSm } from 'react-icons/hi';
-import { useNavigate } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import WithLayout from '../../../components/common/comfaculty/Sidebar/SideBar';
 import './facultynotice.css';
 
 const Notice = () => {
   const navigate = useNavigate();
+
+const addnotice=()=>{
+  navigate("/facleaveform");
+}
+
   const view = () => {
+    console.log("hieeeeeeee")
     navigate("/facleaveform");
   }
   return (
     <>  
       <div class="container mainnotice ">
         <div className='notice-icon'>
-          <h3 class="mt-5 heading-line" style={{ textAlign: "start" }}>
+          <h4 class=" mt-5 heading-line facnotice-icon " style={{ textAlign: "start"  }}>
             Notice <i class="fa fa-bell text-muted"></i>
-          </h3>
-          <a href="" class=" mt-5 btn btn-info add-notice-icon">
+          </h4>
+          <a onClick={addnotice} class=" mt-5 btn btn-info add-notice-icon">
               Add notice
             </a>
         </div>
 
+
+        <div className='row-notice'>
         <div class="card card-notice">
           <div class="card-header">Date</div>
           <div class="card-body">
@@ -59,6 +66,7 @@ const Notice = () => {
               Delete
             </a>
           </div>
+        </div>
         </div>
       </div>
     </>

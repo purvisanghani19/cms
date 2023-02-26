@@ -70,7 +70,7 @@ export const faculty = [
     {
         path: "/result",
         name: "result",
-        icon: <FaGraduationCap />,
+        icon: <FaGraduationCap/>,
         element:<Result/>
     },
   

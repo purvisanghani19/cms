@@ -1,4 +1,5 @@
 import React from 'react';
+import { BsFillArrowLeftCircleFill } from 'react-icons/bs';
 import WithLayout from '../../../components/common/comfaculty/Sidebar/SideBar';
 import './facleavenotice.css';
 
@@ -8,8 +9,11 @@ const Facleaveform = () => {
   return (
     <>
      <div className="facultylevnoti" style={{marginLeft:"268px"}}>
-        <h1>Leave Notice</h1>
-        <form>
+     <div className='leaveicon d-flex' >
+        <BsFillArrowLeftCircleFill className='addnotice-icon'/>
+        <h1 >Leave Notice</h1>
+     </div>
+        <form className='leavenotice-form'>
           <label for="date">Date:</label>
           <input
             type="date"

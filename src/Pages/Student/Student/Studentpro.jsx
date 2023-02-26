@@ -4,21 +4,21 @@ import "../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import WithLayout from "../../../components/common/comstudent/Stusidebar";
 
 const Studentpro = () => {
-  const [student, setStudent] = useState([]);
-  useEffect(() => {
-    fetch("http://localhost:4000/api/use/admin/studentProfile/getall").then(
-      (result) => {
-        result.json().then((resp) => {
-          console.warn("result", resp);
-          setStudent(resp);
-        });
-      }
-    );
-  }, []);
+  // const [student, setStudent] = useState([]);
+  // useEffect(() => {
+  //   fetch("http://localhost:4000/api/use/admin/studentProfile/getall").then(
+  //     (result) => {
+  //       result.json().then((resp) => {
+  //         console.warn("result", resp);
+  //         setStudent(resp);
+  //       });
+  //     }
+  //   );
+  // }, []);
   // console.log("result");
   return (
     <>
-      {
+      {/* {
         student.map((item) => (
         <div
           className="container-xl px-4 mt-4"
@@ -121,7 +121,8 @@ const Studentpro = () => {
             </div>
           </div>
         </div>
-      ))}
+      ))} */}
+      xcvbnm
     </>
   );
 };

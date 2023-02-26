@@ -98,7 +98,7 @@ const WithLayout = (Stusidebar) => {
                       style={{ paddingLeft: "0px" }}
                     >
                       {Student.map((link) =>
-                    (    link.name !== "Sub Notice" && link.name !== "Sub fee"  ) ? (
+                        (link.name !== "Sub Notice" && link.name !== "Sub fee" && link.name !=="student profile") ? (
                           <NavItem
                             className="nav-item"
                             style={{ textAlign: "left" }}
@@ -161,7 +161,7 @@ const WithLayout = (Stusidebar) => {
                       aria-expanded="false"
                       style={{ "font-size": "30px" }}
                     >
-                      <FaBell style={{marginBottom:"21px",marginLeft:"10px",color:"#263159"}}/>
+                      <FaBell style={{ marginBottom: "21px", marginLeft: "10px", color: "#263159" }} />
                     </div>
 
                     <ul className="dropdown-menu">
@@ -169,7 +169,7 @@ const WithLayout = (Stusidebar) => {
                         <a
                           className="dropdown-item"
                           href="#"
-                          
+
                         >
                           Profile
                         </a>
@@ -190,14 +190,14 @@ const WithLayout = (Stusidebar) => {
               </div>
             </li>
             <li className="nav-item">
-              <div className="btn-group nav-link d-flex"  style={{marginLeft:"-20px"}}>
+              <div className="btn-group nav-link d-flex" style={{ marginLeft: "-20px" }}>
                 <span>
-                  <div className="dropdown">
+                  <div className="dropdown show">
                     <img
-                      data-bs-toggle="dropdown"
+                      data-toggle="dropdown"
                       aria-expanded="false"
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU"
-                      className="img-circle elevation-2 user-img dropdown-toggle"
+                      className="img-circle elevation-2 user-img  dropdown-toggle"
                       alt="User Image"
                       style={{ height: "27px", width: "27px" }}
                     />
@@ -205,8 +205,7 @@ const WithLayout = (Stusidebar) => {
                       <li>
                         <a
                           className="dropdown-item"
-                          href=""
-                        
+                          href="studentpro"
                         >
                           Profile
                         </a>
@@ -222,9 +221,10 @@ const WithLayout = (Stusidebar) => {
                         </a>
                       </li>
                     </ul>
+                    <span className="ml-3" data-toggle="dropdown"
+                      aria-expanded="false" style={{cursor:"point"}}>Avni Zalavadiya</span>
                   </div>
                 </span>
-                <span className="ml-3">Avni Zalavadiya</span>
               </div>
             </li>
           </ul>
