@@ -18,7 +18,7 @@ const WithLayout = (Stusidebar) => {
     const normalLink = "nav-link";
 
     const passchange = () => {
-      console.log("hiiiii")
+      console.log("hiiiii");
       navigate("/changepass");
     };
     return (
@@ -98,7 +98,8 @@ const WithLayout = (Stusidebar) => {
                       style={{ paddingLeft: "0px" }}
                     >
                       {Student.map((link) =>
-                    (    link.name !== "Sub Notice" && link.name !== "Sub fee"  ) ? (
+                        link.name !== "Sub Notice" &&
+                        link.name !== "Sub fee" ? (
                           <NavItem
                             className="nav-item"
                             style={{ textAlign: "left" }}
@@ -154,46 +155,59 @@ const WithLayout = (Stusidebar) => {
             <li className="nav-item">
               <div className="btn-group nav-link d-flex">
                 <span>
-                  <div className="dropdown">
+                  {/* <div className="dropdown">
                     <div
                       className="notificationbell"
+                      type="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                       style={{ "font-size": "30px" }}
                     >
-                      <FaBell style={{marginBottom:"21px",marginLeft:"10px",color:"#263159"}}/>
+                      <FaBell
+                        style={{
+                          marginBottom: "21px",
+                          marginLeft: "10px",
+                          color: "#263159",
+                        }}
+                      />
                     </div>
 
                     <ul className="dropdown-menu">
                       <li>
-                        <a
-                          className="dropdown-item"
-                          href="#"
-                          
-                        >
-                          Profile
+                        <a className="dropdown-item" href="#">
+                          Notifications
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
-                          password change
-                        </a>
+                        <hr class="dropdown-divider" />
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
-                          Log out
+                        <a class="dropdown-item" href="#">
+                          others
                         </a>
                       </li>
                     </ul>
-                  </div>
+                  </div> */}
+                  <div className="dropdown">
+                  
+  <ul className="dropdown-menu">
+    <li><a className="dropdown-item" href="#">Action</a></li>
+    <li><a className="dropdown-item" href="#">Another action</a></li>
+    <li><a className="dropdown-item" href="#">Something else here</a></li>
+  </ul>
+</div>
                 </span>
               </div>
             </li>
             <li className="nav-item">
-              <div className="btn-group nav-link d-flex"  style={{marginLeft:"-20px"}}>
+              <div
+                className="btn-group nav-link d-flex"
+                style={{ marginLeft: "-20px" }}
+              >
                 <span>
                   <div className="dropdown">
                     <img
+                      type="button"
                       data-bs-toggle="dropdown"
                       aria-expanded="false"
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU"
@@ -203,17 +217,8 @@ const WithLayout = (Stusidebar) => {
                     />
                     <ul className="dropdown-menu">
                       <li>
-                        <a
-                          className="dropdown-item"
-                          href=""
-                        
-                        >
+                        <a className="dropdown-item" href="/studentpro">
                           Profile
-                        </a>
-                      </li>
-                      <li>
-                        <a onclick={passchange} className="dropdown-item" href="">
-                          password change
                         </a>
                       </li>
                       <li>
@@ -222,9 +227,17 @@ const WithLayout = (Stusidebar) => {
                         </a>
                       </li>
                     </ul>
+                    <a
+                      href="#"
+                      className="ml-3"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                      style={{ color: "black" }}
+                    >
+                      Avni Zalavadiya
+                    </a>
                   </div>
                 </span>
-                <span className="ml-3">Avni Zalavadiya</span>
               </div>
             </li>
           </ul>

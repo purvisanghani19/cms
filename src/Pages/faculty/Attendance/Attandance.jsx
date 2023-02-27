@@ -86,8 +86,8 @@ const Attandance = () => {
           </div>
         </div>
       </div>
-      <div className="attandancebox" >
-        <div className="card" style={{ width: "10rem" }}>
+      <div className="attandancebox mt-5" >
+        <div className="card" style={{ width: "10rem"}}>
         <button
             className="card-body info"
             onClick={() => {

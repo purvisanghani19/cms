@@ -271,7 +271,7 @@ function StuDashBoard() {
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row" style={{marginBottom:"50px"}}>
               <div
                 className="col-xl-6 col-md-6"
                 style={{
@@ -331,7 +331,7 @@ function StuDashBoard() {
                 </div>
               </div>
             </div>
-            <div className="row" style={{ marginBottom: "50px" }}>
+            {/* <div className="row" style={{ marginBottom: "50px" }}>
               <div
                 className="col-xl-6 col-lg-6"
                 style={{
@@ -390,7 +390,7 @@ function StuDashBoard() {
                   />
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

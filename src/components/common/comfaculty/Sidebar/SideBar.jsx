@@ -143,7 +143,7 @@ const navigate=useNavigate();
             </li>
           </ul>
     
-          <ul className="navbar-nav ml-auto">
+         <ul className="navbar-nav ml-auto">
             <li className="nav-item">
               <div className="btn-group nav-link d-flex">
                 <span>
@@ -158,37 +158,26 @@ const navigate=useNavigate();
                     </div>
 
                     <ul className="dropdown-menu">
-                      <li>
-                        <a
-                          className="dropdown-item"
-                          href="#"
-                          
-                        >
-                          Profile
-                        </a>
-                      </li>
+                      
                       <li>
                         <a className="dropdown-item" href="#">
-                          password change
+                         Notifications
                         </a>
                       </li>
-                      <li>
-                        <a className="dropdown-item" href="#">
-                          Log out
-                        </a>
-                      </li>
+                      <li><hr class="dropdown-divider"/></li>
+                      <li><a class="dropdown-item" href="#">others</a></li>
                     </ul>
                   </div>
                 </span>
               </div>
             </li>
             <li className="nav-item">
-              <div className="btn-group nav-link d-flex"   data-bs-toggle="dropdown"
-                      aria-expanded="false" style={{marginLeft:"-20px"}}>
+              <div className="btn-group nav-link d-flex"  style={{marginLeft:"-20px"}}>
                 <span>
                   <div className="dropdown">
                     <img
-                    
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
                       src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBwgu1A5zgPSvfE83nurkuzNEoXs9DMNr8Ww&usqp=CAU"
                       className="img-circle elevation-2 user-img dropdown-toggle"
                       alt="User Image"
@@ -198,15 +187,10 @@ const navigate=useNavigate();
                       <li>
                         <a
                           className="dropdown-item"
-                          href=""
+                          href="/studentpro"
                         
                         >
                           Profile
-                        </a>
-                      </li>
-                      <li>
-                        <a onclick={handleprofile} className="dropdown-item" href="">
-                          password change
                         </a>
                       </li>
                       <li>
@@ -215,9 +199,11 @@ const navigate=useNavigate();
                         </a>
                       </li>
                     </ul>
+                  <a href="#" className="ml-3" data-bs-toggle="dropdown"
+                      aria-expanded="false" style={{color:"black"}}>Avni Zalavadiya</a>
                   </div>
                 </span>
-                <span className="ml-3">Avni Zalavadiya</span>
+               
               </div>
             </li>
           </ul>
