@@ -24,7 +24,7 @@ const Stuleaveform = () => {
     axios
       .post("http://localhost:4000/api/use/student/studentLeaveNotice/create", {
 		date:date,
-        name: name,
+        Name: name,
 		course:course,
 		semester:semester,
 		division:division,
@@ -85,8 +85,57 @@ const Stuleaveform = () => {
               BCA
             </option>
           </select>
-      
-       
+          <label for="subject">Semester:</label>
+          <select 
+          value={semester}
+           onChange={(e) => setSemester(e.target.value)} 
+            id="semester" name="semester" classNameName="semester">
+            <option value="select" >Select</option>
+            <option value="1" >
+             1
+            </option>
+            <option value="2">
+            2
+            </option>
+            <option value="3" >
+             3
+            </option>
+          </select>
+             <label for="subject">Division:</label>
+             <select 
+          value={division}
+           onChange={(e) => setDivision(e.target.value)} 
+            id="division" name="division" classNameName="division">
+            <option value="select" >Select</option>
+            <option value="1" >
+             1
+            </option>
+            <option value="2">
+            2
+            </option>
+            <option value="3" >
+             3
+            </option>
+            <option value="4" >
+             4
+            </option>
+            <option value="5" >
+             5
+            </option>
+            <option value="6" >
+             6
+            </option>
+          </select>
+        <label for="name">Roll No:</label>
+          <input
+            type="text"
+            id="rollno"
+            name="rollno"
+            placeholder="Enter your roll no"
+            value={rollNo}
+            onChange={(e) => setRollno(e.target.value)}
+            required
+          />
           <label for="email">Email:</label>
           <input
             type="email"
