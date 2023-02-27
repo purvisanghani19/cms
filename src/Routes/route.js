@@ -41,16 +41,10 @@ export const faculty = [
         element: <DashBoard />
     },
     {
-        path: "/facnotice",
-        name: "notice",
-        icon: <BsFillBellFill />,
-        element: <Facnotice />
-    },
-    {
-        path: "/facleavenotice",
-        name: "Leave notice",
-        icon: <FaEnvelopeOpenText />,
-        element: <Notice />,
+        path: "/facultyattandance",
+        name: "My attandance",
+        icon: <FaUsers />,
+        element: <Facultyattandance />
     },
     {
         path: "/attandance",
@@ -64,6 +58,20 @@ export const faculty = [
         icon: <FaGraduationCap />,
         element: <Result/>
     },
+    {
+        path: "/facnotice",
+        name: "notice",
+        icon: <BsFillBellFill />,
+        element: <Facnotice />
+    },
+    {
+        path: "/facleavenotice",
+        name: "Leave notice",
+        icon: <FaEnvelopeOpenText />,
+        element: <Notice />,
+    },
+  
+  
 
     {
         path: "/studentlist",
@@ -77,12 +85,7 @@ export const faculty = [
         icon: <FaUsers />,
         element: <Facleaveform />
     },
-    {
-        path: "/facultyattandance",
-        name: "My attandance",
-        icon: <FaUsers />,
-        element: <Facultyattandance />
-    },
+  
     {
         path: "/stuleaveview",
         name: "student notice",
