@@ -13,8 +13,6 @@ import Stuattandance from "../Pages/Student/Attendance/Stuattandance";
 import StuResult from "../Pages/Student/Result/StuResult";
 import Studentpro from "../Pages/Student/Student/Studentpro";
 import Notification from "../Pages/Student/Notice/Notification";
-import Leavenotice from "../Pages/Student/leave notice/Leavenotice";
-import Model from "../Pages/Student/Notice/Viewnotice";
 import Payfee from "../Pages/Student/Fees/Payfee";
 import StuFees from "../Pages/Student/Fees/StuFees";
 import Studentlist from "../Pages/faculty/student list/Studentlist";
@@ -22,6 +20,9 @@ import Facleaveform from "../Pages/faculty/Leave notice/Facleaveform";
 import Notice from "../Pages/faculty/Leave notice/Notice";
 import Facultyattandance from "../Pages/faculty/my attanance/Facultyattandance";
 import Facnotice from "../Pages/faculty/Notice/Subfacnotice";
+import Stunotice from "../Pages/Student/lev notice/Stunotice";
+import Stuleaveform from "../Pages/Student/lev notice/Stuleaveform";
+
 
 
 
@@ -61,7 +62,7 @@ export const faculty = [
         path: "/result",
         name: "result",
         icon: <FaGraduationCap />,
-        element: <Result />
+        element: <Result/>
     },
 
     {
@@ -125,20 +126,20 @@ export const Student = [
         element: <Notification />
     },
     {
-        path: "/leavenotice",
+        path: "/stuleavenotice",
         name: "Leave Notice",
         icon: <FaEnvelopeOpenText />,
-        element: <Leavenotice />
-    },
-    {
-        path: "/viewnotice",
-        name: "Sub Notice",
-        element: <Model />
+        element: <Stunotice />
     },
     {
         path: "/stufee",
         name: "Sub fee",
         element: <StuFees />
+    },
+    {
+        path: "/Stuleaveform",
+        name: "Stuleaveform",
+        element: <Stuleaveform />
     },
 
 

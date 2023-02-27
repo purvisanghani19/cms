@@ -95,7 +95,7 @@ const WithLayout = (Stusidebar) => {
                       style={{ paddingLeft: "0px" }}
                     >
                       {Student.map((link) =>
-                        (link.name !== "Sub Notice" && link.name !== "Sub fee" && link.name !=="student profile") ? (
+                        (link.name !== "Stuleaveform" && link.name !== "Sub fee" && link.name !=="student profile") ? (
                           <NavItem
                             className="nav-item"
                             style={{ textAlign: "left" }}

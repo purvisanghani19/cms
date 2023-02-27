@@ -33,8 +33,6 @@ const Viewnotice = (props) => {
         <Button onClick={props.onHide}>Close</Button>
       </Modal.Footer>
     </Modal>
-
-      
     </>
   );
 };
@@ -44,19 +42,12 @@ const Viewnotice = (props) => {
 
 const Notifications = () => {
   const [modalShow, setModalShow] = React.useState(false);
-
-
-    // const navigate = useNavigate();
-    // const view=()=>{
-    //     navigate("/viewnotice");
-    // }
   return (
     <>
       <div class="container mainnotice ">
         <h3 class="mt-5 heading-line" style={{ textAlign: "start" }}>
           Notice <i class="fa fa-bell text-muted"></i>
         </h3>
-
         <div class="card card-notice">
           <div class="card-header">Date</div>
           <div class="card-body">
