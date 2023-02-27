@@ -206,8 +206,8 @@ const WithLayout = (Sidebar) => {
                         </a>
                       </li>
                     </ul>
-                    <span className="ml-3" data-toggle="dropdown"
-                      aria-expanded="false">Avni Zalavadiya</span>
+                    <a className="ml-3" data-toggle="dropdown"
+                      aria-expanded="false">Avni Zalavadiya</a>
                   </div>
                 </span>
               </div>
