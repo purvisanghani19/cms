@@ -8,6 +8,8 @@ const Subfacnotice = (props) => {
 
 
 
+
+
   return (
     <>
       <Modal
@@ -40,11 +42,6 @@ const Subfacnotice = (props) => {
 const Facnotice = () => {
   const [modalShow, setModalShow] = React.useState(false);
 
-
-    // const navigate = useNavigate();
-    // const view=()=>{
-    //     navigate("/viewnotice");
-    // }
   return (
     <>
       <div class="container mainnotice ">

@@ -22,7 +22,7 @@ import Facultyattandance from "../Pages/faculty/my attanance/Facultyattandance";
 import Facnotice from "../Pages/faculty/Notice/Subfacnotice";
 import Stunotice from "../Pages/Student/lev notice/Stunotice";
 import Stuleaveform from "../Pages/Student/lev notice/Stuleaveform";
-
+import Studentleavnotice from "../Pages/faculty/student leavenotice view/Stuleavnotiview"
 
 
 
@@ -41,7 +41,7 @@ export const faculty = [
         element: <DashBoard />
     },
     {
-        path: "/subnotice",
+        path: "/facnotice",
         name: "notice",
         icon: <BsFillBellFill />,
         element: <Facnotice />
@@ -82,6 +82,12 @@ export const faculty = [
         name: "My attandance",
         icon: <FaUsers />,
         element: <Facultyattandance />
+    },
+    {
+        path: "/stuleaveview",
+        name: "student notice",
+        icon: <FaUsers />,
+        element: <Studentleavnotice />
     },
 
 
