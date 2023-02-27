@@ -1,4 +1,4 @@
-.fee-title{
+.stuatt-title{
     text-align: center;
     font-size: 20px;
     /* padding-left:15px ; */
@@ -6,19 +6,19 @@
     color:black;
   
 }
-.fee-text{
+.stuatt-text{
     font-size: 20px;
     font-weight: 600;
     color:rgb(10, 10, 97);
 }
 
-.fee{
+.stuatt{
     display: flex;
     padding-right: 50px;
-    margin-left: 400px;
+    margin-left: 294px;
     /* margin-top: 90px; */
     /* padding-left:20px ; */
 }
-.btn-attan{
-    background-color: white;
+.stuatt-card{
+    height: 134px;
 }

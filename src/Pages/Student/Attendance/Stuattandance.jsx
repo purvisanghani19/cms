@@ -5,29 +5,31 @@ import WithLayout from "../../../components/common/comstudent/Stusidebar";
 const Result = () => {
   return (
     <>
-    <div className="fee">
-        <div className="card"   style={{ width: "18rem" }}>
+    <div className="stuatt mt-5 ">
+        <div className="card stuatt-card"   style={{ width: "18rem" }}>
           <a href="/stufee" className="card-body btn-attan">
-            <h5 className="fee1-title">Date:11/10</h5>
-            <p className="fee-text">CG</p>
+          <div className="stuattdetail">
+            <h5 className="stuatt-title">Date:11/10</h5>
+            <p className="stuatt-text">CG</p>
+            </div>
           </a>
         </div>
         <div className="card" style={{ width: "18rem", marginLeft: "20px" }}>
-          <a className="card-body btn-attan">
-            <h5 className="fee1-title">Date:11/10</h5>
-            <p className="fee-text">E-COMM</p>
+          <a className="card-body ">
+            <h5 className="stuatt-title">Date:11/10</h5>
+            <p className="stuatt-text">E-COMM</p>
           </a>
         </div>
         <div className="card" style={{ width: "18rem", marginLeft: "20px" }}>
-          <a className="card-body btn-attan" >
-            <h5 className="fee1-title">Date:11/10</h5>
-            <p className="fee-text">SEMINAR</p>
+          <a className="card-body" >
+            <h5 className="stuatt-title">Date:11/10</h5>
+            <p className="stuatt-text">SEMINAR</p>
           </a>
         </div>
         <div className="card" style={{ width: "18rem", marginLeft: "20px" }}>
-          <a className="card-body btn-attan">
-            <h5 className="fee1-title">Date:11/10</h5>
-            <p className="fee-text">PROJECT</p>
+          <a className="card-body ">
+            <h5 className="stuatt-title">Date:11/10</h5>
+            <p className="stuatt-text">PROJECT</p>
           </a>
         </div>
       </div>
