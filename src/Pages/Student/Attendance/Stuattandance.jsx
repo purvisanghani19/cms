@@ -16,20 +16,26 @@ const Result = () => {
         </div>
         <div className="card" style={{ width: "18rem", marginLeft: "20px" }}>
           <a className="card-body ">
+          <div className="stuattdetail">
             <h5 className="stuatt-title">Date:11/10</h5>
             <p className="stuatt-text">E-COMM</p>
+            </div>
           </a>
         </div>
         <div className="card" style={{ width: "18rem", marginLeft: "20px" }}>
           <a className="card-body" >
+          <div className="stuattdetail">
             <h5 className="stuatt-title">Date:11/10</h5>
             <p className="stuatt-text">SEMINAR</p>
+            </div>
           </a>
         </div>
         <div className="card" style={{ width: "18rem", marginLeft: "20px" }}>
           <a className="card-body ">
+          <div className="stuattdetail">
             <h5 className="stuatt-title">Date:11/10</h5>
             <p className="stuatt-text">PROJECT</p>
+            </div>
           </a>
         </div>
       </div>

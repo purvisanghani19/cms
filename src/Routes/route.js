@@ -15,7 +15,7 @@ import StuResult from "../Pages/Student/Result/StuResult";
 import Studentpro from "../Pages/Student/Student/Studentpro";
 import Notification from "../Pages/Student/Notice/Notification";
 import Leavenotice from "../Pages/Student/leave notice/Leavenotice";
-import Viewnotice from "../Pages/Student/Notice/Viewnotice";
+import Model from "../Pages/Student/Notice/Viewnotice";
 import Payfee from "../Pages/Student/Fees/Payfee";
 import StuFees from "../Pages/Student/Fees/StuFees";
 import Subfacnotice from "../Pages/faculty/Notice/Subfacnotice";
@@ -141,7 +141,7 @@ export const Student = [
     {
         path: "/viewnotice",
         name: "Sub Notice",
-        element: <Viewnotice />
+        element: <Model />
     },
     {
         path: "/stufee",
