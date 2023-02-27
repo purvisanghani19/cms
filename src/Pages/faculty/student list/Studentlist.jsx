@@ -1,4 +1,5 @@
 import React from "react";
+import './studentlist.css';
 import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
 
 const Studentlist = () => {
@@ -92,7 +93,74 @@ const Studentlist = () => {
               <div className="card-body">
                 <div className="tbldetails">
                   <div className="row table-responsive mt-4">
-                    <table
+
+                  <table className="table" >
+                  <thead>
+                        <tr className="tbl">
+                          <th scope="col">Roll No</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Semester</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                  <tr className="active">
+                          <td>11</td>
+                          <td>purvi</td>
+                          <td>2</td>
+                          <td>purvi@123</td>
+                          <td >
+                            <button className="studentdetailview" style={{backgroundColor:"#263159"}}>view</button>
+                            
+                          </td>
+                        </tr>
+                        <tr className="active">
+                          <td>11</td>
+                          <td>purvi</td>
+                          <td>2</td>
+                          <td>purvi@123</td>
+                          <td>
+                            <button className="studentdetailview" style={{backgroundColor:"#263159"}}>view</button>
+                          </td>
+                        </tr>
+                        <tr className="active">
+                          <td>11</td>
+                          <td>purvi</td>
+                          <td>2</td>
+                          <td>purvi@123</td>
+                          <td>
+                            <button className="studentdetailview" style={{backgroundColor:"#263159"}}>view</button>
+                          </td>
+                        </tr>
+                        <tr className="active">
+                          <td>11</td>
+                          <td>purvi</td>
+                          <td>2</td>
+                          <td>purvi@123</td>
+                          <td>
+                            <button className="studentdetailview" style={{backgroundColor:"#263159"}}>view</button>
+                          </td>
+                        </tr>
+                        <tr className="active">
+                          <td>11</td>
+                          <td>purvi</td>
+                          <td>2</td>
+                          <td>purvi@123</td>
+                          <td>
+                            <button className="studentdetailview" style={{backgroundColor:"#263159"}}>view</button>
+                          </td>
+                        </tr>
+                        <tr className="active">
+                          <td>11</td>
+                          <td>purvi</td>
+                          <td>2</td>
+                          <td>purvi@123</td>
+                          <td>
+                            <button className="studentdetailview" style={{backgroundColor:"#263159"}}>view</button>
+                          </td>
+                        </tr>
+                        </table>
+                    {/* <table
                       className="table"
                       style={{ border: "1px solid black" }}
                     >
@@ -124,7 +192,7 @@ const Studentlist = () => {
                             <button className="studentdetailview">view</button>
                           </td>
                         </tr>
-                        <tr style={{ height: "2px" }}>
+                        <tr >
                           <td>11</td>
                           <td>purvi</td>
                           <td>2</td>
@@ -143,7 +211,7 @@ const Studentlist = () => {
                           </td>
                         </tr>
                       </tbody>
-                    </table>
+                    </table> */}
                   </div>
                   {/* <table class="table table-bordered" aria-label="TABLE">
                                         <thead role="rowgroup">

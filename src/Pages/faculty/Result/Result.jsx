@@ -206,7 +206,7 @@ const Result = () => {
         className="container-xl px-6 mt-5"
         style={{ marginLeft: "280px", textAlign: " start" }}
       >
-        <div className="row" style={{marginTop:"-20px"}}>
+        <div className="row">
           <div className="col-xl-15">
             <div className="card mb-4">
               <div
@@ -222,9 +222,8 @@ const Result = () => {
               <div className="card-body">
                 <div className="tbldetails">
                   <div className="row table-responsive mt-4">
-                    <div class="row">
-                      <div class="col-md-12">
-                        <table class="table">
+
+                  <table class="table" >
                           <tr class="table-header">
                             <th class="cell">SID</th>
                             <th class="cell">Name</th>
@@ -234,49 +233,129 @@ const Result = () => {
                             <th class="cell">Percentage</th>
                           </tr>
                           <tr class="active">
-                            <td>1</td>
+                            <td>20410145</td>
                             <td>Smith</td>
-                            <td>Smith Mark</td>
-                            <td>#67/B Maxico Usa</td>
-                            <td>mark@gmail.com</td>
-                            <td>+3755438764</td>
+                            <td>BCA</td>
+                            <td>Semester-1</td>
+                            <td>Division-1</td>
+                            <td>+60%</td>
                           </tr>
                           <tr>
-                            <td>2</td>
-                            <td>Smith Mark</td>
+                          <td>20410145</td>
                             <td>Smith</td>
-                            <td>#67/A England</td>
-                            <td>marksmith@gmail.com</td>
-                            <td>+376768764</td>
+                            <td>BCA</td>
+                            <td>Semester-1</td>
+                            <td>Division-1</td>
+                            <td>+60%</td>
                           </tr>
                           <tr class="active">
-                            <td>3</td>
-                            <td>Willson</td>
-                            <td>Will</td>
-                            <td>#3657/34 India New Delhi</td>
-                            <td>will34@gmail.com</td>
-                            <td>+372385694</td>
+                          <td>20410145</td>
+                            <td>Smith</td>
+                            <td>BCA</td>
+                            <td>Semester-1</td>
+                            <td>Division-1</td>
+                            <td>+60%</td>
                           </tr>
                           <tr>
-                            <td>4</td>
-                            <td>Jacob</td>
-                            <td>Jacob Thornton</td>
-                            <td>#67/B Maxico Usa</td>
-                            <td>Jacob@gmail.com</td>
-                            <td>+3755438764</td>
+                          <td>20410145</td>
+                            <td>Smith</td>
+                            <td>BCA</td>
+                            <td>Semester-1</td>
+                            <td>Division-1</td>
+                            <td>+60%</td>
                           </tr>
                           <tr class="active">
-                            <td>5</td>
-                            <td>Larry</td>
-                            <td>Larry Bird</td>
-                            <td>#67/B USA</td>
-                            <td>BirdLarry@gmail.com</td>
-                            <td>+6675438764</td>
+                          <td>20410145</td>
+                            <td>Smith</td>
+                            <td>BCA</td>
+                            <td>Semester-1</td>
+                            <td>Division-1</td>
+                            <td>+60%</td>
                           </tr>
                         </table>
-                      </div>
-                    </div>
+                    {/* <table
+                      className="table"
+                      style={{ border: "1px solid black" }}
+                    >
+                      <thead>
+                        <tr className="tbl">
+                          <th scope="col">Roll No</th>
+                          <th scope="col">Name</th>
+                          <th scope="col">Semester</th>
+                          <th scope="col">Email</th>
+                          <th scope="col">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr className="tbldetails" style={{ height: "2px" }}>
+                          <td>11</td>
+                          <td>purvi</td>
+                          <td>2</td>
+                          <td>purvi@123</td>
+                          <td>
+                            <button className="studentdetailview">view</button>
+                          </td>
+                        </tr>
+                        <tr style={{ height: "2px" }}>
+                          <td>11</td>
+                          <td>purvi</td>
+                          <td>2</td>
+                          <td>purvi@123</td>
+                          <td>
+                            <button className="studentdetailview">view</button>
+                          </td>
+                        </tr>
+                        <tr >
+                          <td>11</td>
+                          <td>purvi</td>
+                          <td>2</td>
+                          <td>purvi@123</td>
+                          <td>
+                            <button className="studentdetailview">view</button>
+                          </td>
+                        </tr>{" "}
+                        <tr>
+                          <td>11</td>
+                          <td>purvi</td>
+                          <td>2</td>
+                          <td>purvi@123</td>
+                          <td>
+                            <button className="studentdetailview">view</button>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table> */}
                   </div>
+                  {/* <table class="table table-bordered" aria-label="TABLE">
+                                        <thead role="rowgroup">
+                                            <tr role="row">
+                                                <th role="columnheader" scope="col" tabindex="0">Select Day</th>
+                                                <th role="columnheader" scope="col" tabindex="0">Article Name</th>
+                                                <th role="columnheader" scope="col" tabindex="0">Author</th>
+                                                <th role="columnheader" scope="col" tabindex="0">Words</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody role="rowgroup">
+                                            <tr role="row">
+                                                <td>Bootstrap 4 CDN and Starter Template</td>
+                                                <td>Cristina</td>
+                                                <td>913</td>
+                                                <td>2.846</td>
+                                            </tr>
+                                            <tr role="row">
+                                                <td>Bootstrap Grid 4 Tutorial and Examples</td>
+                                                <td>Cristina</td>
+                                                <td>1.434</td>
+                                                <td>3.417</td>
+                                            </tr>
+                                            <tr role="row">
+                                                <td>Bootstrap Flexbox Tutorial and Examples</td>
+                                                <td>Cristina</td>
+                                                <td>1.877</td>
+                                                <td>1.234</td>
+                                            </tr>
+                                        </tbody>
+                                    </table> */}
                 </div>
               </div>
             </div>
