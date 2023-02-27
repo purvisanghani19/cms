@@ -2,11 +2,11 @@ import './App.css';
 import { Route, Routes } from "react-router";
 import { faculty,user,Student } from './Routes/route';
 import { useState } from 'react';
-import { Fa500Px } from 'react-icons/fa';
+
 
 
 function App() {
- const [isLogin,setIsLogin]=useState(false);
+ const [isLogin,setIsLogin]=useState(true);
   return(
   <div className='App'>
     <Routes>  

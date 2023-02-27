@@ -2,7 +2,6 @@ import { RiDashboardFill } from "react-icons/ri";
 import { FaEnvelopeOpenText, FaGraduationCap, FaRupeeSign, FaUserAlt, FaUsers } from "react-icons/fa";
 import { BsCalendarCheckFill, BsFillBellFill } from "react-icons/bs";
 import DashBoard from "../Pages/faculty/DashBoard/DashBoard";
-import Faculty from "../Pages/faculty/facultypro/Faculty";
 import About from "../Pages/User/Home/About";
 import Contact from "../Pages/User/Home/Contact";
 import Home from "../Pages/User/Home/Home";
@@ -18,12 +17,11 @@ import Leavenotice from "../Pages/Student/leave notice/Leavenotice";
 import Model from "../Pages/Student/Notice/Viewnotice";
 import Payfee from "../Pages/Student/Fees/Payfee";
 import StuFees from "../Pages/Student/Fees/StuFees";
-import Subfacnotice from "../Pages/faculty/Notice/Subfacnotice";
 import Studentlist from "../Pages/faculty/student list/Studentlist";
 import Facleaveform from "../Pages/faculty/Leave notice/Facleaveform";
 import Notice from "../Pages/faculty/Leave notice/Notice";
 import Facultyattandance from "../Pages/faculty/my attanance/Facultyattandance";
-
+import Facnotice from "../Pages/faculty/Notice/Subfacnotice";
 
 
 
@@ -42,16 +40,10 @@ export const faculty = [
         element: <DashBoard />
     },
     {
-        path: "/faculty",
-        name: "faculty",
-        icon: <FaUserAlt />,
-        element: <Faculty />
-    },
-    {
-        path: "/subfacnotice",
+        path: "/subnotice",
         name: "notice",
-        icon: <FaUsers />,
-        element: <Subfacnotice />
+        icon: <BsFillBellFill />,
+        element: <Facnotice />
     },
     {
         path: "/facleavenotice",
