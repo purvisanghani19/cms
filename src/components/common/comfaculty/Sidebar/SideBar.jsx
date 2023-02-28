@@ -96,7 +96,7 @@ const WithLayout = (Sidebar) => {
                       style={{ paddingLeft: "0px" }}
                     >
                       {faculty.map((link) =>
-                        (link.name !== "fac leaveform" && link.name !== "faculty") ? (<NavItem
+                        (link.name !== "view notice" && link.name !== "faculty" && link.name !== "add leave") ? (<NavItem
                           className="nav-item"
                           style={{ textAlign: "left" }}
                         >

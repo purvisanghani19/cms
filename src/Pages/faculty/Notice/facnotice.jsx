@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import WithLayout from '../../../components/common/comfaculty/Sidebar/SideBar';
-import '../Leave notice/facultynotice.css';
+import './facnotice.css';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 
@@ -20,15 +20,13 @@ const Subfacnotice = (props) => {
     >
       <Modal.Header closeButton>
         <Modal.Title id="contained-modal-title-vcenter">
-          Modal heading
+          Date
         </Modal.Title>
       </Modal.Header>
       <Modal.Body>
-        <h4>Centered Modal</h4>
+        <h4>Subjct</h4>
         <p>
-          Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
-          dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
-          consectetur ac, vestibulum at eros.
+         Notice contant
         </p>
       </Modal.Body>
       <Modal.Footer>
@@ -44,28 +42,23 @@ const Facnotice = () => {
 
   return (
     <>
-      <div class="container mainnotice ">
-        <h3 class="mt-5 heading-line" style={{ textAlign: "start" }}>
-          Notice <i class="fa fa-bell text-muted"></i>
-        </h3>
+        <div class="container mainnotice ">
+          <h3 class="mt-5 heading-line notice-heading" style={{ textAlign: "start" }}>
+            Notice <i class="fa fa-bell text-muted"></i>
+          </h3>
 
-        <div class="card card-notice">
-          <div class="card-header">Date</div>
-          <div class="card-body">
-            <h5 class="card-title">
-              <b>Notice title</b>
-            </h5>
-         
-            <a onClick={() => setModalShow(true)} class="btn btn-notice">
-              view more
-            </a>
-       
+          <div class="card card-notice">
+            <div class="card-header">Date</div>
+            <div class="card-body">
+              <h5 class="card-title">
+                <b>Notice title</b>
+              </h5>
+              <a onClick={() => setModalShow(true)} class="btn btn-notice">
+                view Notice
+              </a>
+            </div>
           </div>
         </div>
-        
-       
-  
-      </div>
       <Subfacnotice
         show={modalShow}
         onHide={() => setModalShow(false)}

@@ -18,16 +18,19 @@ import Payfee from "../Pages/Student/Fees/Payfee";
 import StuFees from "../Pages/Student/Fees/StuFees";
 import Studentlist from "../Pages/faculty/student list/Studentlist";
 import Facleaveform from "../Pages/faculty/Leave notice/Facleaveform";
-import Notice from "../Pages/faculty/Leave notice/Notice";
 import Facultyattandance from "../Pages/faculty/my attanance/Facultyattandance";
-import Facnotice from "../Pages/faculty/Notice/Subfacnotice";
+import Facnotice from "../Pages/faculty/Notice/facnotice";
 import Stunotice from "../Pages/Student/lev notice/Stunotice";
 import Stuleaveform from "../Pages/Student/lev notice/Stuleaveform";
 import Studentleavnotice from "../Pages/faculty/student leavenotice view/Stuleavnotiview"
 import Faculty from "../Pages/faculty/facultypro/Faculty";
-import Syllabus from "../Pages/Student/syllabus/Syllabus";
+import View from "../Pages/faculty/faculty lave notice/View";
+import Addleave from "../Pages/faculty/faculty lave notice/Addleave";
 import { GiNotebook } from "react-icons/gi";
+import Facleavenotice from "../Pages/faculty/faculty lave notice/Facleavenotice";
 import Feedback from "../Pages/Student/Feedback/Feedback";
+import Syllabus from "../Pages/Student/syllabus/Syllabus";
+import Material from "../Pages/faculty/Material/Material";
 
 
 
@@ -79,11 +82,26 @@ export const faculty = [
         path: "/facleavenotice",
         name: "Leave notice",
         icon: <FaEnvelopeOpenText />,
-        element: <Notice />,
+        element: <Facleavenotice />,
     },
-  
-  
-
+    {
+        path: "/facleavenotice/viewnotice",
+        name: "view notice",
+        icon: <FaEnvelopeOpenText />,
+        element: <View />,
+    },
+    {
+        path: "/facleavenotice/addleave",
+        name: "add leave",
+        icon: <FaEnvelopeOpenText />,
+        element: <Addleave />,
+    },
+    {
+        path: "/material",
+        name: "Material",
+        icon: <GiNotebook />,
+        element: <Material />,
+    },
     {
         path: "/studentlist",
         name: "studentlist",

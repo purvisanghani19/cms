@@ -4,8 +4,8 @@
 .btn{
     margin: 5px;
 }
-.card-notice{
-    max-width: 885px !important;
+.facleavnotice{
+    max-width: 800px !important;
 }
 .notice-viewmore{
     margin-top: 50px;
@@ -13,15 +13,12 @@
 .facviewmore{
     margin-left: 268px;
 }
-.notice-icon{
+.faclevnotice-icon{
     display: flex;
-}
-.notice-plus{
-    margin-left: 20px;
 }
 .add-notice-icon{
     height: 40px;
-    margin-left:65%;
+    margin-left:390px !important;
 }
 .notice-icon{
     display: flex;
@@ -32,21 +29,7 @@
     font-size: 34px;
     margin-bottom: 26px;
 }
-.row-notice{
-    width: auto;
-}
-@media only screen and  (max-width:1024px) {
-    .mainnotice{
-        overflow: hidden;
-    }
-    .row-notice{
-       max-width:758px ;
-    }
-    .add-notice-icon{
-        margin-left: 52%;
-    }
-}
 
-.btn-notice{
-    margin-left: 638px !important;
+.btn-facnotice{
+    margin-left: 500px !important;
 }

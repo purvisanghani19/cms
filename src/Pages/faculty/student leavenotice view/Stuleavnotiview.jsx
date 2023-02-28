@@ -14,103 +14,82 @@ import { useEffect } from 'react';
 
 const Stuleavnotiview = (props) => {
   const [leaveview, setLeaveview] = useState([]);
- 
-  useEffect(() => {
-              setLeaveview(props.value);
 
-    // fetch("http://localhost:4000/api/use/student/studentLeaveNotice/get").then(
-    //   (result) => {
-    //     result.json().then((resp) => {
-    //       // console.warn("result", resp);
-    //       setLeaveview(resp);
-    //     });
-    //   }
-    // );
+  useEffect(() => {
+    fetch("http://localhost:4000/api/use/student/studentLeaveNotice/get").then(
+      (result) => {
+        result.json().then((resp) => {
+          // console.warn("result", resp);
+          setLeaveview(resp);
+        });
+      }
+    );
   }, []);
   // console.log("result");
-
-
-
-
-
   return (
     <>
-
-    {
-      leaveview.map((item)=>(
-      <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
-        <Modal.Header closeButton>
-          <Modal.Title id="contained-modal-title-vcenter">
-            Date : {item.date}
-          </Modal.Title>
-        </Modal.Header>
-        <Modal.Body className="show-grid">
-          <Container>
-            <Row className='leave-popup'>
-              <Col xs={12} md={8}>
-                Name :
-                <b> {item.Name}</b>
-              </Col>
-
-            </Row>
-
-            <Row className='leave-popup'>
-              <Col xs={3} md={6}>
-                Course :
-                <b> {item.course}</b>
-              </Col>
-              <Col xs={3} md={6}>
-                Semester :
-                <b> {item.semester}</b> 
-              </Col>
-            </Row>
-
-
-            <Row className='leave-popup'>
-              <Col xs={3} md={6}>
-                Division :
-                <b> {item.division}</b> 
-              </Col>
-              <Col xs={3} md={6}>
-                Roll No :
-              <b> {item.rollNo}</b>
-              </Col>
-            </Row>
-
-
-
-            <Row className='leave-popup'>
-              <Col xs={12} md={8}>
-                Email :
-              <b> {item.email}@23</b>
-              </Col>
-            </Row>
-
-
-            <Row className='leave-popup'>
-              <Col xs={12} md={8}>
-                Subject :
-                <p><b>{item.subject}</b></p>  
-              </Col>
-            </Row>
-
-
-            <Row className='leave-popup'>
-              <Col xs={12} md={8} className="leave-mess">
-                Message :
-              <p><b>{item.message}</b></p>  
-              </Col>
-            </Row>
-
-
-          </Container>
-        </Modal.Body>
-        <Modal.Footer>
-          <Button onClick={props.onHide}>Close</Button>
-        </Modal.Footer>
-      </Modal>
-      ))
-    }
+      {
+        leaveview.map((item) =>
+          <Modal {...props} aria-labelledby="contained-modal-title-vcenter">
+            <Modal.Header closeButton>
+              <Modal.Title id="contained-modal-title-vcenter">
+                Date :
+              </Modal.Title>
+            </Modal.Header>
+            <Modal.Body className="show-grid">
+              <Container>
+                <Row className='leave-popup'>
+                  <Col xs={12} md={8}>
+                    Name :
+                    <b> </b>
+                  </Col>
+                </Row>
+                <Row className='leave-popup'>
+                  <Col xs={3} md={6}>
+                    Course :
+                    <b> {item.course}</b>
+                  </Col>
+                  <Col xs={3} md={6}>
+                    Semester :
+                    <b> {item.semester}</b>
+                  </Col>
+                </Row>
+                <Row className='leave-popup'>
+                  <Col xs={3} md={6}>
+                    Division :
+                    <b> {item.division}</b>
+                  </Col>
+                  <Col xs={3} md={6}>
+                    Roll No :
+                    <b> {item.rollNo}</b>
+                  </Col>
+                </Row>
+                <Row className='leave-popup'>
+                  <Col xs={12} md={8}>
+                    Email :
+                    <b> {item.email}@23</b>
+                  </Col>
+                </Row>
+                <Row className='leave-popup'>
+                  <Col xs={12} md={8}>
+                    Subject :
+                    <p><b>{item.subject}</b></p>
+                  </Col>
+                </Row>
+                <Row className='leave-popup'>
+                  <Col xs={12} md={8} className="leave-mess">
+                    Message :
+                    <p><b>{item.message}</b></p>
+                  </Col>
+                </Row>
+              </Container>
+            </Modal.Body>
+            <Modal.Footer>
+              <Button onClick={props.onHide}>Close</Button>
+            </Modal.Footer>
+          </Modal>
+        )
+      }
     </>
   )
 }
@@ -119,8 +98,6 @@ const Stuleavnotiview = (props) => {
 
 const Studentleavnotice = () => {
   const [modalShow, setModalShow] = useState(false);
-  const [value, setValue] = useState([]);
-
   const [leavenotice , setLeavenotice]=useState([]);
 
   useEffect(() => {
@@ -133,19 +110,15 @@ const Studentleavnotice = () => {
       }
     );
   }, []);
-  const a=(item)=>{
-    setValue(item);
-    setModalShow(true);
-  }
   return (
     <>
-
-    {
-      leavenotice.map((item)=>(
-      <div class="container mainnotice ">
-        <h3 class="mt-5 heading-line" style={{ textAlign: "start" }}>
-          Notice <i class="fa fa-bell text-muted"></i>
-        </h3>
+          <h3 class="mt-5 heading-line stulevnotice-heading" style={{ textAlign: "start" }}>
+             Student Leave Notice <i class="fa fa-bell text-muted"></i>
+            </h3>
+      {
+        leavenotice.map((item) => (
+          <div class="container mainnotice ">
+          
 
         <div class="card card-notice">
           <div class="card-header">Date : {item.date}</div>
@@ -156,7 +129,7 @@ const Studentleavnotice = () => {
             <p class="card-text" style={{ textAlign: "start" }}>
               {item.message}
             </p>
-            <a onClick={() => a(item)} class="btn btn-notice">
+            <a onClick={() => setModalShow(true)} class="btn btn-notice">
               view more
             </a>
 
@@ -168,7 +141,7 @@ const Studentleavnotice = () => {
       </div>
       ))
     }
-      <Stuleavnotiview value={value} show={modalShow} onHide={() => setModalShow(false)} />
+      <Stuleavnotiview show={modalShow} onHide={() => setModalShow(false)} />
 
     </>
   );
