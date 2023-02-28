@@ -23,6 +23,7 @@ import Facnotice from "../Pages/faculty/Notice/Subfacnotice";
 import Stunotice from "../Pages/Student/lev notice/Stunotice";
 import Stuleaveform from "../Pages/Student/lev notice/Stuleaveform";
 import Studentleavnotice from "../Pages/faculty/student leavenotice view/Stuleavnotiview"
+import Faculty from "../Pages/faculty/facultypro/Faculty";
 
 
 
@@ -39,6 +40,12 @@ export const faculty = [
         name: "dashboard",
         icon: <RiDashboardFill />,
         element: <DashBoard />
+    },
+    {
+        path: "/facultyprofile",
+        name: "faculty profile",
+        icon: <RiDashboardFill />,
+        element: <Faculty />
     },
     {
         path: "/facultyattandance",

@@ -16,14 +16,16 @@ const Stuleavnotiview = (props) => {
   const [leaveview, setLeaveview] = useState([]);
  
   useEffect(() => {
-    fetch("http://localhost:4000/api/use/student/studentLeaveNotice/get").then(
-      (result) => {
-        result.json().then((resp) => {
-          // console.warn("result", resp);
-          setLeaveview(resp);
-        });
-      }
-    );
+              setLeaveview(props.value);
+
+    // fetch("http://localhost:4000/api/use/student/studentLeaveNotice/get").then(
+    //   (result) => {
+    //     result.json().then((resp) => {
+    //       // console.warn("result", resp);
+    //       setLeaveview(resp);
+    //     });
+    //   }
+    // );
   }, []);
   // console.log("result");
 
@@ -117,6 +119,8 @@ const Stuleavnotiview = (props) => {
 
 const Studentleavnotice = () => {
   const [modalShow, setModalShow] = useState(false);
+  const [value, setValue] = useState([]);
+
   const [leavenotice , setLeavenotice]=useState([]);
 
   useEffect(() => {
@@ -129,6 +133,10 @@ const Studentleavnotice = () => {
       }
     );
   }, []);
+  const a=(item)=>{
+    setValue(item);
+    setModalShow(true);
+  }
   return (
     <>
 
@@ -148,7 +156,7 @@ const Studentleavnotice = () => {
             <p class="card-text" style={{ textAlign: "start" }}>
               {item.message}
             </p>
-            <a onClick={() => setModalShow(true)} class="btn btn-notice">
+            <a onClick={() => a(item)} class="btn btn-notice">
               view more
             </a>
 
@@ -160,7 +168,7 @@ const Studentleavnotice = () => {
       </div>
       ))
     }
-      <Stuleavnotiview show={modalShow} onHide={() => setModalShow(false)} />
+      <Stuleavnotiview value={value} show={modalShow} onHide={() => setModalShow(false)} />
 
     </>
   );

@@ -5,40 +5,43 @@ import WithLayout from "../../../components/common/comstudent/Stusidebar";
 const Result = () => {
   return (
     <>
-    <div className="stuatt mt-5 ">
-        <div className="card stuatt-card"   style={{ width: "18rem" }}>
-          <a href="/stufee" className="card-body btn-attan">
-          <div className="stuattdetail">
-            <h5 className="stuatt-title">Date:11/10</h5>
-            <p className="stuatt-text">CG</p>
-            </div>
-          </a>
-        </div>
-        <div className="card" style={{ width: "18rem", marginLeft: "20px" }}>
-          <a className="card-body ">
-          <div className="stuattdetail">
-            <h5 className="stuatt-title">Date:11/10</h5>
-            <p className="stuatt-text">E-COMM</p>
-            </div>
-          </a>
-        </div>
-        <div className="card" style={{ width: "18rem", marginLeft: "20px" }}>
-          <a className="card-body" >
-          <div className="stuattdetail">
-            <h5 className="stuatt-title">Date:11/10</h5>
-            <p className="stuatt-text">SEMINAR</p>
-            </div>
-          </a>
-        </div>
-        <div className="card" style={{ width: "18rem", marginLeft: "20px" }}>
-          <a className="card-body ">
-          <div className="stuattdetail">
-            <h5 className="stuatt-title">Date:11/10</h5>
-            <p className="stuatt-text">PROJECT</p>
-            </div>
-          </a>
-        </div>
-      </div>
+  <div className="card-body d-flex" style={{marginLeft:"300px",marginTop:"20px"}}>
+                  <div className="col-md-4">
+                  <label for="date">Date:</label>
+          <input
+            type="date"
+            id="date"
+            name="date"
+            placeholder="Enter  date"
+         
+            required
+          />
+                  </div>
+                  <div
+                    className="searchbtn"
+                    style={{ margin: "18px", textAlign: "start" }}
+                  >
+                    <a
+                      href=""
+                      class="btn btn-danger"
+                      style={{ width: "138px" ,marginTop:"21px"}}
+                    >
+                      Search
+                    </a>
+                  </div>
+                </div>
+
+
+
+
+
+                <div class="card" style="width: 18rem;">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">An item</li>
+    <li class="list-group-item">A second item</li>
+    <li class="list-group-item">A third item</li>
+  </ul>
+</div>
    
     </>
   )

@@ -55,76 +55,16 @@ const Facnotice = () => {
             <h5 class="card-title">
               <b>Notice title</b>
             </h5>
-            <p class="card-text" style={{ textAlign: "start" }}>
-              notice description Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy 
-            </p>
+         
             <a onClick={() => setModalShow(true)} class="btn btn-notice">
               view more
             </a>
-            <a href="" class="btn btn-danger">
-              Delete
-            </a>
+       
           </div>
         </div>
-        <div class="card card-notice">
-          <div class="card-header">Date</div>
-          <div class="card-body">
-            <h5 class="card-title">
-              <b>Notice title</b>
-            </h5>
-            <p class="card-text" style={{ textAlign: "start" }}>
-              notice description Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy 
-            </p>
-            <a href="#" class="btn btn-info btn-notice">
-              view more
-            </a>
-            <a href="#"  class="btn btn-danger">
-              Delete
-            </a>
-          </div>
-        </div>
-        <div class="card card-notice">
-          <div class="card-header">Date</div>
-          <div class="card-body">
-            <h5 class="card-title">
-              <b>Notice title</b>
-            </h5>
-            <p class="card-text" style={{ textAlign: "start" }}>
-              notice description Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy 
-            </p>
-            <a href="#" class="btn btn-info btn-notice">
-              view more
-            </a>
-            <a href="#" class="btn btn-danger">
-              Delete
-            </a>
-          </div>
-        </div>
-        <div class="card card-notice">
-          <div class="card-header">Date</div>
-          <div class="card-body">
-            <h5 class="card-title">
-              <b>Notice title</b>
-            </h5>
-            <p class="card-text" style={{ textAlign: "start" }}>
-              notice description Lorem Ipsum is simply dummy text of the
-              printing and typesetting industry. Lorem Ipsum has been the
-              industry's standard dummy 
-            </p>
-            <a href="#" class="btn btn-info btn-notice">
-              view more
-            </a>
-            <a href="#" class="btn btn-danger">
-              Delete
-            </a>
-          </div>
-        </div>
+        
+       
+  
       </div>
       <Subfacnotice
         show={modalShow}

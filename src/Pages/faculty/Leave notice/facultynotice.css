@@ -5,7 +5,7 @@
     margin: 5px;
 }
 .card-notice{
-    max-width: 1000px;
+    max-width: 885px !important;
 }
 .notice-viewmore{
     margin-top: 50px;
@@ -45,4 +45,8 @@
     .add-notice-icon{
         margin-left: 52%;
     }
+}
+
+.btn-notice{
+    margin-left: 638px !important;
 }
