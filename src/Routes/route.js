@@ -1,6 +1,7 @@
 import { RiDashboardFill } from "react-icons/ri";
 import { FaEnvelopeOpenText, FaGraduationCap, FaRupeeSign, FaUserAlt, FaUsers } from "react-icons/fa";
 import { BsCalendarCheckFill, BsFillBellFill } from "react-icons/bs";
+import {VscFeedback} from "react-icons/vsc";
 import DashBoard from "../Pages/faculty/DashBoard/DashBoard";
 import About from "../Pages/User/Home/About";
 import Contact from "../Pages/User/Home/Contact";
@@ -24,6 +25,9 @@ import Stunotice from "../Pages/Student/lev notice/Stunotice";
 import Stuleaveform from "../Pages/Student/lev notice/Stuleaveform";
 import Studentleavnotice from "../Pages/faculty/student leavenotice view/Stuleavnotiview"
 import Faculty from "../Pages/faculty/facultypro/Faculty";
+import Syllabus from "../Pages/Student/syllabus/Syllabus";
+import { GiNotebook } from "react-icons/gi";
+import Feedback from "../Pages/Student/Feedback/Feedback";
 
 
 
@@ -156,6 +160,18 @@ export const Student = [
         path: "/Stuleaveform",
         name: "Stuleaveform",
         element: <Stuleaveform />
+    },
+    {
+        path: "/Syllabus",
+        name: "Syllabus",
+        icon: <GiNotebook />,
+        element: <Syllabus />
+    },
+    {
+        path: "/feedback",
+        name: "feedback",
+        icon: <VscFeedback />,
+        element: <Feedback />
     },
 
 
