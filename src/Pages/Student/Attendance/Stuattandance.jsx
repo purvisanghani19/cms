@@ -2,7 +2,7 @@ import React from "react";
 import "./attan.css";
 import WithLayout from "../../../components/common/comstudent/Stusidebar";
 
-const Result = () => {
+const Stuattandance = () => {
   return (
     <>
       <div className="card-body d-flex" style={{ marginLeft: "300px", marginTop: "20px" }}>
@@ -34,16 +34,68 @@ const Result = () => {
 
 
 
-      <div class="card" style="width: 18rem;">
+      <div class="card shadow" style={{"width": "18rem",marginLeft:"320px"}}>
         <ul class="list-group list-group-flush">
-          <li class="list-group-item">An item</li>
-          <li class="list-group-item">A second item</li>
-          <li class="list-group-item">A third item</li>
+          <li class="list-group-item">PHP</li>
+          <div className="attan d-flex">
+
+          <li class="list-group-item">Date:10-12-2022</li>
+          <li class="list-group-item" style={{backgroundColor:"green" ,width:"126px"}}>present</li>
+          </div>
         </ul>
       </div>
+
+
+      <div class="card shadow" style={{"width": "18rem",marginLeft:"320px"}}>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">PHP</li>
+          <div className="attan d-flex">
+
+          <li class="list-group-item">Date:10-12-2022</li>
+          <li class="list-group-item" style={{backgroundColor:"red" ,width:"126px"}}>Absent</li>
+          </div>
+        </ul>
+      </div>
+
+
+      <div class="card shadow" style={{"width": "18rem",marginLeft:"320px"}}>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">PHP</li>
+          <div className="attan d-flex">
+
+          <li class="list-group-item">Date:10-12-2022</li>
+          <li class="list-group-item" style={{backgroundColor:"green" ,width:"126px"}}>present</li>
+          </div>
+        </ul>
+      </div>
+
+
+      <div class="card shadow" style={{"width": "18rem",marginLeft:"320px"}}>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">PHP</li>
+          <div className="attan d-flex">
+
+          <li class="list-group-item">Date:10-12-2022</li>
+          <li class="list-group-item" style={{backgroundColor:"red" ,width:"126px"}}>Absent</li>
+          </div>
+        </ul>
+      </div>
+
+
+      <div class="card shadow" style={{"width": "18rem",marginLeft:"320px"}}>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">PHP</li>
+          <div className="attan d-flex">
+
+          <li class="list-group-item">Date:10-12-2022</li>
+          <li class="list-group-item" style={{backgroundColor:"green" ,width:"126px"}}>present</li>
+          </div>
+        </ul>
+      </div>
+
 
     </>
   );
 };
 
-export default WithLayout(Result);
+export default WithLayout(Stuattandance);

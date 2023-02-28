@@ -40,306 +40,184 @@ const Stuleaveform = () => {
   };
   return (
     <>
-      {/* <div className="stulevnoti" style={{marginLeft:"268px"}}>
-     <div className='leaveicon d-flex' >
-        <BsFillArrowLeftCircleFill className='addnotice-icon'/>
-        <h1 >Leave Notice</h1>
-     </div>
-        <form className='leavenotice-form'>
-          <label for="date">Date:</label>
-          <input
-            type="date"
-            id="date"
-            name="date"
-            placeholder="Enter  date"
-            value={date}
-            onChange={(e) => setDate(e.target.value)}
-            required
-          />
-          <label for="name">Name:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            placeholder="Enter your name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            required
-          />
-          <label  for="course">Course</label>
-          <select 
-          value={course}
-           onChange={(e) => setCourse(e.target.value)} 
-            id="course" name="course" classNameName="course">
-            <option value="select" >Select</option>
-            <option value="bcom" >
-              BCOM
-            </option>
-            <option value="bba">
-              BBA
-            </option>
-            <option value="mba" >
-              BCA
-            </option>
-          </select>
-          <label for="subject">Semester:</label>
-          <select 
-          value={semester}
-           onChange={(e) => setSemester(e.target.value)} 
-            id="semester" name="semester" classNameName="semester">
-            <option value="select" >Select</option>
-            <option value="1" >
-             1
-            </option>
-            <option value="2">
-            2
-            </option>
-            <option value="3" >
-             3
-            </option>
-          </select>
-             <label for="subject">Division:</label>
-             <select 
-          value={division}
-           onChange={(e) => setDivision(e.target.value)} 
-            id="division" name="division" classNameName="division">
-            <option value="select" >Select</option>
-            <option value="1" >
-             1
-            </option>
-            <option value="2">
-            2
-            </option>
-            <option value="3" >
-             3
-            </option>
-            <option value="4" >
-             4
-            </option>
-            <option value="5" >
-             5
-            </option>
-            <option value="6" >
-             6
-            </option>
-          </select>
-        <label for="name">Roll No:</label>
-          <input
-            type="text"
-            id="rollno"
-            name="rollno"
-            placeholder="Enter your roll no"
-            value={rollNo}
-            onChange={(e) => setRollno(e.target.value)}
-            required
-          />
-          <label for="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-			value={email}
-			onChange={(e) => setEmail(e.target.value)}
-            placeholder="Enter your email"
-            required
-          />
-          <label for="subject">Subject:</label>
-          <input
-            type="text"
-            id="subject"
-            name="subject"
-			value={subject}
-			onChange={(e) => setSubject	(e.target.value)}
-            placeholder="Enter the subject of your leave"
-            required
-          />
-          <label for="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-			value={message}
-			onChange={(e) => setMessage	(e.target.value)}
-            placeholder="Enter your leave request message"
-            required
-          ></textarea>
-          <button classNameName="leavenotice-btn" type="submit" onClick={handlenotice}>
-            Submit
-          </button>
-        </form>
-      </div> */}
-      <div id="content-wrapper" className="d-flex flex-column" >
+      <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
           <div className="container-fluid">
-            <div className="row">
-              <h3 >Add Notice</h3>
+            <div className="row" style={{textAlign:"start"}}>
+              <h3>Add Notice</h3>
               <div className="row">
                 <div className="col-sm-12">
-                
-                 
-                      <form>
-                        <div className="row">
-                          <div className="col-12 col-sm-6">
-                            <div className="form-group local-forms">
-                              <label>
-                                Date <span className="login-danger">*</span>
-                              </label>
-                              <input style={{border:"1px solid black"}}
-                                type="date"
-                                name="date"
-                                value={date}
-                                onChange={(e) => setDate(e.target.value)}
-                                className="form-control"
-                              />
-                            </div>
-                          </div>
-                          <div className="col-12 col-sm-6">
-                            <div className="form-group local-forms">
-                              <label>
-                                Name <span className="login-danger">*</span>
-                              </label>
-                              <input style={{border:"1px solid black"}}
-                                type="text"
-                                name="name"
-                                value={name}
-                                onChange={(e) => setName(e.target.value)}
-                                className="form-control"
-                              />
-                            </div>
-                          </div>
-                          <div className="col-12 col-sm-6">
-                            <div className="form-group local-forms">
-                              <label for="course">Course</label>
-                              <select style={{border:"1px solid black"}}
-                                value={course}
-                                onChange={(e) => setCourse(e.target.value)}
-                                id="course"
-                                name="course"
-                                classNameName="form-control"
-                              >
-                                <option value="select">Select</option>
-                                <option value="bcom">BCOM</option>
-                                <option value="bba">BBA</option>
-                                <option value="mba">BCA</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div className="col-12 col-sm-6">
-                            <div className="form-group local-forms">
-                              <label for="subject">Semester:</label>
-                              <select style={{border:"1px solid black"}}
-                                value={semester}
-                                onChange={(e) => setSemester(e.target.value)}
-                                id="semester"
-                                name="semester"
-                                classNameName="form-control"
-                              >
-                                <option value="select">Select</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div className="col-12 col-sm-6">
-                            <div className="form-group local-forms">
-                              <label for="subject">Division:</label>
-                              <select style={{border:"1px solid black"}}
-                                value={division}
-                                onChange={(e) => setDivision(e.target.value)}
-                                id="division"
-                                name="division"
-                                classNameName="form-control"
-                              >
-                                <option value="select">Select</option>
-                                <option value="1">1</option>
-                                <option value="2">2</option>
-                                <option value="3">3</option>
-                                <option value="4">4</option>
-                                <option value="5">5</option>
-                                <option value="6">6</option>
-                              </select>
-                            </div>
-                          </div>
-                          <div className="col-12 col-sm-6">
-                            <div className="form-group local-forms">
-                              <label>
-                                Roll No <span className="login-danger">*</span>
-                              </label>
-                              <input style={{border:"1px solid black"}}
-                                type="text"
-                                name="roll no"
-                                value={rollNo}
-                                onChange={(e) => setRollno(e.target.value)}
-                                className="form-control"
-                              />
-                            </div>
-                          </div>
-                          <div className="col-12 col-sm-6">
-                            <div className="form-group local-forms">
-                              <label>
-                                Email <span className="login-danger">*</span>
-                              </label>
-                              <input style={{border:"1px solid black"}}
-                                type="text"
-                                name="email"
-                                value={email}
-                                onChange={(e) => setEmail(e.target.value)}
-                                className="form-control"
-                              />
-                            </div>
-                          </div>
-                          <div className="col-12 col-sm-6">
-                            <div className="form-group local-forms">
-                              <label>
-                                Title <span className="login-danger">*</span>
-                              </label>
-                              <input style={{border:"1px solid black"}}
-                                type="text"
-                                name="title"
-                                value={subject}
-                                onChange={(e) => setSubject(e.target.value)}
-                                className="form-control"
-                              />
-                            </div>
-                          </div>
-                          <div className="col-12 col-sm-6">
-                            <div className="form-group local-forms">
-                              <label>
-                                Message <span className="login-danger">*</span>
-                              </label>
-                              <textarea style={{border:"1px solid black"}}
-                                type="text"
-                                placeholder="Enter your leave request message"
-                                name="message"
-                                value={message}
-                                onChange={(e) => setMessage(e.target.value)}
-                                className="form-control"
-                              />
-                            </div>
-                          </div>
-                        
-                          <div className="col-12 ">
-                            <div className="student-submit">
-                              <button
-                              style={{backgroundColor:"#263159 !important"}}
-                                type="submit"
-                                className="btn-leave"
-                                onClick={handlenotice}
-                              >
-                                Submit
-                              </button>
-                            </div>
-                          </div>
+                  <form>
+                    <div className="row">
+                      <div className="col-12 col-sm-6">
+                        <div className="form-group local-forms">
+                          <label>
+                            Date <span className="login-danger">*</span>
+                          </label>
+                          <input
+                            style={{ border: "1px solid black" }}
+                            type="date"
+                            name="date"
+                            value={date}
+                            onChange={(e) => setDate(e.target.value)}
+                            className="form-control"
+                          />
                         </div>
-                      </form>
+                      </div>
+                      <div className="col-12 col-sm-6">
+                        <div className="form-group local-forms">
+                          <label>
+                            Name <span className="login-danger">*</span>
+                          </label>
+                          <input
+                            style={{ border: "1px solid black" }}
+                            type="text"
+                            name="name"
+                            value={name}
+                            onChange={(e) => setName(e.target.value)}
+                            className="form-control"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-12 col-sm-6">
+                        <div className="form-group local-forms">
+                          <label for="course">Course</label>
+                          <select
+                            style={{ border: "1px solid black" }}
+                            value={course}
+                            onChange={(e) => setCourse(e.target.value)}
+                            id="course"
+                            name="course"
+                            classNameName="form-control"
+                          >
+                            <option value="select">Select</option>
+                            <option value="bcom">BCOM</option>
+                            <option value="bba">BBA</option>
+                            <option value="mba">BCA</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div className="col-12 col-sm-6">
+                        <div className="form-group local-forms">
+                          <label for="subject">Semester:</label>
+                          <select
+                            style={{ border: "1px solid black" }}
+                            value={semester}
+                            onChange={(e) => setSemester(e.target.value)}
+                            id="semester"
+                            name="semester"
+                            classNameName="form-control"
+                          >
+                            <option value="select">Select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div className="col-12 col-sm-6">
+                        <div className="form-group local-forms">
+                          <label for="subject">Division:</label>
+                          <select
+                            style={{ border: "1px solid black" }}
+                            value={division}
+                            onChange={(e) => setDivision(e.target.value)}
+                            id="division"
+                            name="division"
+                            classNameName="form-control"
+                          >
+                            <option value="select">Select</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                          </select>
+                        </div>
+                      </div>
+                      <div className="col-12 col-sm-6">
+                        <div className="form-group local-forms">
+                          <label>
+                            Roll No <span className="login-danger">*</span>
+                          </label>
+                          <input
+                            style={{ border: "1px solid black" }}
+                            type="text"
+                            name="roll no"
+                            value={rollNo}
+                            onChange={(e) => setRollno(e.target.value)}
+                            className="form-control"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-12 col-sm-6">
+                        <div className="form-group local-forms">
+                          <label>
+                            Email <span className="login-danger">*</span>
+                          </label>
+                          <input
+                            style={{ border: "1px solid black" }}
+                            type="text"
+                            name="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            className="form-control"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-12 col-sm-6">
+                        <div className="form-group local-forms">
+                          <label>
+                            Title <span className="login-danger">*</span>
+                          </label>
+                          <input
+                            style={{ border: "1px solid black" }}
+                            type="text"
+                            name="title"
+                            value={subject}
+                            onChange={(e) => setSubject(e.target.value)}
+                            className="form-control"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-12 col-sm-6">
+                        <div className="form-group local-forms">
+                          <label>
+                            Message <span className="login-danger">*</span>
+                          </label>
+                          <textarea
+                            style={{ border: "1px solid black" }}
+                            type="text"
+                            placeholder="Enter your leave request message"
+                            name="message"
+                            value={message}
+                            onChange={(e) => setMessage(e.target.value)}
+                            className="form-control"
+                          />
+                        </div>
+                      </div>
+
+                      <div className="col-12 ">
+                        <div className="student-submit">
+                          <button
+                            style={{ backgroundColor: "#263159 !important" }}
+                            type="submit"
+                            className="btn-leave"
+                            onClick={handlenotice}
+                          >
+                            Submit
+                          </button>
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </form>
                 </div>
               </div>
             </div>
           </div>
-    
-      
+        </div>
+      </div>
     </>
   );
 };

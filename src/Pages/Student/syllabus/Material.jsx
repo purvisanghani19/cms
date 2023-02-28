@@ -1,10 +1,10 @@
 import React from 'react';
 import WithLayout from '../../../components/common/comstudent/Stusidebar';
 
-const Syllabus = () => {
+const Material = () => {
   return (
-    <div>Syllabus</div>
+    <div>Material</div>
   )
 }
 
-export default WithLayout(Syllabus);
+export default WithLayout(Material);

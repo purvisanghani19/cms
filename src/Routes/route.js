@@ -13,24 +13,25 @@ import StuDashBoard from "../Pages/Student/DashBoard/StuDashBoard";
 import Stuattandance from "../Pages/Student/Attendance/Stuattandance";
 import StuResult from "../Pages/Student/Result/StuResult";
 import Studentpro from "../Pages/Student/Student/Studentpro";
-import Notification from "../Pages/Student/Notice/Notification";
+import Notification from "../Pages/Student/Notice/Studentnotice";
 import Payfee from "../Pages/Student/Fees/Payfee";
 import StuFees from "../Pages/Student/Fees/StuFees";
 import Studentlist from "../Pages/faculty/student list/Studentlist";
 import Facleaveform from "../Pages/faculty/Leave notice/Facleaveform";
 import Facultyattandance from "../Pages/faculty/my attanance/Facultyattandance";
 import Facnotice from "../Pages/faculty/Notice/facnotice";
-import Stunotice from "../Pages/Student/lev notice/Stunotice";
+// import Stunotice from "../Pages/Student/lev notice/Stunotice";
 import Stuleaveform from "../Pages/Student/lev notice/Stuleaveform";
-import Studentleavnotice from "../Pages/faculty/student leavenotice view/Stuleavnotiview"
 import Faculty from "../Pages/faculty/facultypro/Faculty";
-import View from "../Pages/faculty/faculty lave notice/View";
-import Addleave from "../Pages/faculty/faculty lave notice/Addleave";
 import { GiNotebook } from "react-icons/gi";
 import Facleavenotice from "../Pages/faculty/faculty lave notice/Facleavenotice";
 import Feedback from "../Pages/Student/Feedback/Feedback";
-import Syllabus from "../Pages/Student/syllabus/Syllabus";
-import Material from "../Pages/faculty/Material/Material";
+import View from "../Pages/faculty/faculty lave notice/View";
+import Addleave from "../Pages/faculty/faculty lave notice/Addleave";
+import Material from "../Pages/Student/syllabus/Material";
+import Leavestud from "../Pages/Student/lev notice/Leavestud";
+import Stuleavnotiview from "../Pages/faculty/student leavenotice view/Stuleavnotiview";
+import Studentviewnotice from "../Pages/Student/lev notice/Studentviewnotice";
 
 
 
@@ -119,7 +120,7 @@ export const faculty = [
         path: "/stuleaveview",
         name: "student notice",
         icon: <FaUsers />,
-        element: <Studentleavnotice />
+        element: <Stuleavnotiview />
     },
 
 
@@ -163,11 +164,12 @@ export const Student = [
         icon: <BsFillBellFill />,
         element: <Notification />
     },
+
     {
-        path: "/stuleavenotice",
-        name: "Leave Notice",
+        path: "/Leavestud",
+        name: "Leavestud",
         icon: <FaEnvelopeOpenText />,
-        element: <Stunotice />
+        element: <Leavestud />
     },
     {
         path: "/stufee",
@@ -175,15 +177,21 @@ export const Student = [
         element: <StuFees />
     },
     {
-        path: "/Stuleaveform",
+        path: "/Leavestud/Stuleaveform",
         name: "Stuleaveform",
         element: <Stuleaveform />
     },
     {
-        path: "/Syllabus",
-        name: "Syllabus",
+        path: "/Leavestud/studentviewnotice",
+        name: "student view notice",
+        element: <Studentviewnotice />
+    },
+    
+    {
+        path: "/Material",
+        name: "Material",
         icon: <GiNotebook />,
-        element: <Syllabus />
+        element: <Material />
     },
     {
         path: "/feedback",
