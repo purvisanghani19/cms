@@ -18,7 +18,7 @@ const View = () => {
                     style={{
                       padding: "3px 25px",
                       borderRadius: "5px",
-                      backgroundColor: "#005d91",
+                      backgroundColor: "#17a2b8",
                       border: "none",
                       color: "#fff",
                       marginBottom: "20px",
@@ -38,7 +38,7 @@ const View = () => {
               >
                 <Card.Header
                   style={{
-                    backgroundColor: "#005d91",
+                    backgroundColor: "#263159",
                     color: "#fff",
                     paddingLeft: "450px",
                   }}
@@ -82,7 +82,7 @@ const View = () => {
                         padding: "5px",
                         width: "80px",
                         borderRadius: "5px",
-                        backgroundColor: "#005d91",
+                        backgroundColor: "#17a2b8",
                         border: "none",
                         color: "#fff",
                       }}

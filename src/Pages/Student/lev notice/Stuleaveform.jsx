@@ -43,8 +43,8 @@ const Stuleaveform = () => {
       <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
           <div className="container-fluid">
-            <div className="row" style={{textAlign:"start"}}>
-              <h3>Add Notice</h3>
+            <div className="row">
+              <h3 >Add Notice</h3>
               <div className="row">
                 <div className="col-sm-12">
                   <form>

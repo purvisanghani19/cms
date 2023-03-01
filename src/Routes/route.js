@@ -1,5 +1,5 @@
 import { RiDashboardFill } from "react-icons/ri";
-import { FaEnvelopeOpenText, FaGraduationCap, FaRupeeSign, FaUserAlt, FaUsers } from "react-icons/fa";
+import { FaEnvelopeOpenText, FaRupeeSign, FaUserAlt, FaUsers } from "react-icons/fa";
 import { BsCalendarCheckFill, BsFillBellFill } from "react-icons/bs";
 import {VscFeedback} from "react-icons/vsc";
 import DashBoard from "../Pages/faculty/DashBoard/DashBoard";
@@ -8,31 +8,29 @@ import Contact from "../Pages/User/Home/Contact";
 import Home from "../Pages/User/Home/Home";
 import Login from "../Pages/User/Home/Login";
 import Attandance from "../Pages/faculty/Attendance/Attandance";
-import Result from "../Pages/faculty/Result/Result";
 import StuDashBoard from "../Pages/Student/DashBoard/StuDashBoard";
 import Stuattandance from "../Pages/Student/Attendance/Stuattandance";
-import StuResult from "../Pages/Student/Result/StuResult";
 import Studentpro from "../Pages/Student/Student/Studentpro";
 import Notification from "../Pages/Student/Notice/Studentnotice";
 import Payfee from "../Pages/Student/Fees/Payfee";
 import StuFees from "../Pages/Student/Fees/StuFees";
 import Studentlist from "../Pages/faculty/student list/Studentlist";
-import Facleaveform from "../Pages/faculty/Leave notice/Facleaveform";
 import Facultyattandance from "../Pages/faculty/my attanance/Facultyattandance";
 import Facnotice from "../Pages/faculty/Notice/facnotice";
 // import Stunotice from "../Pages/Student/lev notice/Stunotice";
 import Stuleaveform from "../Pages/Student/lev notice/Stuleaveform";
-import Faculty from "../Pages/faculty/facultypro/Faculty";
+import Faculty from "../Pages/faculty/facultyprofile/Faculty";
 import { GiNotebook } from "react-icons/gi";
 import Facleavenotice from "../Pages/faculty/faculty lave notice/Facleavenotice";
 import Feedback from "../Pages/Student/Feedback/Feedback";
 import View from "../Pages/faculty/faculty lave notice/View";
 import Addleave from "../Pages/faculty/faculty lave notice/Addleave";
-import Material from "../Pages/Student/syllabus/Material";
 import Leavestud from "../Pages/Student/lev notice/Leavestud";
 import Stuleavnotiview from "../Pages/faculty/student leavenotice view/Stuleavnotiview";
 import Studentviewnotice from "../Pages/Student/lev notice/Studentviewnotice";
-
+import Material from "../Pages/faculty/Material/Material";
+import Stumaterial from "../Pages/Student/syllabus/Stumaterial";
+import Addmateraial from "../Pages/faculty/Material/Addmateraial";
 
 
 
@@ -67,12 +65,7 @@ export const faculty = [
         icon: <BsCalendarCheckFill />,
         element: <Attandance />
     },
-    {
-        path: "/result",
-        name: "result",
-        icon: <FaGraduationCap />,
-        element: <Result/>
-    },
+  
     {
         path: "/facnotice",
         name: "notice",
@@ -88,7 +81,6 @@ export const faculty = [
     {
         path: "/facleavenotice/viewnotice",
         name: "view notice",
-        icon: <FaEnvelopeOpenText />,
         element: <View />,
     },
     {
@@ -104,18 +96,16 @@ export const faculty = [
         element: <Material />,
     },
     {
+        path: "/material/addmaterial",
+        name: "add material",
+        element: <Addmateraial />,
+    },
+    {
         path: "/studentlist",
         name: "studentlist",
         icon: <FaUsers />,
         element: <Studentlist />
     },
-    {
-        path: "/facleaveform",
-        name: "fac leaveform",
-        icon: <FaUsers />,
-        element: <Facleaveform />
-    },
-  
     {
         path: "/stuleaveview",
         name: "student notice",
@@ -151,13 +141,6 @@ export const Student = [
         icon: <FaRupeeSign />,
         element: <Payfee />
     },
-
-    {
-        path: "/result",
-        name: "result",
-        icon: <FaGraduationCap />,
-        element: <StuResult />
-    },
     {
         path: "/stunotice",
         name: "notice",
@@ -188,10 +171,10 @@ export const Student = [
     },
     
     {
-        path: "/Material",
+        path: "/stumaterial",
         name: "Material",
         icon: <GiNotebook />,
-        element: <Material />
+        element: <Stumaterial />
     },
     {
         path: "/feedback",
@@ -199,10 +182,6 @@ export const Student = [
         icon: <VscFeedback />,
         element: <Feedback />
     },
-
-
-
-
 ];
 
 

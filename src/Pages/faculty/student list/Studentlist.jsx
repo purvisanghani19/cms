@@ -1,11 +1,16 @@
 import React from "react";
 import './studentlist.css';
 import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
+import { Table } from "react-bootstrap";
+// import Table from "react-bootstrap/Table";
+// import EditIcon from "@mui/icons-material/Edit";
+// import DeleteIcon from "@mui/icons-material/Delete";
+
 
 const Studentlist = () => {
   return (
     <>
-      <div id="content">
+      {/* <div id="content">
         <div
           className="container-fluid"
           style={{ width: "100%", marginLeft: "268px" }}
@@ -72,183 +77,140 @@ const Studentlist = () => {
             </div>
           </div>
         </div>
-      </div>
-      <div
-        className="container-xl px-6 mt-5"
-        style={{ marginLeft: "268px", textAlign: " start" }}
-      >
-        <div className="row">
-          <div className="col-xl-15">
-            <div className="card mb-4">
-              <div
-                className="card-header stunotice"
-                style={{
-                  backgroundColor: "#263159",
-                  color: "#f8f9fa",
-                  textAlign: "center",
-                }}
-              >
-                All students{" "}
-              </div>
-              <div className="card-body">
-                <div className="tbldetails">
-                  <div className="row table-responsive mt-4">
-
-                  <table className="table" >
-                  <thead>
-                        <tr className="tbl">
-                          <th scope="col">Roll No</th>
-                          <th scope="col">Name</th>
-                          <th scope="col">Semester</th>
-                          <th scope="col">Email</th>
-                          <th scope="col">Action</th>
-                        </tr>
-                      </thead>
-                  <tr className="active">
-                          <td>11</td>
-                          <td>purvi</td>
-                          <td>2</td>
-                          <td>purvi@123</td>
-                          <td >
-                            <button className="studentdetailview" style={{backgroundColor:"#263159"}}>view</button>
-                            
-                          </td>
-                        </tr>
-                        <tr className="active">
-                          <td>11</td>
-                          <td>purvi</td>
-                          <td>2</td>
-                          <td>purvi@123</td>
-                          <td>
-                            <button className="studentdetailview" style={{backgroundColor:"#263159"}}>view</button>
-                          </td>
-                        </tr>
-                        <tr className="active">
-                          <td>11</td>
-                          <td>purvi</td>
-                          <td>2</td>
-                          <td>purvi@123</td>
-                          <td>
-                            <button className="studentdetailview" style={{backgroundColor:"#263159"}}>view</button>
-                          </td>
-                        </tr>
-                        <tr className="active">
-                          <td>11</td>
-                          <td>purvi</td>
-                          <td>2</td>
-                          <td>purvi@123</td>
-                          <td>
-                            <button className="studentdetailview" style={{backgroundColor:"#263159"}}>view</button>
-                          </td>
-                        </tr>
-                        <tr className="active">
-                          <td>11</td>
-                          <td>purvi</td>
-                          <td>2</td>
-                          <td>purvi@123</td>
-                          <td>
-                            <button className="studentdetailview" style={{backgroundColor:"#263159"}}>view</button>
-                          </td>
-                        </tr>
-                        <tr className="active">
-                          <td>11</td>
-                          <td>purvi</td>
-                          <td>2</td>
-                          <td>purvi@123</td>
-                          <td>
-                            <button className="studentdetailview" style={{backgroundColor:"#263159"}}>view</button>
-                          </td>
-                        </tr>
-                        </table>
-                    {/* <table
-                      className="table"
-                      style={{ border: "1px solid black" }}
+      </div> */}
+      <div id="content-wrapper" className="d-flex flex-column"  style={{marginLeft:"268px"}}>
+      <div id="content">
+        <div className="container-fluid">
+          <div className="row">
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h3 class="page-title">Students</h3>
+                </div>
+                <div class="col-auto text-right float-right ml-auto">
+                  <a href="/ourstudent/addstudent">
+                    <button
+                      style={{
+                        padding: "3px 25px",
+                        marginRight: "25px",
+                        borderRadius: "5px",
+                        backgroundColor: "#005d91",
+                        border: "none",
+                        color: "#fff",
+                      }}
                     >
-                      <thead>
-                        <tr className="tbl">
-                          <th scope="col">Roll No</th>
-                          <th scope="col">Name</th>
-                          <th scope="col">Semester</th>
-                          <th scope="col">Email</th>
-                          <th scope="col">Action</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        <tr className="tbldetails" style={{ height: "2px" }}>
-                          <td>11</td>
-                          <td>purvi</td>
-                          <td>2</td>
-                          <td>purvi@123</td>
-                          <td>
-                            <button className="studentdetailview">view</button>
-                          </td>
-                        </tr>
-                        <tr style={{ height: "2px" }}>
-                          <td>11</td>
-                          <td>purvi</td>
-                          <td>2</td>
-                          <td>purvi@123</td>
-                          <td>
-                            <button className="studentdetailview">view</button>
-                          </td>
-                        </tr>
-                        <tr >
-                          <td>11</td>
-                          <td>purvi</td>
-                          <td>2</td>
-                          <td>purvi@123</td>
-                          <td>
-                            <button className="studentdetailview">view</button>
-                          </td>
-                        </tr>{" "}
-                        <tr>
-                          <td>11</td>
-                          <td>purvi</td>
-                          <td>2</td>
-                          <td>purvi@123</td>
-                          <td>
-                            <button className="studentdetailview">view</button>
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table> */}
-                  </div>
-                  {/* <table class="table table-bordered" aria-label="TABLE">
-                                        <thead role="rowgroup">
-                                            <tr role="row">
-                                                <th role="columnheader" scope="col" tabindex="0">Select Day</th>
-                                                <th role="columnheader" scope="col" tabindex="0">Article Name</th>
-                                                <th role="columnheader" scope="col" tabindex="0">Author</th>
-                                                <th role="columnheader" scope="col" tabindex="0">Words</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody role="rowgroup">
-                                            <tr role="row">
-                                                <td>Bootstrap 4 CDN and Starter Template</td>
-                                                <td>Cristina</td>
-                                                <td>913</td>
-                                                <td>2.846</td>
-                                            </tr>
-                                            <tr role="row">
-                                                <td>Bootstrap Grid 4 Tutorial and Examples</td>
-                                                <td>Cristina</td>
-                                                <td>1.434</td>
-                                                <td>3.417</td>
-                                            </tr>
-                                            <tr role="row">
-                                                <td>Bootstrap Flexbox Tutorial and Examples</td>
-                                                <td>Cristina</td>
-                                                <td>1.877</td>
-                                                <td>1.234</td>
-                                            </tr>
-                                        </tbody>
-                                    </table> */}
+                      Add
+                    </button>
+                  </a>
                 </div>
               </div>
             </div>
+
+            <Table striped bordered hover>
+                    <thead>
+                      <tr style={{ backgroundColor: "#005d91" }}>
+                        <th class="text-center">ID</th>
+                        <th class="text-center">Name</th>
+                        <th class="text-center">Email</th>
+                        <th class="text-center">Gender</th>
+                        <th class="text-center">BOD</th>
+                        <th class="text-center">Mobile Number</th>
+                        <th class="text-center">Address</th>
+                        <th class="text-center">Course</th>
+                        <th class="text-center">Sem</th>
+                        <th class="text-center">Div</th>
+                        <th class="text-center">Action</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="text-center">PRE2209</td>
+                        <td class="text-center">
+                          <h2 class="table-avatar">
+                            <a
+                              href="teacher-details.html"
+                              class="avatar avatar-sm mr-2"
+                            >
+                              <img
+                                class="img-circle elevation-2 user-img"
+                                // src={userImg}
+                              />
+                            </a>
+                            <a
+                              href="teacher-details.html"
+                              style={{
+                                textDecoration: "none",
+                                color: "#212529",
+                              }}
+                            >
+                              Aaliyah
+                            </a>
+                          </h2>
+                        </td>
+                        <td class="text-center">aliyah@gmail.com</td>
+                        <td class="text-center">Female</td>
+                        <td class="text-center">12/10/1979</td>
+                        <td class="text-center">097 3584 5870</td>
+                        <td class="text-center">911 Deer Ridge Drive,USA</td>
+                        <td class="text-center">BBA</td>
+                        <td class="text-center">4</td>
+                        <td class="text-center">1</td>
+                        <td class="text-center">
+                          {/* <div class="actions">
+                            <EditIcon
+                              style={{
+                                marginRight: "5px",
+                                color: "#0094ff",
+                              }}
+                            />
+                            <DeleteIcon style={{ color: "#db3d3d" }} />
+                          </div> */}
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="text-center">PRE2209</td>
+                        <td class="text-center">
+                          <h2 class="table-avatar">
+                            <a
+                              href="teacher-details.html"
+                              class="avatar avatar-sm mr-2"
+                            >
+                              <img
+                                class="img-circle elevation-2 user-img"
+                                // src={userImg}
+                              />
+                            </a>
+                            <a
+                              href="teacher-details.html"
+                              style={{
+                                textDecoration: "none",
+                                color: "#212529",
+                              }}
+                            >
+                              Aaliyah
+                            </a>
+                          </h2>
+                        </td>
+                        <td class="text-center">aliyah@gmail.com</td>
+                        <td class="text-center">Female</td>
+                        <td class="text-center">12/10/1979</td>
+                        <td class="text-center">097 3584 5870</td>
+                        <td class="text-center">911 Deer Ridge Drive,USA</td>
+                        <td class="text-center">BBA</td>
+                        <td class="text-center">6</td>
+                        <td class="text-center">2</td>
+                        <td class="text-center">
+                          
+                        </td>
+                      </tr>
+                    </tbody>
+                  </Table>
           </div>
         </div>
       </div>
+    </div>
+
+
     </>
   );
 };

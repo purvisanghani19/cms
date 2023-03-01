@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import "../../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import { SiShopware } from "react-icons/si";
-// import { user } from '../../../Routes/route';
 import { NavItem } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaBell } from "react-icons/fa";
@@ -96,7 +95,7 @@ const WithLayout = (Sidebar) => {
                       style={{ paddingLeft: "0px" }}
                     >
                       {faculty.map((link) =>
-                        (link.name !== "view notice" && link.name !== "faculty" && link.name !== "add leave") ? (<NavItem
+                        (link.name !== "view notice" && link.name !== "faculty" && link.name !== "add leave" && link.name !== "add material") ? (<NavItem
                           className="nav-item"
                           style={{ textAlign: "left" }}
                         >

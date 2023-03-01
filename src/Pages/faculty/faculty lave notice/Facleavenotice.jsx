@@ -18,7 +18,7 @@ const Facleavenotice = () => {
                     style={{
                       padding: "3px 25px",
                       borderRadius: "5px",
-                      backgroundColor: "#005d91",
+                      backgroundColor: "#17a2b8",
                       border: "none",
                       color: "#fff",
                       marginBottom: "20px",
@@ -31,8 +31,8 @@ const Facleavenotice = () => {
               </div>
               <Card style={{ paddingRight: "0px", paddingLeft: "0px","textAlign":"start" }}>
                 <Card.Header
-                  style={{ backgroundColor: "#005d91", color: "#fff" }}
-                >
+                  style={{ backgroundColor: "#263159", color: "#fff" }}
+                >   
                   Special title treatment
                 </Card.Header>
                 <Card.Body>
@@ -48,7 +48,7 @@ const Facleavenotice = () => {
                         padding: "5px",
                         width: "80px",
                         borderRadius: "5px",
-                        backgroundColor: "#005d91",
+                        backgroundColor: "#17a2b8",
                         border: "none",
                         color: "#fff",
                       }}

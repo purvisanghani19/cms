@@ -107,7 +107,7 @@ const Addleave = () => {
                           <div className="col-12 ">
                             <div className="student-submit">
                               <button
-                              style={{backgroundColor:"#263159 !important"}}
+                              style={{backgroundColor:"#17a2b8"}}
                                 type="submit"
                                 className="btn-leave"
                               >
