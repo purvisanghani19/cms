@@ -17,7 +17,7 @@ const Facleavenotice = () => {
                   <div class="col">
                     <h3 class="page-title" style={{marginLeft :"17px"}}>Leave notice</h3>
                   </div>
-                  <div class="col-auto text-right float-right ml-auto" style={{ textAlign: "start" ,marginRight :"32px" }}>
+                  <div class="col-auto text-right float-right ml-auto " style={{ textAlign: "start" ,marginRight :"32px" }}>
                     <a href="/facleavenotice/addleave">
                       <button
                         style={{
@@ -70,12 +70,6 @@ const Facleavenotice = () => {
                   </a>
                 </Card.Body>
               </Card>
-
-
-
-
-
-
                   </div>
                 </div>
               </div>

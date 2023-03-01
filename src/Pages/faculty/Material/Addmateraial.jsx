@@ -19,12 +19,12 @@ const Addmateraial = () => {
                         <div className="row">
                           <div className="col-12">
                             <h5 className="form-title">
-                              <span>Material Details</span>
+                              <span className='span-addmaterial'>Material Details</span>
                             </h5>
                           </div>
                           <div className="col-12">
                             <div className="form-group local-forms">
-                              <label>
+                              <label className='lbladdmaterial'>
                                 Name <span className="login-danger">*</span>
                               </label>
                               <input
@@ -37,7 +37,7 @@ const Addmateraial = () => {
                           </div>
                           <div className="col-12 col-sm-4">
                             <div className="form-group local-forms">
-                              <label>
+                              <label className='lbladdmaterial'>
                                 Course <span className="login-danger">*</span>
                               </label>
                               <select
@@ -52,7 +52,7 @@ const Addmateraial = () => {
                           </div>
                           <div className="col-12 col-sm-4">
                             <div className="form-group local-forms">
-                              <label>
+                              <label className='lbladdmaterial'>
                                 Semester <span className="login-danger">*</span>
                               </label>
                               <select
@@ -70,7 +70,7 @@ const Addmateraial = () => {
                           </div>
                           <div className="col-12 col-sm-4">
                             <div className="form-group local-forms">
-                              <label>
+                              <label className='lbladdmaterial'>
                                 Division <span className="login-danger">*</span>
                               </label>
                               <select
@@ -88,7 +88,7 @@ const Addmateraial = () => {
                           </div>
                           <div className="col-12 col-sm-4">
                             <div className="form-group local-forms">
-                              <label>
+                              <label className='lbladdmaterial'>
                                 Date {" "}
                                 <span className="login-danger">*</span>
                               </label>
@@ -102,7 +102,7 @@ const Addmateraial = () => {
                           </div>
                           <div className="col-12 col-sm-4">
                             <div className="form-group local-forms">
-                              <label>
+                              <label className='lbladdmaterial'>
                                 Submission Date {" "}
                                 <span className="login-danger">*</span>
                               </label>
@@ -115,7 +115,7 @@ const Addmateraial = () => {
                             </div>
                           </div>
                           <div class="col-12 col-sm-4">
-                            <label>
+                            <label className='lbladdmaterial'>
                                 Type of file <span className="login-danger">*</span>
                               </label>
                               <select
@@ -127,7 +127,7 @@ const Addmateraial = () => {
                                 <option>Material</option>
                               </select>
                           </div>
-                            <input type="file" style={{ marginLeft: "20px" }} />
+                            <input type="file"/>
                           <div className="col-12 col-sm-4">
                             <div className="form-group local-forms">
                              

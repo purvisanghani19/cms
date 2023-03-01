@@ -47,7 +47,7 @@ const Stuleaveform = () => {
               <h3 >Add Notice</h3>
               <div className="row">
                 <div className="col-sm-12">
-                  <form>
+                  <form className="stu-leaveform">
                     <div className="row">
                       <div className="col-12 col-sm-6">
                         <div className="form-group local-forms">

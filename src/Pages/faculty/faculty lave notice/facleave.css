@@ -27,3 +27,15 @@
 .btn-leave{
     background-color: #3c8dbc;
 }
+
+.add-facleave{
+    text-align:start;
+    margin-bottom: 20px;
+    font-size: 30px;
+    color: black;
+    
+}
+.addfacleave{
+    color:black;
+    font-size: 15px;
+}

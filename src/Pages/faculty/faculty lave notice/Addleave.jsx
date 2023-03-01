@@ -1,6 +1,6 @@
 import React from 'react';
 import WithLayout from '../../../components/common/comfaculty/Sidebar/SideBar';
-
+import './facleave.css';
 
 
 const Addleave = () => {
@@ -10,14 +10,14 @@ const Addleave = () => {
         <div id="content">
           <div className="container-fluid">
             <div className="row">
-              <h3>Add Notice</h3>
+              <h3 className='add-facleave' style={{textAlign:"start" , marginBottom :"20px" , fontSize:"30px" ,color:"black"}}>Add Leave Notice</h3>
               <div className="row addleave">
                 <div className="col-sm-12">
                       <form>
                         <div className="row">
                           <div className="col-12 col-sm-6">
                             <div className="form-group local-forms">
-                              <label>
+                              <label className='addfacleave'>
                                 Date <span className="login-danger">*</span>
                               </label>
                               <input style={{border:"1px solid black"}}
@@ -31,7 +31,7 @@ const Addleave = () => {
                           </div>
                           <div className="col-12 col-sm-6">
                             <div className="form-group local-forms">
-                              <label>
+                              <label className='addfacleave'>
                                 Name <span className="login-danger">*</span>
                               </label>
                               <input style={{border:"1px solid black"}}
@@ -45,7 +45,7 @@ const Addleave = () => {
                           </div>
                           <div className="col-12 col-sm-6">
                             <div className="form-group local-forms">
-                              <label>
+                              <label className='addfacleave'>
                                 Email <span className="login-danger">*</span>
                               </label>
                               <input style={{border:"1px solid black"}}
@@ -59,7 +59,7 @@ const Addleave = () => {
                           </div>
                           <div className="col-12 col-sm-6">
                             <div className="form-group local-forms">
-                              <label for="course">Course</label>
+                              <label  className='addfacleave' for="course">Course</label>
                               <select style={{border:"1px solid black"}}
                                 // value={course}
                                 // onChange={(e) => setCourse(e.target.value)}
@@ -76,7 +76,7 @@ const Addleave = () => {
                           </div>
                           <div className="col-12 col-sm-6">
                             <div className="form-group local-forms">
-                              <label>
+                              <label className='addfacleave'>
                                 Title <span className="login-danger">*</span>
                               </label>
                               <input style={{border:"1px solid black"}}
@@ -90,7 +90,7 @@ const Addleave = () => {
                           </div>
                           <div className="col-12 ">
                             <div className="form-group local-forms">
-                              <label>
+                              <label className='addfacleave'>
                                 Message <span className="login-danger">*</span>
                               </label>
                               <textarea style={{border:"1px solid black"}}
