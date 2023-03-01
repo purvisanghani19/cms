@@ -18,7 +18,7 @@ const Studentviewnotice = () => {
                     style={{
                       padding: "3px 25px",
                       borderRadius: "5px",
-                      backgroundColor: "#005d91",
+                      backgroundColor: "rgb(23, 162, 184)",
                       border: "none",
                       color: "#fff",
                       marginBottom: "20px",
@@ -38,12 +38,12 @@ const Studentviewnotice = () => {
               >
                 <Card.Header
                   style={{
-                    backgroundColor: "#005d91",
+                    backgroundColor: "#263159",
                     color: "#fff",
                     paddingLeft: "450px",
                   }}
                 >
-                  Special title treatment
+               Notice title
                 </Card.Header>
                 <Card.Body>
                   <Card.Title style={{ float: "right" , fontWeight :" bold"}}>
@@ -82,7 +82,7 @@ const Studentviewnotice = () => {
                         padding: "5px",
                         width: "80px",
                         borderRadius: "5px",
-                        backgroundColor: "#005d91",
+                        backgroundColor: "rgb(23, 162, 184)",
                         border: "none",
                         color: "#fff",
                       }}

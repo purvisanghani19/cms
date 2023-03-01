@@ -25,12 +25,15 @@ import Facleavenotice from "../Pages/faculty/faculty lave notice/Facleavenotice"
 import Feedback from "../Pages/Student/Feedback/Feedback";
 import View from "../Pages/faculty/faculty lave notice/View";
 import Addleave from "../Pages/faculty/faculty lave notice/Addleave";
+// import Material from "../Pages/Student/syllabus/Material";
 import Leavestud from "../Pages/Student/lev notice/Leavestud";
 import Stuleavnotiview from "../Pages/faculty/student leavenotice view/Stuleavnotiview";
 import Studentviewnotice from "../Pages/Student/lev notice/Studentviewnotice";
-import Material from "../Pages/faculty/Material/Material";
-import Stumaterial from "../Pages/Student/syllabus/Stumaterial";
+import Studfeedform from "../Pages/Student/Feedback/Studfeedform";
 import Addmateraial from "../Pages/faculty/Material/Addmateraial";
+import Material from "../Pages/faculty/Material/Material";
+import Studmaterial from "../Pages/Student/Student material/Studmaterial";
+
 
 
 
@@ -174,7 +177,7 @@ export const Student = [
         path: "/stumaterial",
         name: "Material",
         icon: <GiNotebook />,
-        element: <Stumaterial />
+        element: <Studmaterial />
     },
     {
         path: "/feedback",
@@ -182,6 +185,16 @@ export const Student = [
         icon: <VscFeedback />,
         element: <Feedback />
     },
+    {
+        path: "/studfeedform",
+        name: "Studfeedform",
+        icon: <VscFeedback />,
+        element: <Studfeedform />
+    },
+
+
+
+
 ];
 
 

@@ -7,17 +7,17 @@ import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
 const Faculty = () => {
   const [faculty,setFaculty]=useState([]);
     useEffect(() => {
-        fetch("http://localhost:4000/api/use/admin/facultyProfile/get").then((result) => {
+        fetch("http://127.0.0.1:4000/api/use/admin/facultyProfile/getallfacultylist").then((result) => {
             result.json().then((resp) => {
                 console.log("result", resp)
                 setFaculty(resp);
             })
         })
-    }, [])
-    console.log("result");
+     }, []);
+    console.log(faculty);
   return (
     <>
-    {faculty.map((item)=>
+   
       
       <div
         className="container-xl px-4 mt-4"
@@ -30,7 +30,7 @@ const Faculty = () => {
                 className="card-header"
                 style={{ backgroundColor: " #263159", color: "white" }}
               >Profile Picture
-                {item.ProfileImage}
+                {/* {item.ProfileImage} */}
               </div>
               <div className="card-body text-center">
                 <img
@@ -52,82 +52,82 @@ const Faculty = () => {
               <div className="card-body">
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Faculty FName :</label>
-                  <p> {item.fName}</p>
+                  {/* <p> {item.fName}</p> */}
                 </div>
 
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Faculty Lname :</label>
-                  <p> {item.lName}</p>
+                  {/* <p> {item.lName}</p> */}
                 </div>
 
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Gender :</label>
-                  <p>{item.gender}</p>
+                  {/* <p>{item.gender}</p> */}
                 </div>
 
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Date Of Birth : </label>
-                  <p> {item.dateOfBirth}</p>
+                  {/* <p> {item.dateOfBirth}</p> */}
                 </div>
 
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Contact No :</label>
-                  <p> {item.contactNo}</p>
+                  {/* <p> {item.contactNo}</p> */}
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Date Of Joining :</label>
-                  <p> {item.dateOfJoining}</p>
+                  {/* <p> {item.dateOfJoining}</p> */}
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Qualification :</label>
-                  <p> {item.qualification}</p>
+                  {/* <p> {item.qualification}</p> */}
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Experiance :</label>
-                  <p> {item.experiance}</p>
+                  {/* <p> {item.experiance}</p> */}
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Course :</label>
-                  <p> {item.course}</p>
+                  {/* <p> {item.course}</p> */}
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Username :</label>
-                  <p> {item.userName}</p>
+                  {/* <p> {item.userName}</p> */}
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Email :</label>
-                  <p> {item.email}</p>
+                  {/* <p> {item.email}</p> */}
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Password :</label>
-                  <p> {item.password}</p>
+                  {/* <p> {item.password}</p> */}
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Repeat Password :</label>
-                  <p> {item.rePassword}</p>
+                  {/* <p> {item.rePassword}</p> */}
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Address :</label>
-                  <p> {item.address}</p>
+                  {/* <p> {item.address}</p> */}
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">City :</label>
-                  <p> {item.city}</p>
+                  {/* <p> {item.city}</p> */}
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">State :</label>
-                  <p> {item.state}</p>
+                  {/* <p> {item.state}</p> */}
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Country :</label>
-                  <p> {item.country}</p>
+                  {/* <p> {item.country}</p> */}
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    )}
+  
 
 
     </>

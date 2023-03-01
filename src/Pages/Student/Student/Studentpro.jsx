@@ -5,21 +5,19 @@ import WithLayout from "../../../components/common/comstudent/Stusidebar";
 
 const Studentpro = () => {
   // const [student, setStudent] = useState([]);
-  // useEffect(() => {
-  //   fetch("http://localhost:4000/api/use/admin/studentProfile/getall").then(
-  //     (result) => {
-  //       result.json().then((resp) => {
-  //         console.warn("result", resp);
-  //         setStudent(resp);
-  //       });
-  //     }
-  //   );
-  // }, []);
-  // console.log("result");
+ 
+    fetch("http://localhost:4000/api/use/admin/studentProfile/getstudent").then((result) => {
+        result.json().then((resp) => {
+          console.warn("result", resp);
+ 
+          
+        });
+      }
+    );
+
   return (
     <>
-      {/* {
-        student.map((item) => (
+      
         <div
           className="container-xl px-4 mt-4"
           style={{ marginLeft: "268px", textAlign: " start" }}
@@ -31,7 +29,7 @@ const Studentpro = () => {
                   className="card-header"
                   style={{ backgroundColor: "#263159", color: "white" }}
                 >
-                  {" "}
+                  {/* {" "} */}
                   Student Profile Picture
                 </div>
                 <div className="card-body text-center">
@@ -54,75 +52,75 @@ const Studentpro = () => {
                 <div className="card-body">
                   <div className="col-md-6">
                     <label className="small mb-1"> Student FName :</label>
-                    <p> {item.fName}</p>
+                    {/* <p> {item.fName}</p> */}
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">Student FatherName :</label>
-                    <p> {item.fatherName}</p>
+                    {/* <p> {item.fatherName}</p> */}
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">Student Lname :</label>
-                    <p> {item.lName}</p>
+                    {/* <p> {item.lName}</p> */}
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">email : </label>
-                    <p> {item.email}</p>
+                    {/* <p> {item.email}</p> */}
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">gender :</label>
-                    <p> {item.gender}</p>
+                    {/* <p> {item.gender}</p> */}
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">dateOfBirth :</label>
-                    <p> {item.dateOfBirth}</p>
+                    {/* <p> {item.dateOfBirth}</p> */}
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">studentContactNo :</label>
-                    <p> {item.studentContactNo}</p>
+                    {/* <p> {item.studentContactNo}</p> */}
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">fatherContactNo :</label>
-                    <p> {item.fatherContactNo}</p>
+                    {/* <p> {item.fatherContactNo}</p> */}
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">address :</label>
-                    <p> {item.address}</p>
+                    {/* <p> {item.address}</p> */}
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">bloodGroup :</label>
-                    <p> {item.bloodGroup}</p>
+                    {/* <p> {item.bloodGroup}</p> */}
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">cast :</label>
-                    <p> {item.cast}</p>
+                    {/* <p> {item.cast}</p> */}
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">course :</label>
-                    <p> {item.course}</p>
+                    {/* <p> {item.course}</p> */}
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">year :</label>
-                    <p> {item.year}</p>
+                    {/* <p> {item.year}</p> */}
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">semester :</label>
-                    <p> {item.semester}</p>
+                    {/* <p> {item.semester}</p> */}
                   </div>{" "}
                   <div className="col-md-6">
                     <label className="small mb-1">class :</label>
-                    <p> {item.class}</p>
+                    {/* <p> {item.class}</p> */}
                   </div>{" "}
                   <div className="col-md-6">
                     <label className="small mb-1">SPID :</label>
-                    <p> {item.SPID}</p>
+                    {/* <p> {item.SPID}</p> */}
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      ))} */}
-      xcvbnm
+    
+     
     </>
   );
 };

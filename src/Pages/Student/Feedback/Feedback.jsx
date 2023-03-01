@@ -1,43 +1,158 @@
-import React from 'react';
-import { Table } from 'react-bootstrap';
+import React from "react";
+import { Table } from "react-bootstrap";
+import { MdDelete, MdModeEdit } from "react-icons/md";
 
-
-// import WithLayout from '../../../components/common/comstudent/Stusidebar';
+// import './feedback.css';
+import WithLayout from "../../../components/common/comstudent/Stusidebar";
 
 const Feedback = () => {
   return (
     <>
-        <Table striped bordered hover>
-      <thead>
-        <tr>
-          <th>#</th>
-          <th>First Name</th>
-          <th>Last Name</th>
-          <th>Username</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>1</td>
-          <td>Mark</td>
-          <td>Otto</td>
-          <td>@mdo</td>
-        </tr>
-        <tr>
-          <td>2</td>
-          <td>Jacob</td>
-          <td>Thornton</td>
-          <td>@fat</td>
-        </tr>
-        <tr>
-          <td>3</td>
-          <td colSpan={2}>Larry the Bird</td>
-          <td>@twitter</td>
-        </tr>
-      </tbody>
-    </Table>
-    </>
-  )
-}
+ 
 
-export default Feedback;
+ <div id="content-wrapper" className="d-flex flex-column">
+    <div id="content">
+      <div className="container-fluid">
+        <div className="row">
+          <div class="page-header">
+            <div class="row align-items-center">
+              <div class="col">
+                <h3 class="page-title" style={{textAlign:"start"}}>Feedback</h3>
+              </div>
+              <div class="col-auto text-right float-right ml-auto">
+                <a href="/studfeedform">
+                  <button
+                    style={{
+                      padding: "3px 25px",
+                      marginRight: "25px",
+                      borderRadius: "5px",
+                      backgroundColor: "#005d91",
+                      border: "none",
+                      color: "#fff",
+                    }}
+                  >
+                    Add
+                  </button>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="row" style={{marginBottom:"5px"}}>
+            <div class="col-sm-12">
+              <div className="shadow">
+                <Table striped bordered hover>
+                  <thead>
+                    <tr style={{ backgroundColor: "#263159",color:"#fff" }}>
+                      <th class="text-center">ID</th>
+                      <th class="text-center">Name</th>
+                      <th class="text-center">Course</th>
+                      <th class="text-center">Semester</th>
+                      <th class="text-center">Division</th>
+                      <th class="text-center">Title</th>
+                      <th class="text-center">Date</th>
+                      <th class="text-center">Action</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td class="text-center">20410145</td>
+                      <td class="text-center">
+                          <h2 class="table-avatar">
+                            <a
+                              href="teacher-details.html"
+                              class="avatar avatar-sm mr-2"
+                            >
+                              <img
+                                class="img-circle elevation-2 user-img"
+                              src="https://imgv3.fotor.com/images/slider-image/a-woman-in-a-suit-with-a-white-background.png"
+                                
+                              />
+                            </a>
+                            <a
+                              href="teacher-details.html"
+                              style={{
+                                textDecoration: "none",
+                                color: "#212529",
+                              }}
+                            >
+                              Aaliyah
+                            </a>
+                          </h2>
+                        </td>
+                      <td class="text-center">BCA</td>
+              
+                      <td class="text-center">1</td>
+                      <td class="text-center">5</td>
+                      <td class="text-center">For college campus</td>
+                      <td class="text-center">21-12-2002</td>
+                      <td class="text-center">
+                        <div class="actions">
+                          <MdModeEdit
+                            style={{
+                              marginRight: "5px",
+                              color: "#0094ff",
+                            }}
+                          />
+                          <MdDelete style={{ color: "#db3d3d" }} />
+                        </div>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="text-center">20410145</td>
+                      <td class="text-center">
+                          <h2 class="table-avatar">
+                            <a
+                              href="teacher-details.html"
+                              class="avatar avatar-sm mr-2"
+                            >
+                              <img
+                                class="img-circle elevation-2 user-img"
+                              src="https://imgv3.fotor.com/images/slider-image/a-woman-in-a-suit-with-a-white-background.png"
+                                
+                              />
+                            </a>
+                            <a
+                              href="teacher-details.html"
+                              style={{
+                                textDecoration: "none",
+                                color: "#212529",
+                              }}
+                            >
+                              Aaliyah
+                            </a>
+                          </h2>
+                        </td>
+                      <td class="text-center">BCA</td>
+              
+                      <td class="text-center">1</td>
+                      <td class="text-center">5</td>
+                      <td class="text-center">For college campus</td>
+                      <td class="text-center">21-12-2002</td>
+                      <td class="text-center">
+                        <div class="actions">
+                          <MdModeEdit
+                            style={{
+                              marginRight: "5px",
+                              color: "#0094ff",
+                            }}
+                          />
+                          <MdDelete style={{ color: "#db3d3d" }} />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
+                </Table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+    </>
+  );
+};
+
+export default WithLayout(Feedback);

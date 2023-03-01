@@ -189,7 +189,6 @@ const Stuleaveform = () => {
                           <textarea
                             style={{ border: "1px solid black" }}
                             type="text"
-                            placeholder="Enter your leave request message"
                             name="message"
                             value={message}
                             onChange={(e) => setMessage(e.target.value)}

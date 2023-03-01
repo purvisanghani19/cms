@@ -14,7 +14,7 @@ const Leavestud = () => {
                 style={{
                   padding: "3px 25px",
                   borderRadius: "5px",
-                  backgroundColor: "#005d91",
+                  backgroundColor: "rgb(23, 162, 184)",
                   border: "none",
                   color: "#fff",
                   marginBottom: "20px",
@@ -25,11 +25,11 @@ const Leavestud = () => {
               </button>
             </a>
           </div>
-          <Card style={{ paddingRight: "0px", paddingLeft: "0px","textAlign":"start" }}>
+          <Card style={{ paddingRight: "0px", paddingLeft: "0px",textAlign:"start" }}>
             <Card.Header
-              style={{ backgroundColor: "#005d91", color: "#fff" }}
+              style={{ backgroundColor: "#263159", color: "#fff" }}
             >
-              Special title treatment
+           Notice title
             </Card.Header>
             <Card.Body>
               <Card.Title>Date : 12/10/2022</Card.Title>
@@ -44,7 +44,7 @@ const Leavestud = () => {
                     padding: "5px",
                     width: "80px",
                     borderRadius: "5px",
-                    backgroundColor: "#005d91",
+                    backgroundColor: "#263159",
                     border: "none",
                     color: "#fff",
                   }}
@@ -60,5 +60,4 @@ const Leavestud = () => {
   </div>
   )
 }
-
 export default WithLayout(Leavestud);
