@@ -15,7 +15,6 @@ import Notification from "../Pages/Student/Notice/Studentnotice";
 import Payfee from "../Pages/Student/Fees/Payfee";
 import StuFees from "../Pages/Student/Fees/StuFees";
 import Studentlist from "../Pages/faculty/student list/Studentlist";
-import Facultyattandance from "../Pages/faculty/my attanance/Facultyattandance";
 import Facnotice from "../Pages/faculty/Notice/facnotice";
 // import Stunotice from "../Pages/Student/lev notice/Stunotice";
 import Stuleaveform from "../Pages/Student/lev notice/Stuleaveform";
@@ -53,17 +52,11 @@ export const faculty = [
     {
         path: "/facultyprofile",
         name: "faculty profile",
-        icon: <RiDashboardFill />,
         element: <Faculty />
     },
+    
     {
-        path: "/facultyattandance",
-        name: "My attandance",
-        icon: <FaUsers />,
-        element: <Facultyattandance />
-    },
-    {
-        path: "/attandance",
+        path: "/stuattandance",
         name: "student attandance",
         icon: <BsCalendarCheckFill />,
         element: <Attandance />

@@ -11,7 +11,7 @@ const Addmateraial = () => {
          <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
           <div className="container-fluid">
-              <div className="row">
+              <div className="row add-material">
                 <div className="col-md-12">
                   <div className="card">
                     <div className="card-body">
@@ -22,7 +22,6 @@ const Addmateraial = () => {
                               <span>Material Details</span>
                             </h5>
                           </div>
-                       
                           <div className="col-12">
                             <div className="form-group local-forms">
                               <label>
@@ -31,15 +30,11 @@ const Addmateraial = () => {
                               <input
                                 type="text"
                                 name="name"
-                                className="form-control"
+                                className="form-control name-input"
                                 placeholder="Enter name"
                               />
                             </div>
                           </div>
-
-
-
-
                           <div className="col-12 col-sm-4">
                             <div className="form-group local-forms">
                               <label>
@@ -91,23 +86,6 @@ const Addmateraial = () => {
                               </select>
                             </div>
                           </div>
-
-
-                          <div className="col-12 col-sm-4">
-                            <div className="form-group local-forms">
-                              <label>
-                                Type of file <span className="login-danger">*</span>
-                              </label>
-                              <select
-                                className="form-control select"
-                                name="course">
-                                <option>Select type</option>
-                                <option>Assignment</option>
-                                <option>Syllabus</option>
-                                <option>Material</option>
-                              </select>
-                            </div>
-                          </div>
                           <div className="col-12 col-sm-4">
                             <div className="form-group local-forms">
                               <label>
@@ -122,6 +100,40 @@ const Addmateraial = () => {
                               />
                             </div>
                           </div>
+                          <div className="col-12 col-sm-4">
+                            <div className="form-group local-forms">
+                              <label>
+                                Submission Date {" "}
+                                <span className="login-danger">*</span>
+                              </label>
+                              <input
+                                type="date"
+                                name="sdate"
+                                className="form-control"
+                                placeholder="Enter submission Date"
+                              />
+                            </div>
+                          </div>
+                          <div class="col-12 col-sm-4">
+                            <label>
+                                Type of file <span className="login-danger">*</span>
+                              </label>
+                              <select
+                                className="form-control select"
+                                name="course">
+                                <option>Select type</option>
+                                <option>Assignment</option>
+                                <option>Syllabus</option>
+                                <option>Material</option>
+                              </select>
+                          </div>
+                            <input type="file" style={{ marginLeft: "20px" }} />
+                          <div className="col-12 col-sm-4">
+                            <div className="form-group local-forms">
+                             
+                            </div>
+                          </div>
+                         
                           <div className="col-12">
                             <div className="student-submit">
                               <button
@@ -141,7 +153,6 @@ const Addmateraial = () => {
           </div>
         </div>
       </div>
-   
     </>
   )
 }

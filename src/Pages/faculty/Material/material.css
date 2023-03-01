@@ -98,3 +98,9 @@
   .material-actions{
     font-size: 25px;
   }
+  .add-material{
+    text-align: start;
+  }
+  .name-input{
+    border: 1.5px solid rgb(198, 198, 198) !important;
+  }

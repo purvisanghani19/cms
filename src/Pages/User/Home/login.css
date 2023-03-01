@@ -46,30 +46,8 @@ section{
     margin-bottom: 24px;
 
 }
-input,button{
-    border: none;
-    outline: none;
-    border-radius: 30px;
-    font-size: 1.1em;
-}
-input{
-    width: 100%;
-    background-color: aliceblue;
-    color:#303433;
-    letter-spacing: .5px;
-    padding: 14px 64px;
 
-}
-input ~ i{
-    position: absolute;
-    left: 32px;
-    top:50%;
-    font-size: 20px;
-    transform: translateY(-50%);
-    color:rgb(64, 63, 63);
-    transition: color .4s;
 
-}
 .login_form_btn {
     width: 50%;
     border: none;

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Table } from 'react-bootstrap';
 import { MdEdit, MdDelete } from "react-icons/md"
-
 import WithLayout from '../../../components/common/comfaculty/Sidebar/SideBar';
 import "./material.css";
 
@@ -46,6 +45,10 @@ const Material = () => {
                           <th class="text-center">ID</th>
                           <th class="text-center">Name</th>
                           <th class="text-center">Date</th>
+                          <th class="text-center">submission date</th>
+                          <th class="text-center">course</th>
+                          <th class="text-center">semester</th>
+                          <th class="text-center">div</th>
                           <th class="text-center">Action</th>
                         </tr>
                       </thead>
@@ -75,6 +78,10 @@ const Material = () => {
                             </h2>
                           </td>
                           <td class="text-center">12/10/1979</td>
+                          <td class="text-center">12/10/1979</td>
+                          <td class="text-center">BCA</td>
+                          <td class="text-center">sem 2</td>
+                          <td class="text-center">div 5</td>
                           <div class="material-actions">
                             <MdEdit
                               style={{
@@ -86,7 +93,7 @@ const Material = () => {
                           </div>
                         </tr>
                         <tr>
-                          <td class="text-center">2</td>
+                          <td class="text-center">1</td>
                           <td class="text-center">
                             <h2 class="table-avatar">
                               <a
@@ -105,11 +112,15 @@ const Material = () => {
                                   color: "#212529",
                                 }}
                               >
-                                Jhon
+                                Aaliyah
                               </a>
                             </h2>
                           </td>
                           <td class="text-center">12/10/1979</td>
+                          <td class="text-center">12/10/1979</td>
+                          <td class="text-center">BCA</td>
+                          <td class="text-center">sem 2</td>
+                          <td class="text-center">div 5</td>
                           <div class="material-actions">
                             <MdEdit
                               style={{
