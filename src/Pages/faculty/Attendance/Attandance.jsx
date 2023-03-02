@@ -7,9 +7,6 @@ import './stufac.css';
 const Attandance = () => {
   const [btnColor, setBtnColor] = useState("green");
 
-
-
-
   return (
     <>
       <div
@@ -88,14 +85,14 @@ const Attandance = () => {
 
 
                 <div className="col-md-3">
-                    <label className="small mb-1">Date :</label>
-                    <input
-                                className="form-control datetimepicker"
-                                type="date"
-                                name="date"
-                                placeholder="DD-MM-YYYY"
-                              />
-                  </div>  
+                  <label className="small mb-1">Date :</label>
+                  <input
+                    className="form-control datetimepicker"
+                    type="date"
+                    name="date"
+                    placeholder="DD-MM-YYYY"
+                  />
+                </div>
 
               </div>
             </div>

@@ -32,6 +32,7 @@ import Studfeedform from "../Pages/Student/Feedback/Studfeedform";
 import Addmateraial from "../Pages/faculty/Material/Addmateraial";
 import Material from "../Pages/faculty/Material/Material";
 import Studmaterial from "../Pages/Student/Student material/Studmaterial";
+import Stulistprofile from "../Pages/faculty/student list/Stulistprofile";
 
 
 
@@ -103,11 +104,17 @@ export const faculty = [
         element: <Studentlist />
     },
     {
+        path: "/studentlist/stulistprofile",
+        name: "stulist profile",
+        element: <Stulistprofile />
+    },
+    {
         path: "/stuleaveview",
-        name: "student notice",
+        name: "student Leave notice",
         icon: <FaUsers />,
         element: <Stuleavnotiview />
     },
+   
 
 
 ];
