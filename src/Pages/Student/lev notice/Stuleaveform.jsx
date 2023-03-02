@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
+// import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import WithLayout from "../../../components/common/comstudent/Stusidebar";
 import "./stuleavenotice.css";
 
@@ -44,8 +45,13 @@ const Stuleaveform = () => {
         <div id="content">
           <div className="container-fluid">
             <div className="row">
-              <h3 >Add Notice</h3>
-              <div className="row">
+              <div className="d-flex">
+                <a href="/Leavestud">
+                  <BsFillArrowLeftCircleFill className="leaveaero" />
+                </a>
+                <h3 className="leave-text">Add Leave</h3>
+              </div>
+              <div className="row" style={{ textAlign: "start" }}>
                 <div className="col-sm-12">
                   <form className="stu-leaveform">
                     <div className="row">

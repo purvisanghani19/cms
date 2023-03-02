@@ -16,7 +16,7 @@ const Attandance = () => {
           <div className="col-xl-14">
             <div className="card mb-3">
               <div
-                className="card-header stunotice"
+                className="card-header "
                 style={{
                   backgroundColor: "#263159",
                   color: "#f8f9fa",

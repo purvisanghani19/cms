@@ -2,6 +2,9 @@
     box-sizing: border-box !important;
 
 }
+/* .studentchart{
+    column-gap: 5px;
+} */
 #content-wrapper{
     /* background-color: #f8f9fc; */
 
@@ -105,7 +108,7 @@
 }
 .col-xl-3,.col-md-6{
     position: relative;
-    width: 100%;
+    /* width: 100%; */
     padding-right: 0.75rem;
     padding-left: 0.75rem;
 }
@@ -161,9 +164,9 @@
 }
 .col-xl-6{
     flex: 0 0 66.66667%;
-    max-width: 66.66667%;
+    /* max-width: 66.66667%; */
     position: relative;
-    width: 100%;
+    width: 50%;
     padding-right: 0.75rem;
     padding-left: 0.75rem;
 }

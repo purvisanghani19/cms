@@ -1,6 +1,6 @@
 import React from "react";
 import { Table } from "react-bootstrap";
-import { MdDelete, MdModeEdit } from "react-icons/md";
+import { MdDelete } from "react-icons/md";
 
 // import './feedback.css';
 import WithLayout from "../../../components/common/comstudent/Stusidebar";
@@ -88,12 +88,6 @@ const Feedback = () => {
                       <td class="text-center">21-12-2002</td>
                       <td class="text-center">
                         <div class="actions">
-                          <MdModeEdit
-                            style={{
-                              marginRight: "5px",
-                              color: "#0094ff",
-                            }}
-                          />
                           <MdDelete style={{ color: "#db3d3d" }} />
                         </div>
                       </td>
@@ -131,12 +125,6 @@ const Feedback = () => {
                       <td class="text-center">21-12-2002</td>
                       <td class="text-center">
                         <div class="actions">
-                          <MdModeEdit
-                            style={{
-                              marginRight: "5px",
-                              color: "#0094ff",
-                            }}
-                          />
                           <MdDelete style={{ color: "#db3d3d" }} />
                         </div>
                       </td>

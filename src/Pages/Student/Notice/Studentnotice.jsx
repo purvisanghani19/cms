@@ -52,7 +52,7 @@ const Notifications = () => {
           <h5 class="card-title">
             <b>Notice title</b>
           </h5>
-          <a onClick={() => setModalShow(true)} class="btn btn-notice " style={{backgroundColor:"#17a2b8"}}>
+          <a onClick={() => setModalShow(true)} class="btn btn-notice " style={{backgroundColor:"#17a2b8",marginLeft:"504px",marginTop:"0px"}}>
             view Notice
           </a>
         </div>

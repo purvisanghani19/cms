@@ -56,9 +56,12 @@ button {
 .leavenotice-form{
     margin-top: 20px;
 }
-/* .input{
-    border: 1px solid black;
-} */
-
+.leaveaero{
+    color:black;
+    font-size: 30px;
+}
+.leave-text{
+    margin-left: 40%;
+}
 
 

@@ -1,21 +1,17 @@
-import React from "react";
-import { useState } from "react";
-import "./login.css";
 import axios from "axios";
+import React, { useState } from "react";
+import { useNavigate } from "react-router";
+import "./login.css";
 
 const Login = () => {
-  // const [error, setError] = useState(null);
-  // const [loading, setLoading] = useState(false);
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  // const navigate = useNavigate();
+  const navigate = useNavigate();
   console.log({ email, password });
 
   const handlelogin = (e) => {
     e.preventDefault();
-    // setError(null);
-    // setLoading(true);
-    // navigate("/home");
+    navigate("/studashboard");
     axios
       .post("http://127.0.0.1:4000/api/use/login/login", {
         userName: email,
@@ -26,13 +22,12 @@ const Login = () => {
         console.log("result", result);
       })
       .catch((error) => {
-        // setLoading(false);
         console.log("error", error);
       }, []);
   };
   return (
     <>
-      <section className="login_side">
+      {/* <section className="login_side">
         <img
           src="https://thumbs.dreamstime.com/b/online-registration-sign-up-concept-young-man-signing-login-to-account-smartphone-app-user-interface-secure-password-194944772.jpg"
           alt=""
@@ -72,8 +67,35 @@ const Login = () => {
             </form>
           </div>
         </div>
-      </section>
-     
+      </section> */}
+      <div className="mainlogin">
+        <p className="sign" align="center">
+          Welcome to login page
+        </p>
+        <form className="form1">
+          <input
+            className="username "
+            type="text"
+            align="center"
+            placeholder="Username"
+            value={email}
+            id="username"
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <input
+            className="pass"
+            type="password"
+            align="center"
+            placeholder="Password"
+            value={password}
+            id="email"
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <a className="submitlogin" align="center" onClick={handlelogin}>
+            Login
+          </a>
+        </form>
+      </div>
     </>
   );
 };

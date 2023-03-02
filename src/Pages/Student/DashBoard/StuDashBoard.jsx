@@ -207,7 +207,7 @@ function StuDashBoard() {
               </div>
               <div className="col-xl-3 col-md-6 mb-4">
                 <div className="card border-left-success shadow h-100 py-2">
-                  <a href="/stuleavenotice" style={{ textDecoration: "none" }}>
+                  <a href="/Leavestud" style={{ textDecoration: "none" }}>
                     <div className="card-body">
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
@@ -251,7 +251,7 @@ function StuDashBoard() {
 
               <div className="col-xl-3 col-md-6 mb-4">
                 <div className="card border-left-warning shadow h-100 py-2">
-                  <a href="/Syllabus" style={{ textDecoration: "none" }}>
+                  <a href="/stumaterial" style={{ textDecoration: "none" }}>
                     <div className="card-body">
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
@@ -271,13 +271,13 @@ function StuDashBoard() {
                 </div>
               </div>
             </div>
-            <div className="row">
+            <div className="row d-flex studentchart">
               <div
                 className="col-xl-6 col-md-6"
                 style={{
-                  width: "500px",
+                  width: "550px",
                   height: "450px",
-                  paddingLeft: "20px",
+                  // paddingLeft: "20px",
                   backgroundColor: "white",
                   border: "1px solid #e3e6f0",
                   backgroundClip: "border-box",
@@ -302,12 +302,11 @@ function StuDashBoard() {
                 </div>
               </div>
               <div
-                className="col-xl-6 col-lg-6"
+                className="col-xl-6 col-md-6"
                 style={{
                   justifyContent:"space-between",
-                  width: "500px",
+                  width: "550px",
                   height: "450px",
-                  // paddingLeft: "20px",
                   backgroundColor: "#fff",
                   border: "1px solid #e3e6f0",
                   backgroundClip: "border-box",
