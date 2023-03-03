@@ -12,7 +12,8 @@ const Login = () => {
 
   useEffect(() => {
     if (localStorage.getItem("student")) {
-      navigate("/studashboard");
+    }else{
+      console.log("errorrrrrrrrrrrrr")
     }
   }, []);
 
@@ -21,7 +22,7 @@ const Login = () => {
     let item = { userName, password };
 
     let result = await fetch(
-      "http://127.0.0.1:4000/api/use/student/studentLogin/login",
+      "http://127.0.0.1:4000/api/use/user/login",
       {
         method: "POST",
         headers: {
