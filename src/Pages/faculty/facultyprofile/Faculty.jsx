@@ -17,8 +17,8 @@ const Faculty = () => {
     console.log(faculty);
   return (
     <>
-   
-      
+    {faculty.map((item)=>(
+
       <div
         className="container-xl px-4 mt-4"
         style={{ marginLeft: "268px", textAlign: "start" }}
@@ -127,9 +127,9 @@ const Faculty = () => {
           </div>
         </div>
       </div>
-  
-
-
+    )
+      
+    )}
     </>
   );
 };
