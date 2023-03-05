@@ -21,7 +21,7 @@ const Stuleaveform = () => {
   const handlenotice = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/api/use/student/studentLeaveNotice/create", {
+      .post("http://localhost:4000/api/use/staff-login/create", {
         date: date,
         Name: name,
         course: course,

@@ -41,7 +41,7 @@ const Material = () => {
                   <div className="shadow">
                     <Table striped bordered hover>
                       <thead>
-                        <tr style={{ backgroundColor: "#005d91", color: "black" }}>
+                        <tr style={{ backgroundColor: "#263159", color: "white" }}>
                           <th class="text-center">ID</th>
                           <th class="text-center">Name</th>
                           <th class="text-center">Date</th>

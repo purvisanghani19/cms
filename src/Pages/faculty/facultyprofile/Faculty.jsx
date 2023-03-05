@@ -2,22 +2,24 @@ import React, { useEffect, useState } from "react";
 import "./faculty.css";
 import "../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
+import axios from "axios";
 // import { NavLink } from "react-router-dom";
 
 const Faculty = () => {
   const [faculty,setFaculty]=useState([]);
-    useEffect(() => {
-        fetch("http://127.0.0.1:4000/api/use/admin/facultyProfile/getallfacultylist").then((result) => {
-            result.json().then((resp) => {
-                console.log("result", resp)
-                setFaculty(resp);
-            })
-        })
-     }, []);
-    console.log(faculty);
+
+    // const profile =()=>{
+    //   axios.get("http://127.0.0.1:4000/api/use/get-staff-profile/getallstafflist").then((result) => {
+    //     console.log(result.data);
+    //  }).catch((err)=>{
+    //    console.log(err);
+    //  })
+    // }
+        
+     
+    // console.log(faculty);
   return (
     <>
-    {faculty.map((item)=>(
 
       <div
         className="container-xl px-4 mt-4"
@@ -91,6 +93,18 @@ const Faculty = () => {
                   {/* <p> {item.course}</p> */}
                 </div>
                 <div className="col-md-6 d-flex">
+                  <label className="small mb-1">Semester :</label>
+                  {/* <p> {item.semester}</p> */}
+                </div>
+                <div className="col-md-6 d-flex">
+                  <label className="small mb-1">Division :</label>
+                  {/* <p> {item.course}</p> */}
+                </div>
+                <div className="col-md-6 d-flex">
+                  <label className="small mb-1">Subject :</label>
+                  {/* <p> {item.course}</p> */}
+                </div>
+                <div className="col-md-6 d-flex">
                   <label className="small mb-1">Username :</label>
                   {/* <p> {item.userName}</p> */}
                 </div>
@@ -101,10 +115,6 @@ const Faculty = () => {
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Password :</label>
                   {/* <p> {item.password}</p> */}
-                </div>
-                <div className="col-md-6 d-flex">
-                  <label className="small mb-1">Repeat Password :</label>
-                  {/* <p> {item.rePassword}</p> */}
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Address :</label>
@@ -127,9 +137,11 @@ const Faculty = () => {
           </div>
         </div>
       </div>
-    )
+
+
+    
       
-    )}
+ 
     </>
   );
 };

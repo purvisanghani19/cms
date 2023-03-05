@@ -6,7 +6,7 @@ import { Link, NavLink } from "react-router-dom";
 import { FaBars, FaBell } from "react-icons/fa";
 import { faculty } from "../../../../Routes/route";
 import "./sidebar.css";
-
+import axios from "axios";
 
 
 
@@ -17,7 +17,14 @@ const WithLayout = (Sidebar) => {
 
     const activeLink = "nav-link active";
     const normalLink = "nav-link";
-    
+    const profile = async()=>{
+  debugger
+     await axios.get("http://127.0.0.1:4000/api/use/get-staff-profile/getallstafflist").then((result) => {
+        console.log(result.data);
+     }).catch((err)=>{
+       console.log(err);
+     })
+    }
     return (
       <>
         <aside
@@ -196,6 +203,7 @@ const WithLayout = (Sidebar) => {
                         <a
                           className="dropdown-item"
                           href="/facultyprofile"
+                          onClick={profile}
                         >
                           Profile
                         </a>

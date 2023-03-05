@@ -7,39 +7,36 @@ import "./login.css";
 const Login = () => {
   const [userName, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("");
+
   const navigate = useNavigate();
   console.log({ userName, password });
 
   useEffect(() => {
-    if (localStorage.getItem("student")) {
-    }else{
-      console.log("errorrrrrrrrrrrrr")
+    if( localStorage.getItem("student")){
+          navigate("/studashboard")
     }
+  
   }, []);
 
   const handlelogin = async (e) => {
     console.warn(userName, password);
     let item = { userName, password };
 
-    let result = await fetch(
-      "http://127.0.0.1:4000/api/use/user/login",
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          "Accept": "application/json",
-        },
-        body: JSON.stringify(item),
-      }
-    );
+    let result = await fetch("http://127.0.0.1:4000/api/use/user/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+      body: JSON.stringify(item),
+    });
     result = await result.json();
-    localStorage.setItem("student", JSON.stringify(result.token));
+    localStorage.setItem("student", JSON.stringify(result));
     navigate("/studashboard");
-   
   };
   return (
     <>
-      
       <div className="mainlogin">
         <p className="sign" align="center">
           Welcome to login page
@@ -63,6 +60,21 @@ const Login = () => {
             id="email"
             onChange={(e) => setPassword(e.target.value)}
           />
+          <br />
+          {/* <label className="small mb-1">Role :</label> */}
+          <select
+            className="role-form"
+            aria-label="Default select example"
+            value={role}
+            onChange={(e) => setRole(e.target.value)}
+          >
+            <option value="" disabled selected>
+              Select your role
+            </option>
+            <option value="1">Student</option>
+            <option value="2">Faculty</option>
+            <option value="3">Admin</option>
+          </select>
           <a className="submitlogin" align="center" onClick={handlelogin}>
             Login
           </a>

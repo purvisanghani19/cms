@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
-import './stufac.css';
-
-
+import "./stufac.css";
 
 const Attandance = () => {
   const [btnColor, setBtnColor] = useState("green");
@@ -11,7 +9,8 @@ const Attandance = () => {
     <>
       <div
         className="container-xl px-4 mt-5 "
-        style={{ marginLeft: "268px", textAlign: " start" }}>
+        style={{ marginLeft: "268px", textAlign: " start" }}
+      >
         <div className="row">
           <div className="col-xl-14">
             <div className="card mb-3">
@@ -77,30 +76,51 @@ const Attandance = () => {
                     className="searchbtn"
                     style={{ margin: "18px", textAlign: "start" }}
                   >
-                    <a href="" class="btn btn-danger" style={{ width: "138px" }}>
+                    <a
+                      href=""
+                      class="btn btn-danger"
+                      style={{ width: "138px" }}
+                    >
                       Search
                     </a>
                   </div>
                 </div>
 
-
-                <div className="col-md-3">
-                  <label className="small mb-1">Date :</label>
-                  <input
-                    className="form-control datetimepicker"
-                    type="date"
-                    name="date"
-                    placeholder="DD-MM-YYYY"
-                  />
+                <div className="stu-flex d-flex">
+                  <div className="col-md-3">
+                    <label className="small mb-1">Date :</label>
+                    <input
+                      className="form-control datetimepicker"
+                      type="date"
+                      name="date"
+                      placeholder="DD-MM-YYYY"
+                    />
+                  </div>
+                  <div className="col-md-3">
+                    <label className="small mb-1">Subject :</label>
+                    <select
+                      className="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option value="" disabled selected>
+                        Select your subject
+                      </option>
+                      <option value="1">.net</option>
+                      <option value="2">JAVA</option>
+                      <option value="3">PHP</option>
+                      <option value="1">WEB</option>
+                      <option value="2">ANDROID</option>
+                      <option value="3">CG</option>
+                    </select>
+                  </div>
                 </div>
-
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      <div className="attandancebox" >
+      <div className="attandancebox">
         <div className="card" style={{ width: "10rem" }}>
           <button
             className="card-body info"
@@ -118,15 +138,6 @@ const Attandance = () => {
           </button>
         </div>
       </div>
-
-
-
-
-
-
-
-
-
     </>
   );
 };

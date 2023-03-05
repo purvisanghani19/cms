@@ -51,8 +51,12 @@ const Studentpro = () => {
                 </div>
                 <div className="card-body ">
                   <div className="col-md-6 ">
-                    <label className="small mb-1"> Student Name :</label>
-                    <p> {item.name}</p>
+                    <label className="small mb-1"> Student FName :</label>
+                    <p> {item.Fname}</p>
+                  </div>
+                  <div className="col-md-6 ">
+                    <label className="small mb-1"> Student LName :</label>
+                    <p> {item.Lname}</p>
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">Student gender :</label>
@@ -67,8 +71,32 @@ const Studentpro = () => {
                     <p> {item.contactNo}</p>
                   </div>
                   <div className="col-md-6">
+                    <label className="small mb-1">Username : </label>
+                    <p> {item.username}</p>
+                  </div>
+                  <div className="col-md-6">
                     <label className="small mb-1">email :</label>
                     <p> {item.email}</p>
+                  </div>
+                  <div className="col-md-6">
+                    <label className="small mb-1">Password : </label>
+                    <p> {item.password}</p>
+                  </div>
+                  <div className="col-md-6">
+                    <label className="small mb-1">address :</label>
+                    <p> {item.address}</p>
+                  </div>
+                  <div className="col-md-6">
+                    <label className="small mb-1">city :</label>
+                    <p> {item.city}</p>
+                  </div>
+                  <div className="col-md-6">
+                    <label className="small mb-1">state :</label>
+                    <p> {item.state}</p>
+                  </div>
+                  <div className="col-md-6">
+                    <label className="small mb-1">country :</label>
+                    <p> {item.country}</p>
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">fatherName :</label>
@@ -101,22 +129,6 @@ const Studentpro = () => {
                   <div className="col-md-6">
                     <label className="small mb-1">mother Email :</label>
                     <p> {item.motherEmail}</p>
-                  </div>
-                  <div className="col-md-6">
-                    <label className="small mb-1">address :</label>
-                    <p> {item.address}</p>
-                  </div>
-                  <div className="col-md-6">
-                    <label className="small mb-1">city :</label>
-                    <p> {item.city}</p>
-                  </div>
-                  <div className="col-md-6">
-                    <label className="small mb-1">state :</label>
-                    <p> {item.state}</p>
-                  </div>
-                  <div className="col-md-6">
-                    <label className="small mb-1">country :</label>
-                    <p> {item.country}</p>
                   </div>
                   <div className="col-md-6">
                     <label className="small mb-1">course :</label>

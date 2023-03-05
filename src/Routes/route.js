@@ -1,6 +1,6 @@
 import { RiDashboardFill } from "react-icons/ri";
 import { FaEnvelopeOpenText, FaGraduationCap, FaUserAlt, FaUsers } from "react-icons/fa";
-import { BsCalendarCheckFill, BsFillBellFill } from "react-icons/bs";
+import { BsCalendarCheckFill, BsFillBellFill, BsFillCalendarFill } from "react-icons/bs";
 import {VscFeedback} from "react-icons/vsc";
 import DashBoard from "../Pages/faculty/DashBoard/DashBoard";
 import About from "../Pages/User/Home/About";
@@ -37,6 +37,7 @@ import FacFeedback from "../Pages/faculty/Feedback/FacFeedback";
 import Facfeedform from "../Pages/faculty/Feedback/Facfeedform";
 import Stufacfeedback from "../Pages/faculty/Student feedback/Stufacfeedback";
 import Viewstufeedback from "../Pages/faculty/Student feedback/Viewstufeedback";
+import { MdFeedback } from "react-icons/md";
 
 export const faculty = [
     {
@@ -106,13 +107,13 @@ export const faculty = [
     {
         path: "/stuleaveview",
         name: "student Leave notice",
-        icon: <FaUsers />,
+        icon: <BsFillCalendarFill />,
         element: <Stuleavnotiview />
     },
     {
         path: "/facfeedback",
         name: "My feedback",
-        icon: <FaUsers />,
+        icon: <MdFeedback />,
         element: <FacFeedback />
     },
     {
@@ -123,7 +124,7 @@ export const faculty = [
     {
         path: "/stufacfeedback",
         name: "student feedback",
-        icon: <FaUsers />,
+        icon: <VscFeedback />,
         element: <Stufacfeedback />
     },
     {
