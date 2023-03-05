@@ -33,6 +33,10 @@ import Material from "../Pages/faculty/Material/Material";
 import Studmaterial from "../Pages/Student/Student material/Studmaterial";
 import Stulistprofile from "../Pages/faculty/student list/Stulistprofile";
 import Viewstudmaterial from "../Pages/Student/Student material/Viewstudmaterial";
+import FacFeedback from "../Pages/faculty/Feedback/FacFeedback";
+import Facfeedform from "../Pages/faculty/Feedback/Facfeedform";
+import Stufacfeedback from "../Pages/faculty/Student feedback/Stufacfeedback";
+import Viewstufeedback from "../Pages/faculty/Student feedback/Viewstufeedback";
 
 export const faculty = [
     {
@@ -105,10 +109,34 @@ export const faculty = [
         icon: <FaUsers />,
         element: <Stuleavnotiview />
     },
-   
-
-
+    {
+        path: "/facfeedback",
+        name: "My feedback",
+        icon: <FaUsers />,
+        element: <FacFeedback />
+    },
+    {
+        path: "/addfacfeedback",
+        name: "add facfeedbackform",
+        element: <Facfeedform />
+    },
+    {
+        path: "/stufacfeedback",
+        name: "student feedback",
+        icon: <FaUsers />,
+        element: <Stufacfeedback />
+    },
+    {
+        path: "/viewstufeedback",
+        name: "view student feedback",
+        element: <Viewstufeedback />
+    },
 ];
+
+
+
+
+
 
 export const Student = [
     {

@@ -10,17 +10,17 @@ function App() {
   return(
   <div className='App'>
     <Routes>  
-      {isLogin ===  false && faculty.map((faculty)=>{
+      {isLogin ===  true && faculty.map((faculty)=>{
         return(
         <Route path={faculty.path} element={faculty.element}></Route>
         )
       })}
-      {isLogin === true && Student.map((Student)=>{
+      {isLogin === false && Student.map((Student)=>{
         return(
         <Route path={Student.path} element={Student.element}></Route>
         )
       })}
-      {isLogin === true && user.map((user)=>{
+      {isLogin === false && user.map((user)=>{
         return(
         <Route path={user.path} element={user.element}></Route>
         )

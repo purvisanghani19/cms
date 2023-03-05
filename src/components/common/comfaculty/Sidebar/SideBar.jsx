@@ -95,7 +95,7 @@ const WithLayout = (Sidebar) => {
                       style={{ paddingLeft: "0px" }}
                     >
                       {faculty.map((link) =>
-                        (link.name !== "view notice" && link.name !== "faculty profile" && link.name !== "add leave" && link.name !== "add material"  && link.name !== "stulist profile"  ) ?
+                        (link.name !== "view notice" && link.name !== "faculty profile" && link.name !== "add leave" && link.name !== "add material"  && link.name !== "stulist profile"  && link.name !== "add facfeedbackform"&& link.name !== "view student feedback") ?
                          (<NavItem
                           className="nav-item"
                           style={{ textAlign: "left" }}
