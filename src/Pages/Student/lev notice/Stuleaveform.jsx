@@ -1,17 +1,22 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
+import { useNavigate } from "react-router";
 // import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import WithLayout from "../../../components/common/comstudent/Stusidebar";
 import "./stuleavenotice.css";
 
 const Stuleaveform = () => {
+
+
+  const navigation=useNavigate()
+
   const [date, setDate] = useState("");
   const [name, setName] = useState("");
   const [course, setCourse] = useState("");
   const [semester, setSemester] = useState("");
   const [division, setDivision] = useState("");
-  const [rollNo, setRollno] = useState("");
+  const [spid, setSpid] = useState("");
   const [email, setEmail] = useState("");
   const [subject, setSubject] = useState("");
   const [message, setMessage] = useState("");
@@ -21,19 +26,21 @@ const Stuleaveform = () => {
   const handlenotice = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/api/use/staff-login/create", {
+      .post("http://localhost:5000/api/use/student/student-leave-notice", {
         date: date,
         Name: name,
         course: course,
         semester: semester,
         division: division,
-        rollNo: rollNo,
+        spid: spid,
         email: email,
         subject: subject,
         message: message,
       })
       .then((result) => {
         console.log(result);
+        alert("your leave has been submmited");
+        navigation("/Leavestud")
       })
       .catch((error) => {
         console.log(error);
@@ -150,9 +157,9 @@ const Stuleaveform = () => {
                           <input
                             style={{ border: "1px solid black" }}
                             type="text"
-                            name="roll no"
-                            value={rollNo}
-                            onChange={(e) => setRollno(e.target.value)}
+                            name="spid"
+                            value={spid}
+                            onChange={(e) => setSpid(e.target.value)}
                             className="form-control"
                           />
                         </div>

@@ -1,8 +1,31 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { Card,Button } from 'react-bootstrap';
 import WithLayout from '../../../components/common/comstudent/Stusidebar';
 
 const Leavestud = () => {
+
+  const [stuleave, setStuleave] = useState([]);
+
+
+  const leavestu = async () => {
+    // var data=JSON.parse(localStorage.getItem("info")).response;
+    // console.log("id",data.response.tokendata.userId)
+    let  studentleave  = await axios.get(`http://localhost:5000/api/use/staff/student-leave-notice`);
+
+    console.log("studentleave",studentleave);  
+    // setStuleave(studentleave);
+    // console.log("student:::::::::", res);
+
+  };
+
+  useEffect(() => {
+    leavestu();
+  }, []);
+
+
+
+
   return (
     <div id="content-wrapper" className="d-flex flex-column">
     <div id="content">
