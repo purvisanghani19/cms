@@ -1,14 +1,12 @@
 import React from "react";
 import { Table } from "react-bootstrap";
 import { MdDelete } from "react-icons/md";
-
 // import './feedback.css';
 import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
 
 const FacFeedback = () => {
   return (
     <>
- 
  <div id="content-wrapper" className="d-flex flex-column">
     <div id="content">
       <div className="container-fluid">
@@ -137,6 +135,7 @@ const FacFeedback = () => {
       </div>
     </div>
   </div>
+
 
     </>
   );

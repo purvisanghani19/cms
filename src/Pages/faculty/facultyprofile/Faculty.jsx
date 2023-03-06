@@ -3,24 +3,43 @@ import "./faculty.css";
 import "../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
 import axios from "axios";
+
 // import { NavLink } from "react-router-dom";
 
 const Faculty = () => {
-  const [faculty,setFaculty]=useState([]);
+  // const [faculty,setFaculty]=useState([]);
 
-    // const profile =()=>{
-    //   axios.get("http://127.0.0.1:4000/api/use/get-staff-profile/getallstafflist").then((result) => {
-    //     console.log(result.data);
-    //  }).catch((err)=>{
-    //    console.log(err);
-    //  })
-    // }
+  //   const profile =()=>{
+  //     axios.get("http://127.0.0.1:4000/api/use/staff/staff-profile").then((result) => {
+  //       console.log(result.data);
+  //    }).catch((err)=>{
+  //      console.log(err);
+  //    })
+  //   }
         
      
-    // console.log(faculty);
+  //   console.log(faculty);
+  const [faculty, setfaculty] = useState([]);
+
+
+  const getFaculty = async () => {
+    let  res  = await axios.get(
+      `http://localhost:5000/api/use/staff/staff-profile`
+    );
+
+    // setfaculty(res);
+    console.log("faculty:::::::::", res);
+
+  };
+
+  useEffect(() => {
+    getFaculty();
+  }, []);
+
   return (
     <>
-
+{/* {
+  faculty.map((item)=>(
       <div
         className="container-xl px-4 mt-4"
         style={{ marginLeft: "268px", textAlign: "start" }}
@@ -32,7 +51,7 @@ const Faculty = () => {
                 className="card-header"
                 style={{ backgroundColor: " #263159", color: "white" }}
               >Profile Picture
-                {/* {item.ProfileImage} */}
+                {item.ProfileImage}
               </div>
               <div className="card-body text-center">
                 <img
@@ -54,94 +73,92 @@ const Faculty = () => {
               <div className="card-body">
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Faculty FName :</label>
-                  {/* <p> {item.fName}</p> */}
+                  <p> {item.fName}</p>
                 </div>
 
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Faculty Lname :</label>
-                  {/* <p> {item.lName}</p> */}
+                  <p> {item.lName}</p>
                 </div>
 
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Gender :</label>
-                  {/* <p>{item.gender}</p> */}
+                  <p>{item.gender}</p>
                 </div>
 
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Date Of Birth : </label>
-                  {/* <p> {item.dateOfBirth}</p> */}
+                  <p> {item.dateOfBirth}</p>
                 </div>
 
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Contact No :</label>
-                  {/* <p> {item.contactNo}</p> */}
+                  <p> {item.contactNo}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Date Of Joining :</label>
-                  {/* <p> {item.dateOfJoining}</p> */}
+                  <p> {item.dateOfJoining}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Qualification :</label>
-                  {/* <p> {item.qualification}</p> */}
+                  <p> {item.qualification}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Experiance :</label>
-                  {/* <p> {item.experiance}</p> */}
+                  <p> {item.experiance}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Course :</label>
-                  {/* <p> {item.course}</p> */}
+                  <p> {item.course}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Semester :</label>
-                  {/* <p> {item.semester}</p> */}
+                  <p> {item.sem}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Division :</label>
-                  {/* <p> {item.course}</p> */}
+                  <p> {item.div}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Subject :</label>
-                  {/* <p> {item.course}</p> */}
+                  <p> {item.Subject}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Username :</label>
-                  {/* <p> {item.userName}</p> */}
+                  <p> {item.userName}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Email :</label>
-                  {/* <p> {item.email}</p> */}
+                  <p> {item.email}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Password :</label>
-                  {/* <p> {item.password}</p> */}
+                  <p> {item.password}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Address :</label>
-                  {/* <p> {item.address}</p> */}
+                  <p> {item.address}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">City :</label>
-                  {/* <p> {item.city}</p> */}
+                  <p> {item.city}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">State :</label>
-                  {/* <p> {item.state}</p> */}
+                  <p> {item.state}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Country :</label>
-                  {/* <p> {item.country}</p> */}
+                  <p> {item.country}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+  ))
+} */}
 
-
-    
-      
- 
     </>
   );
 };
