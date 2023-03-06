@@ -11,30 +11,32 @@ const Stuleaveform = () => {
 
   const navigation=useNavigate()
 
-  const [date, setDate] = useState("");
-  const [name, setName] = useState("");
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
+  const [email, setEmail] = useState("");
   const [course, setCourse] = useState("");
   const [semester, setSemester] = useState("");
   const [division, setDivision] = useState("");
   const [spid, setSpid] = useState("");
-  const [email, setEmail] = useState("");
-  const [subject, setSubject] = useState("");
+  const [reason, setReason] = useState("");
+  const [date, setDate] = useState("");
   const [message, setMessage] = useState("");
 
-  console.log(date, name, course, semester, division, email, subject, message);
+  // console.log(date, fname,lname, course, semester, division, email, reason, message);
 
   const handlenotice = (e) => {
     e.preventDefault();
     axios
       .post("http://localhost:5000/api/use/student/student-leave-notice", {
-        date: date,
-        Name: name,
-        course: course,
-        semester: semester,
-        division: division,
-        spid: spid,
+        fName: fname,
+        lName:lname,
         email: email,
-        subject: subject,
+        course: course,
+        sem: semester,
+        div: division,
+        spid: spid,
+        reason: reason,
+        date: date,
         message: message,
       })
       .then((result) => {
@@ -65,14 +67,14 @@ const Stuleaveform = () => {
                       <div className="col-12 col-sm-6">
                         <div className="form-group local-forms">
                           <label>
-                            Date <span className="login-danger">*</span>
+                            First Name <span className="login-danger">*</span>
                           </label>
                           <input
                             style={{ border: "1px solid black" }}
-                            type="date"
-                            name="date"
-                            value={date}
-                            onChange={(e) => setDate(e.target.value)}
+                            type="text"
+                            name="fname"
+                            value={fname}
+                            onChange={(e) => setFname(e.target.value)}
                             className="form-control"
                           />
                         </div>
@@ -80,14 +82,29 @@ const Stuleaveform = () => {
                       <div className="col-12 col-sm-6">
                         <div className="form-group local-forms">
                           <label>
-                            Name <span className="login-danger">*</span>
+                            Last Name <span className="login-danger">*</span>
                           </label>
                           <input
                             style={{ border: "1px solid black" }}
                             type="text"
-                            name="name"
-                            value={name}
-                            onChange={(e) => setName(e.target.value)}
+                            name="lname"
+                            value={lname}
+                            onChange={(e) => setLname(e.target.value)}
+                            className="form-control"
+                          />
+                        </div>
+                      </div>
+                      <div className="col-12 col-sm-6">
+                        <div className="form-group local-forms">
+                          <label>
+                            Email <span className="login-danger">*</span>
+                          </label>
+                          <input
+                            style={{ border: "1px solid black" }}
+                            type="text"
+                            name="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
                             className="form-control"
                           />
                         </div>
@@ -152,7 +169,7 @@ const Stuleaveform = () => {
                       <div className="col-12 col-sm-6">
                         <div className="form-group local-forms">
                           <label>
-                            Roll No <span className="login-danger">*</span>
+                           SPID <span className="login-danger">*</span>
                           </label>
                           <input
                             style={{ border: "1px solid black" }}
@@ -164,17 +181,18 @@ const Stuleaveform = () => {
                           />
                         </div>
                       </div>
+                      
                       <div className="col-12 col-sm-6">
                         <div className="form-group local-forms">
                           <label>
-                            Email <span className="login-danger">*</span>
+                          Reason <span className="login-danger">*</span>
                           </label>
                           <input
                             style={{ border: "1px solid black" }}
                             type="text"
-                            name="email"
-                            value={email}
-                            onChange={(e) => setEmail(e.target.value)}
+                            name="title"
+                            value={reason}
+                            onChange={(e) => setReason(e.target.value)}
                             className="form-control"
                           />
                         </div>
@@ -182,14 +200,14 @@ const Stuleaveform = () => {
                       <div className="col-12 col-sm-6">
                         <div className="form-group local-forms">
                           <label>
-                            Title <span className="login-danger">*</span>
+                            Date <span className="login-danger">*</span>
                           </label>
                           <input
                             style={{ border: "1px solid black" }}
-                            type="text"
-                            name="title"
-                            value={subject}
-                            onChange={(e) => setSubject(e.target.value)}
+                            type="date"
+                            name="date"
+                            value={date}
+                            onChange={(e) => setDate(e.target.value)}
                             className="form-control"
                           />
                         </div>
