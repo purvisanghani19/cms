@@ -9,11 +9,13 @@ const Studentpro = () => {
 
 
   const getStudent = async () => {
+    var id=JSON.parse(localStorage.getItem("student")).id;
     let  res  = await axios.get(
-      `http://localhost:5000/api/use/student/student`
+      `http://localhost:5000/api/use/student/student/${id}`
     );
-    setStudent(res.data.body);
-    console.log("student:::::::::", res.data.body);
+    console.log("res",res);
+    // setStudent(res);
+    // console.log("student:::::::::", res);
 
   };
 
@@ -25,8 +27,9 @@ const Studentpro = () => {
     <>
     {
       student.map((item)=>(
-
+         
       <div
+      key ={item.id}
         className="container-xl px-4 mt-4"
         style={{ marginLeft: "268px", textAlign: " start" }}
       >
@@ -40,9 +43,7 @@ const Studentpro = () => {
                 Student Profile Picture
               </div>
               <div className="card-body text-center">
-                {/* {item.profileImage} */}
-                {/* <img src={`data:image/jpeg;base64,${base64String(item)}`} width="300"/> */}
-                fggfgh
+               <img src="" alt="profile image" />
               </div>
             </div>
           </div>

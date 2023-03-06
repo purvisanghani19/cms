@@ -1,7 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { useNavigate } from "react-router";
+// import { useNavigate } from "react-router";
 import "./login.css";
 
 const Login = () => {
@@ -9,12 +9,15 @@ const Login = () => {
   const [password, setPassword] = useState("");
   const [role, setRole] = useState("");
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   console.log({ userName, password });
+
+ 
 
   useEffect(() => {
     if( localStorage.getItem("student")){
-          navigate("/studashboard")
+          // navigate("/studashboard")
+          // alert("login sucessfully");
     }
   
   }, []);
@@ -23,7 +26,7 @@ const Login = () => {
     console.warn(userName, password);
     let item = { userName, password };
 
-    let result = await fetch("http://127.0.0.1:4000/api/use/user/login", {
+    let result = await fetch("http://127.0.0.1:5000/api/use/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -33,7 +36,8 @@ const Login = () => {
     });
     result = await result.json();
     localStorage.setItem("student", JSON.stringify(result));
-    navigate("/studashboard");
+  
+    // navigate("/studashboard");
   };
   return (
     <>
