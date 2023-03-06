@@ -21,7 +21,7 @@ function App() {
             <Route path={Student.path} element={Student.element}></Route>
             )
           })}
-          {isLogin === false && user.map((user)=>{
+          {isLogin === true && user.map((user)=>{
             return(
             <Route path={user.path} element={user.element}></Route>
             )

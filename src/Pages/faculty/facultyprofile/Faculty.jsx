@@ -23,12 +23,11 @@ const Faculty = () => {
 
 
   const getFaculty = async () => {
-    let  res  = await axios.get(
-      `http://localhost:5000/api/use/staff/staff-profile`
-    );
+    var data=JSON.parse(localStorage.getItem("info")).response.tokendata.userId;;
+    let  res  = await axios.get(`http://localhost:5000/api/use/staff/staff/${data}`);
 
-    // setfaculty(res);
-    console.log("faculty:::::::::", res);
+      console.log("res",res);
+    setfaculty(res.data.staff);
 
   };
 
@@ -38,8 +37,8 @@ const Faculty = () => {
 
   return (
     <>
-{/* {
-  faculty.map((item)=>(
+
+
       <div
         className="container-xl px-4 mt-4"
         style={{ marginLeft: "268px", textAlign: "start" }}
@@ -51,7 +50,7 @@ const Faculty = () => {
                 className="card-header"
                 style={{ backgroundColor: " #263159", color: "white" }}
               >Profile Picture
-                {item.ProfileImage}
+                {faculty.ProfileImage}
               </div>
               <div className="card-body text-center">
                 <img
@@ -73,91 +72,90 @@ const Faculty = () => {
               <div className="card-body">
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Faculty FName :</label>
-                  <p> {item.fName}</p>
+                  <p> {faculty.fName}</p>
                 </div>
 
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Faculty Lname :</label>
-                  <p> {item.lName}</p>
+                  <p> {faculty.lName}</p>
                 </div>
 
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Gender :</label>
-                  <p>{item.gender}</p>
+                  <p>{faculty.gender}</p>
                 </div>
 
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Date Of Birth : </label>
-                  <p> {item.dateOfBirth}</p>
+                  <p> {faculty.dateOfBirth}</p>
                 </div>
 
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Contact No :</label>
-                  <p> {item.contactNo}</p>
+                  <p> {faculty.contactNo}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Date Of Joining :</label>
-                  <p> {item.dateOfJoining}</p>
+                  <p> {faculty.dateOfJoining}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Qualification :</label>
-                  <p> {item.qualification}</p>
+                  <p> {faculty.qualification}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Experiance :</label>
-                  <p> {item.experiance}</p>
+                  <p> {faculty.experiance}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Course :</label>
-                  <p> {item.course}</p>
+                  <p> {faculty.course}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Semester :</label>
-                  <p> {item.sem}</p>
+                  <p> {faculty.sem}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Division :</label>
-                  <p> {item.div}</p>
+                  <p> {faculty.div}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Subject :</label>
-                  <p> {item.Subject}</p>
+                  <p> {faculty.Subject}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Username :</label>
-                  <p> {item.userName}</p>
+                  <p> {faculty.userName}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Email :</label>
-                  <p> {item.email}</p>
+                  <p> {faculty.email}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Password :</label>
-                  <p> {item.password}</p>
+                  <p> {faculty.password}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Address :</label>
-                  <p> {item.address}</p>
+                  <p> {faculty.address}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">City :</label>
-                  <p> {item.city}</p>
+                  <p> {faculty.city}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">State :</label>
-                  <p> {item.state}</p>
+                  <p> {faculty.state}</p>
                 </div>
                 <div className="col-md-6 d-flex">
                   <label className="small mb-1">Country :</label>
-                  <p> {item.country}</p>
+                  <p> {faculty.country}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-  ))
-} */}
+
 
     </>
   );

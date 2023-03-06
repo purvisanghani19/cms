@@ -4,17 +4,18 @@ import "../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import WithLayout from "../../../components/common/comstudent/Stusidebar";
 import axios from "axios";
 
+
 const Studentpro = () => {
   const [student, setStudent] = useState([]);
 
 
   const getStudent = async () => {
-    var id=JSON.parse(localStorage.getItem("student")).id;
-    let  res  = await axios.get(
-      `http://localhost:5000/api/use/student/student/${id}`
-    );
-    console.log("res",res);
-    // setStudent(res);
+    var data=JSON.parse(localStorage.getItem("info")).response.tokendata.userId;
+    // console.log("id",data.response.tokendata.userId)
+    let  res  = await axios.get(`http://localhost:5000/api/use/student/student/${data}`);
+
+    console.log("res",res);  
+    setStudent(res.data.data);
     // console.log("student:::::::::", res);
 
   };
@@ -25,11 +26,9 @@ const Studentpro = () => {
 
   return (
     <>
-    {
-      student.map((item)=>(
-         
+    
       <div
-      key ={item.id}
+      key ={student.id}
         className="container-xl px-4 mt-4"
         style={{ marginLeft: "268px", textAlign: " start" }}
       >
@@ -58,111 +57,111 @@ const Studentpro = () => {
               <div className="card-body ">
                 <div className="col-md-6 ">
                   <label className="small mb-1"> Student First Name :</label>
-                  <p> {item.fName}</p>
+                  <p> {student.fName}</p>
                 </div>
                 <div className="col-md-6 ">
                   <label className="small mb-1"> Student Last Name :</label>
-                  <p> {item.lName}</p>
+                  <p> {student.lName}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">Student gender :</label>
-                  <p> {item.gender}</p>
+                  <p> {student.gender}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">Student dateOfBirth :</label>
-                  <p> {item.dateOfBirth}</p>
+                  <p> {student.dateOfBirth}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">contactNo : </label>
-                  <p> {item.contactNo}</p>
+                  <p> {student.contactNo}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">Username : </label>
-                  <p> {item.userName}</p>
+                  <p> {student.userName}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">email :</label>
-                  <p> {item.email}</p>
+                  <p> {student.email}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">Password : </label>
-                  <p> {item.password}</p>
+                  <p> {student.password}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">address :</label>
-                  <p> {item.address}</p>
+                  <p> {student.address}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">city :</label>
-                  <p> {item.city}</p>
+                  <p> {student.city}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">state :</label>
-                  <p> {item.state}</p>
+                  <p> {student.state}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">country :</label>
-                  <p> {item.country}</p>
+                  <p> {student.country}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">fatherName :</label>
-                  <p> {item.fatherName}</p>
+                  <p> {student.fatherName}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">fatherOcupation :</label>
-                  <p> {item.fatherOccupation}</p>
+                  <p> {student.fatherOccupation}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">fatherContactNo :</label>
-                  <p> {item.fatherContactNo}</p>
+                  <p> {student.fatherContactNo}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">fatherEmail :</label>
-                  <p> {item.fatherEmail}</p>
+                  <p> {student.fatherEmail}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">mother Name :</label>
-                  <p> {item.motherName}</p>
+                  <p> {student.motherName}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">mother Ocupation :</label>
-                  <p> {item.motherOccupation}</p>
+                  <p> {student.motherOccupation}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">mother ContactNo :</label>
-                  <p> {item.motherContactNo}</p>
+                  <p> {student.motherContactNo}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">mother Email :</label>
-                  <p> {item.motherEmail}</p>
+                  <p> {student.motherEmail}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">course :</label>
-                  <p> {item.course}</p>
+                  <p> {student.course}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">year :</label>
-                  <p> {item.year}</p>
+                  <p> {student.year}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">semester :</label>
-                  <p> {item.sem}</p>
+                  <p> {student.sem}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">division :</label>
-                  <p> {item.div}</p>
+                  <p> {student.div}</p>
                 </div>
                 <div className="col-md-6">
                   <label className="small mb-1">spid :</label>
-                  <p> {item.spid}</p>
+                  <p> {student.spid}</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      ))
-    }
+    
+    
     </>
   );
 };

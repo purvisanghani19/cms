@@ -1,4 +1,3 @@
-import React, { useEffect, useState } from "react";
 import Chart from "react-apexcharts";
 import './dashboard.css';
 import {AiFillSound} from "react-icons/ai";
@@ -8,7 +7,7 @@ import { FaClipboardList, FaUserAlt } from "react-icons/fa";
 
 
 function StuDashBoard() {
- useEffect()
+
   const options1 = {
     chart: {
       width: 380,

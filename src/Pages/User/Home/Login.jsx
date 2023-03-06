@@ -15,7 +15,7 @@ const Login = () => {
  
 
   useEffect(() => {
-    if( localStorage.getItem("student")){
+    if( localStorage.getItem("info")){
           // navigate("/studashboard")
           // alert("login sucessfully");
     }
@@ -35,7 +35,7 @@ const Login = () => {
       body: JSON.stringify(item),
     });
     result = await result.json();
-    localStorage.setItem("student", JSON.stringify(result));
+    localStorage.setItem("info", JSON.stringify(result));
   
     // navigate("/studashboard");
   };
