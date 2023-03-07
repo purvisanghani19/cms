@@ -4,6 +4,8 @@ import {AiFillSound} from "react-icons/ai";
 import WithLayout from "../../../components/common/comstudent/Stusidebar";
 import { GiNotebook } from "react-icons/gi";
 import { FaClipboardList, FaUserAlt } from "react-icons/fa";
+import { Link } from "react-router-dom";
+
 
 
 function StuDashBoard() {
@@ -185,7 +187,7 @@ function StuDashBoard() {
             <div className="row">
               <div className="col-xl-3  col-md-6 mb-4">
                 <div className="card border-left-danger shadow h-100 py-2">
-                  <a href="/stuattendance" style={{ textDecoration: "none" }}>
+                  <Link to="/stuattendance" style={{ textDecoration: "none" }}>
                     <div className="card-body">
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
@@ -201,12 +203,12 @@ function StuDashBoard() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-xl-3 col-md-6 mb-4">
                 <div className="card border-left-success shadow h-100 py-2">
-                  <a href="/Leavestud" style={{ textDecoration: "none" }}>
+                  <Link to="/Leavestud" style={{ textDecoration: "none" }}>
                     <div className="card-body">
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
@@ -222,13 +224,13 @@ function StuDashBoard() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
               <div className="col-xl-3 col-md-6 mb-4">
                 <div className="card border-left-info shadow h-100 py-2">
-                  <a href="/stunotice" style={{ textDecoration: "none" }}>
+                  <Link to="/stunotice" style={{ textDecoration: "none" }}>
                     <div className="card-body">
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
@@ -244,13 +246,13 @@ function StuDashBoard() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
               <div className="col-xl-3 col-md-6 mb-4">
                 <div className="card border-left-warning shadow h-100 py-2">
-                  <a href="/stumaterial" style={{ textDecoration: "none" }}>
+                  <Link to="/stumaterial" style={{ textDecoration: "none" }}>
                     <div className="card-body">
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
@@ -266,7 +268,7 @@ function StuDashBoard() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

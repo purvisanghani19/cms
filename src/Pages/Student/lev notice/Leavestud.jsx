@@ -1,86 +1,91 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Card, Button } from "react-bootstrap";
+import { BsFillEyeFill } from "react-icons/bs";
+import { Link } from "react-router-dom";
 import WithLayout from "../../../components/common/comstudent/Stusidebar";
 
 const Leavestud = () => {
-  const [stuleave, setStuleave] = useState([]);
+  const [studleave, setStudleave] = useState("");
 
-  const leavestu = async () => {
-    // var data=JSON.parse(localStorage.getItem("info")).response;
-    // console.log("id",data.response.tokendata.userId)
+  const getleavestud = async () => {
+    // var data = JSON.parse(localStorage.getItem("info"));
+    let abc = "64048040b38ee5a85a63223b";
     let studentleave = await axios.get(
-      `http://localhost:5000/api/use/staff/student-leave-notice`
+      `http://localhost:5000/api/use/staff/student-leave-notice${abc}`
     );
 
-    console.log("stuleave", studentleave);
-    // setStuleave(studentleave);
+    // setStudleave(feedres.data.feedback);
+    console.log("studentleave", studentleave);
   };
 
   useEffect(() => {
-    leavestu();
+    getleavestud();
+    // console.log("feed", feedstudent);
   }, []);
-
   return (
     <div id="content-wrapper" className="d-flex flex-column">
       <div id="content">
         <div className="container-fluid">
           <div className="row">
-            <div
-              class="col-auto text-right float-right ml-auto"
-              style={{ textAlign: "start" }}
-            >
-              <a href="/Leavestud/Stuleaveform">
-                <button
-                  style={{
-                    padding: "3px 25px",
-                    borderRadius: "5px",
-                    backgroundColor: "rgb(23, 162, 184)",
-                    border: "none",
-                    color: "#fff",
-                    marginBottom: "20px",
-                    marginRight: "0px",
-                  }}
-                >
-                  Add Leave
-                </button>
-              </a>
+            <div class="page-header">
+              <div class="row align-items-center">
+                <div class="col">
+                  <h3 class="page-title">Student Leave notice</h3>
+                </div>
+                <div class="col-auto text-right float-right ml-auto">
+                  <a href="/Leavestud/Stuleaveform">
+                    <button
+                      style={{
+                        padding: "3px 25px",
+                        marginRight: "25px",
+                        borderRadius: "5px",
+                        backgroundColor: "#005d91",
+                        border: "none",
+                        color: "#fff",
+                      }}
+                    >
+                      Add leave
+                    </button>
+                  </a>
+                </div>
+              </div>
             </div>
-            <Card
-              style={{
-                paddingRight: "0px",
-                paddingLeft: "0px",
-                textAlign: "start",
-              }}
-            >
-              <Card.Header
-                style={{ backgroundColor: "#263159", color: "#fff" }}
-              >
-                Notice title
-              </Card.Header>
-              <Card.Body>
-                <Card.Title>Date : 12/10/2022</Card.Title>
+            <div class="row">
+              <div class="col-sm-12">
+                <div class="card card-table">
+                  <div class="card-body">
+                    <div class="table-responsive">
+                      <table class="table table-hover table-center mb-0 datatable">
+                        <thead>
+                          <tr>
+                            <th>Date</th>
+                            <th>Reason</th>
+                            <th>Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          {/* {
+                          studleave.map((item)=>(
 
-                <Card.Text>
-                  With supporting text below as a natural lead-in to additional
-                  content.
-                </Card.Text>
-                <a href="/Leavestud/studentviewnotice">
-                  <Button
-                    style={{
-                      padding: "5px",
-                      width: "80px",
-                      borderRadius: "5px",
-                      backgroundColor: "#263159",
-                      border: "none",
-                      color: "#fff",
-                    }}
-                  >
-                    View
-                  </Button>
-                </a>
-              </Card.Body>
-            </Card>
+                          <tr>
+                            <td>{item.date}</td>
+                            <td>{item.reason}</td>
+                            <td>
+                              <a href="/Leavestud/studentviewnotice">
+                                <BsFillEyeFill style={{ color: "#263159" }} />
+                              </a>
+                            </td>
+                          </tr>
+                          ))
+                        } */}
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

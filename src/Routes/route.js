@@ -35,7 +35,7 @@ import Stulistprofile from "../Pages/faculty/student list/Stulistprofile";
 import Viewstudmaterial from "../Pages/Student/Student material/Viewstudmaterial";
 import FacFeedback from "../Pages/faculty/Feedback/FacFeedback";
 import Facfeedform from "../Pages/faculty/Feedback/Facfeedform";
-import Stufacfeedback from "../Pages/faculty/Student feedback/Stufacfeedback";
+// import Stufacfeedback from "../Pages/faculty/Student feedback/Stufacfeedback";
 import Viewstufeedback from "../Pages/faculty/Student feedback/Viewstufeedback";
 import { MdFeedback } from "react-icons/md";
 
@@ -121,12 +121,12 @@ export const faculty = [
         name: "add facfeedbackform",
         element: <Facfeedform />
     },
-    {
-        path: "/stufacfeedback",
-        name: "student feedback",
-        icon: <VscFeedback />,
-        element: <Stufacfeedback />
-    },
+    // {
+    //     path: "/stufacfeedback",
+    //     name: "student feedback",
+    //     icon: <VscFeedback />,
+    //     element: <Stufacfeedback />
+    // },
     {
         path: "/viewstufeedback",
         name: "view student feedback",
@@ -179,7 +179,7 @@ export const Student = [
 
     {
         path: "/Leavestud",
-        name: "Leavestud",
+        name: "Student leave",
         icon: <FaEnvelopeOpenText />,
         element: <Leavestud />
     },

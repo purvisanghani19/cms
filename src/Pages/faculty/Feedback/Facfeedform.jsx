@@ -3,41 +3,43 @@ import "./facfeedform.css";
 import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
 import axios from "axios";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
+import { useNavigate } from "react-router";
 
 const Facfeedform = () => {
 
-  const [name, setName] = useState("");
-  const [course, setCourse] = useState("");
-  const [semester, setSemester] = useState("");
-  const [division, setDivision] = useState("");
-  const [title, setTitle] = useState("");
-  const [date, setDate] = useState("");
-  const [discription, setDiscription] = useState("");
-
-  console.log( name, course, semester, division,title,date,discription);
-
-  const handlefeedform = (e) => {
-    e.preventDefault();
-    axios
-      .post("http://localhost:4000/api/use/student/studentFeedback/create", {
-        name: name,
-        course: course,
-        semester: semester,
-        division: division,
-        title:title,
-        date: date,
-        discription:discription,
-        
-      })
-      .then((result) => {
-        console.log(result);
-      })
-      .catch((error) => {
-        console.log(error);
-      }, []);
-  };
-
- 
+    const navigate=useNavigate("");
+    
+      const [fname, setFname] = useState("");
+      const [lname, setLname] = useState("");
+      const [course, setCourse] = useState("");
+      const [title, setTitle] = useState("");
+      const [date, setDate] = useState("");
+      const [message, setMessage] = useState("");
+    
+      console.log(fname, lname, course, title, date, message);
+    
+      const handlefeedform = (e) => {
+        e.preventDefault();
+        axios
+          .post("http://localhost:5000/api/use/staff/staff-feedback", {
+            fName: fname,
+            lName: lname,
+            course: course,
+            title:title,
+            date: date,
+            message: message,  
+          })
+          .then((result) => {
+            console.log(result);
+            alert("your feedback has been submmited");
+            navigate("/facfeedback");
+          })
+          .catch((error) => {
+            console.log(error);
+            alert("!!🥴oops try again");
+          }, []);
+      };
+    
   
   
  
@@ -62,14 +64,31 @@ const Facfeedform = () => {
                     <div className="col-12 col-sm-6">
                       <div className="form-group local-forms">
                         <label>
-                          Name <span className="login-danger">*</span>
+                          First Name <span className="login-danger">*</span>
                         </label>
                         <input
                           style={{ border: "1px solid black" }}
                           type="text"
                           name="name"
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
+                          value={fname}
+                          onChange={(e) => setFname(e.target.value)}
+                          className="form-control"
+                        
+                        />
+                      </div>
+                   
+                    </div>
+                    <div className="col-12 col-sm-6">
+                      <div className="form-group local-forms">
+                        <label>
+                          Last Name <span className="login-danger">*</span>
+                        </label>
+                        <input
+                          style={{ border: "1px solid black" }}
+                          type="text"
+                          name="name"
+                          value={lname}
+                          onChange={(e) => setLname(e.target.value)}
                           className="form-control"
                         
                         />
@@ -94,45 +113,8 @@ const Facfeedform = () => {
                         </select>
                       </div>
                     </div>
-                    <div className="col-12 col-sm-6">
-                      <div className="form-group local-forms">
-                        <label for="subject">Semester:</label>
-                        <select
-                          style={{ border: "1px solid black" }}
-                          value={semester}
-                          onChange={(e) => setSemester(e.target.value)}
-                          id="semester"
-                          name="semester"
-                          classNameName="form-control"
-                        >
-                          <option value="select">Select</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                        </select>
-                      </div>
-                    </div>
-                    <div className="col-12 col-sm-6">
-                      <div className="form-group local-forms">
-                        <label for="subject">Division:</label>
-                        <select
-                          style={{ border: "1px solid black" }}
-                          value={division}
-                          onChange={(e) => setDivision(e.target.value)}
-                          id="division"
-                          name="division"
-                          classNameName="form-control"
-                        >
-                          <option value="select">Select</option>
-                          <option value="1">1</option>
-                          <option value="2">2</option>
-                          <option value="3">3</option>
-                          <option value="4">4</option>
-                          <option value="5">5</option>
-                          <option value="6">6</option>
-                        </select>
-                      </div>
-                    </div>
+                    
+                    
                     <div className="col-12 col-sm-6">
                       <div className="form-group local-forms">
                         <label>
@@ -166,14 +148,14 @@ const Facfeedform = () => {
                     <div className="col-12">
                       <div className="form-group local-forms">
                         <label>
-                          Discription <span className="login-danger">*</span>
+                          Message <span className="login-danger">*</span>
                         </label>
                         <textarea
                           style={{ border: "1px solid black" }}
                           type="text"
                           name="discription"
-                          value={discription}
-                          onChange={(e) => setDiscription(e.target.value)}
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
                           className="form-control"
                         />
                       </div>

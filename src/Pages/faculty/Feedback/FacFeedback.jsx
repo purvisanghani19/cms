@@ -5,6 +5,7 @@ import { MdDelete } from "react-icons/md";
 import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
 
 const FacFeedback = () => {
+  
   return (
     <>
  <div id="content-wrapper" className="d-flex flex-column">
