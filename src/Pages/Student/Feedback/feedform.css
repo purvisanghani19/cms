@@ -5,10 +5,17 @@
 .feedbackform{
     width:800px;
     margin-left: 200px;
+    margin-top: 50px;
 }
 .feedaero{
     font-size: 30px;
     margin-left: 200px;
 
     color:rgb(15, 14, 14);
+}
+/* .content-wrapper{
+    background-color: aliceblue;
+} */
+.form-group{
+    background: aliceblue;
 }

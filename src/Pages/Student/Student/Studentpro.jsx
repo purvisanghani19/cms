@@ -10,20 +10,17 @@ const Studentpro = () => {
 
 
   const getStudent = async () => {
-    var data=JSON.parse(localStorage.getItem("info")).response.tokendata.userId;
-    // console.log("id",data.response.tokendata.userId)
-    let  res  = await axios.get(`http://localhost:5000/api/use/student/student/${data}`);
+    var id=JSON.parse(localStorage.getItem("info")).response.tokendata.userId;
+    let  stures  = await axios.get(`http://localhost:5000/api/use/student/student/${id}`);
 
-    console.log("res",res);  
-    setStudent(res.data.data);
-    // console.log("student:::::::::", res);
+      console.log("stures",stures.data.data);
+      setStudent(stures.data.data);
 
   };
 
   useEffect(() => {
     getStudent();
   }, []);
-
   return (
     <>
     

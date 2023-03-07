@@ -26,7 +26,7 @@ const Login = () => {
     console.warn(userName, password);
     let item = { userName, password };
 
-    let result = await fetch("http://127.0.0.1:5000/api/use/login", {
+    let result = await fetch("http://localhost:5000/api/use/login", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

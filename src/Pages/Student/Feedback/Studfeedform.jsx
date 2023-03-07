@@ -3,78 +3,95 @@ import "./feedform.css";
 import WithLayout from "../../../components/common/comstudent/Stusidebar";
 import axios from "axios";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
+import { useNavigate } from "react-router";
 
 const Studfeedform = () => {
 
-  const [name, setName] = useState("");
+const navigate=useNavigate("");
+
+  const [fname, setFname] = useState("");
+  const [lname, setLname] = useState("");
   const [course, setCourse] = useState("");
   const [semester, setSemester] = useState("");
   const [division, setDivision] = useState("");
-  const [title, setTitle] = useState("");
   const [date, setDate] = useState("");
-  const [discription, setDiscription] = useState("");
+  const [message, setMessage] = useState("");
 
-  console.log( name, course, semester, division,title,date,discription);
+  console.log(fname, lname, course, semester, division, date, message);
 
   const handlefeedform = (e) => {
     e.preventDefault();
     axios
-      .post("http://localhost:4000/api/use/student/studentFeedback/create", {
-        name: name,
+      .post("http://localhost:5000/api/use/student/student-feedback", {
+        fName: fname,
+        lName: lname,
         course: course,
-        semester: semester,
-        division: division,
-        title:title,
+        sem: semester,
+        div: division,
         date: date,
-        discription:discription,
-        
+        message: message,  
       })
       .then((result) => {
         console.log(result);
+        alert("your feedback has been submmited");
+        navigate("/feedback");
       })
       .catch((error) => {
         console.log(error);
+        alert("!!🥴oops try again");
       }, []);
   };
 
- 
-  
-  
- 
   return (
     <div id="content-wrapper" className="d-flex flex-column">
       <div id="content">
         <div className="container-fluid">
-        
           <div
             className="row"
             style={{ textAlign: "start", marginBottom: "15px" }}
           >
-          <div className="d-flex" >
-
-          <a href="/feedback"><BsFillArrowLeftCircleFill className="feedaero" /></a>
-            <h3 className="feed-text">Add Feedback</h3>
-          </div>
+            <div className="d-flex">
+              <a href="/feedback">
+                <BsFillArrowLeftCircleFill className="feedaero" />
+              </a>
+              <h3 className="feed-text">Add Feedback</h3>
+            </div>
             <div className="row">
               <div className="col-sm-12">
-                <form className="feedbackform" >
+                <form className="feedbackform">
                   <div className="row">
                     <div className="col-12 col-sm-6">
-                      <div className="form-group local-forms">
+                      <div
+                        className="form-group local-forms"
+                        style={{ backgroundColor: "ECF2FF" }}
+                      >
                         <label>
-                          Name <span className="login-danger">*</span>
+                          First Name <span className="login-danger">*</span>
                         </label>
                         <input
                           style={{ border: "1px solid black" }}
                           type="text"
-                          name="name"
-                          value={name}
-                          onChange={(e) => setName(e.target.value)}
+                          name="fname"
+                          value={fname}
+                          onChange={(e) => setFname(e.target.value)}
                           className="form-control"
-                        
                         />
                       </div>
-                   
+                    </div>
+                    <div className="col-12 col-sm-6">
+                      <div className="form-group local-forms">
+                        <label>
+                          Last Name <span className="login-danger">*</span>
+                        </label>
+                        <input
+                          style={{ border: "1px solid black" }}
+                          type="text"
+                          name="lname"
+                          value={lname}
+                          onChange={(e) => setLname(e.target.value)}
+                          className="form-control"
+                        />
+                      </div>
                     </div>
                     <div className="col-12 col-sm-6">
                       <div className="form-group local-forms">
@@ -103,7 +120,7 @@ const Studfeedform = () => {
                           onChange={(e) => setSemester(e.target.value)}
                           id="semester"
                           name="semester"
-                          classNameName="form-control"
+                          className="form-control"
                         >
                           <option value="select">Select</option>
                           <option value="1">1</option>
@@ -136,21 +153,6 @@ const Studfeedform = () => {
                     <div className="col-12 col-sm-6">
                       <div className="form-group local-forms">
                         <label>
-                          Title <span className="login-danger">*</span>
-                        </label>
-                        <input
-                          style={{ border: "1px solid black" }}
-                          type="text"
-                          name="title"
-                          value={title}
-                          onChange={(e) => setTitle(e.target.value)}
-                          className="form-control"
-                        />
-                      </div>
-                    </div>
-                    <div className="col-12 col-sm-6">
-                      <div className="form-group local-forms">
-                        <label>
                           Date <span className="login-danger">*</span>
                         </label>
                         <input
@@ -172,8 +174,8 @@ const Studfeedform = () => {
                           style={{ border: "1px solid black" }}
                           type="text"
                           name="discription"
-                          value={discription}
-                          onChange={(e) => setDiscription(e.target.value)}
+                          value={message}
+                          onChange={(e) => setMessage(e.target.value)}
                           className="form-control"
                         />
                       </div>
@@ -186,7 +188,6 @@ const Studfeedform = () => {
                           type="submit"
                           className="btn-leave"
                           onClick={handlefeedform}
-                         
                         >
                           Submit
                         </button>

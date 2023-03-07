@@ -17,6 +17,7 @@ const WithLayout = (Stusidebar) => {
     const activeLink = "nav-link active";
     const normalLink = "nav-link";
 
+
    
     return (
       <>
@@ -177,9 +178,9 @@ const WithLayout = (Stusidebar) => {
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="#">
+                        <Link className="dropdown-item" href="#" >
                           Log out
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                   </div>
@@ -208,9 +209,9 @@ const WithLayout = (Stusidebar) => {
                         </a>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="">
+                        <Link className="dropdown-item" href="">
                           Log out
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                     <span className="ml-3" data-toggle="dropdown"
