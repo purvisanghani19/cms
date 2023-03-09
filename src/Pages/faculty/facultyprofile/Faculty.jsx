@@ -4,31 +4,18 @@ import "../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
 import axios from "axios";
 
-// import { NavLink } from "react-router-dom";
-
 const Faculty = () => {
-  // const [faculty,setFaculty]=useState([]);
-
-  //   const profile =()=>{
-  //     axios.get("http://127.0.0.1:4000/api/use/staff/staff-profile").then((result) => {
-  //       console.log(result.data);
-  //    }).catch((err)=>{
-  //      console.log(err);
-  //    })
-  //   }
-        
-     
-  //   console.log(faculty);
   const [faculty, setfaculty] = useState([]);
 
-
   const getFaculty = async () => {
-    var data=JSON.parse(localStorage.getItem("info")).response.tokendata.userId;;
-    let  res  = await axios.get(`http://localhost:5000/api/use/staff/staff/${data}`);
+    var data = JSON.parse(localStorage.getItem("info")).response.tokendata
+      .userId;
+    let res = await axios.get(
+      `http://localhost:5000/api/use/staff/staff/${data}`
+    );
 
-      console.log("res",res);
+    console.log("res", res);
     setfaculty(res.data.staff);
-
   };
 
   useEffect(() => {
@@ -37,19 +24,18 @@ const Faculty = () => {
 
   return (
     <>
-
-
       <div
         className="container-xl px-4 mt-4"
         style={{ marginLeft: "268px", textAlign: "start" }}
       >
         <div className="row">
           <div className="col-xl-4" style={{ marginTop: "90px" }}>
-            <div className="card mb-4 mb-xl-0"> 
+            <div className="card mb-4 mb-xl-0">
               <div
                 className="card-header"
                 style={{ backgroundColor: " #263159", color: "white" }}
-              >Profile Picture
+              >
+                Profile Picture
                 {faculty.ProfileImage}
               </div>
               <div className="card-body text-center">
@@ -155,8 +141,6 @@ const Faculty = () => {
           </div>
         </div>
       </div>
-
-
     </>
   );
 };

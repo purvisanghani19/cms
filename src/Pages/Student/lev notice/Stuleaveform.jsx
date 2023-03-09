@@ -7,9 +7,7 @@ import WithLayout from "../../../components/common/comstudent/Stusidebar";
 import "./stuleavenotice.css";
 
 const Stuleaveform = () => {
-
-
-  const navigation=useNavigate()
+  const navigation = useNavigate();
 
   const [fname, setFname] = useState("");
   const [lname, setLname] = useState("");
@@ -29,7 +27,7 @@ const Stuleaveform = () => {
     axios
       .post("http://localhost:5000/api/use/student/student-leave-notice", {
         fName: fname,
-        lName:lname,
+        lName: lname,
         email: email,
         course: course,
         sem: semester,
@@ -42,7 +40,7 @@ const Stuleaveform = () => {
       .then((result) => {
         console.log(result);
         alert("your leave has been submmited");
-        navigation("/Leavestud")
+        navigation("/Leavestud");
       })
       .catch((error) => {
         console.log(error);
@@ -169,7 +167,7 @@ const Stuleaveform = () => {
                       <div className="col-12 col-sm-6">
                         <div className="form-group local-forms">
                           <label>
-                           SPID <span className="login-danger">*</span>
+                            SPID <span className="login-danger">*</span>
                           </label>
                           <input
                             style={{ border: "1px solid black" }}
@@ -181,11 +179,11 @@ const Stuleaveform = () => {
                           />
                         </div>
                       </div>
-                      
+
                       <div className="col-12 col-sm-6">
                         <div className="form-group local-forms">
                           <label>
-                          Reason <span className="login-danger">*</span>
+                            Reason <span className="login-danger">*</span>
                           </label>
                           <input
                             style={{ border: "1px solid black" }}

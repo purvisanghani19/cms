@@ -11,6 +11,12 @@ import axios from "axios";
 
 
 const WithLayout = (Sidebar) => {
+
+  const logout=()=>{
+    console.log("hieeeeeee");
+  }
+
+
   return function WithPage() {
     const [isOpen, setIsOpen] = useState(true);
     const toggle = () => setIsOpen(!isOpen);
@@ -200,18 +206,20 @@ const WithLayout = (Sidebar) => {
                     />
                     <ul className="dropdown-menu">
                       <li>
-                        <a
+                        <Link
                           className="dropdown-item"
-                          href="/facultyprofile"
+                          to="/facultyprofile"
                           onClick={profile}
                         >
                           Profile
-                        </a>
+                        </Link>
                       </li>
                       <li>
-                        <a className="dropdown-item" href="">
+                        <Link className="dropdown-item" to=""
+                        onClick={logout}
+                        >
                           Log out
-                        </a>
+                        </Link>
                       </li>
                     </ul>
                     <span className="ml-3" data-toggle="dropdown"

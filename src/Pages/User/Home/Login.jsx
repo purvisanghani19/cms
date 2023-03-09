@@ -1,4 +1,4 @@
-import axios from "axios";
+// import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
 // import { useNavigate } from "react-router";
@@ -10,16 +10,13 @@ const Login = () => {
   const [role, setRole] = useState("");
 
   // const navigate = useNavigate();
-  console.log({ userName, password });
-
- 
+  console.log({ userName, password });  
 
   useEffect(() => {
-    if( localStorage.getItem("info")){
-          // navigate("/studashboard")
-          // alert("login sucessfully");
+    if (localStorage.getItem("info")) {
+      // navigate("/studashboard")
+      // alert("login sucessfully");
     }
-  
   }, []);
 
   const handlelogin = async (e) => {
@@ -36,7 +33,7 @@ const Login = () => {
     });
     result = await result.json();
     localStorage.setItem("info", JSON.stringify(result));
-  
+
     // navigate("/studashboard");
   };
   return (

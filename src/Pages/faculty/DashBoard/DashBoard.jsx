@@ -4,6 +4,7 @@ import "./dashboard.css";
 import { GiTeacher, GiWhiteBook, GiBookmarklet } from "react-icons/gi";
 import { HiUserGroup } from "react-icons/hi";
 import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
+import { Link } from "react-router-dom";
 
 function DashBoard() {
   const options1 = {
@@ -174,7 +175,7 @@ function DashBoard() {
             <div className="row">
               <div className="col-xl-3  col-md-6 mb-4">
                 <div className="card border-left-danger shadow h-100 py-2">
-                  <a href="/studentlist" style={{ textDecoration: "none" }}>
+                  <Link to="/studentlist" style={{ textDecoration: "none" }}>
                     <div className="card-body">
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
@@ -190,12 +191,12 @@ function DashBoard() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
               <div className="col-xl-3 col-md-6 mb-4">
                 <div className="card border-left-success shadow h-100 py-2">
-                  <a href="/facnotice" style={{ textDecoration: "none" }}>
+                  <Link to="/facnotice" style={{ textDecoration: "none" }}>
                     <div className="card-body">
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
@@ -211,13 +212,13 @@ function DashBoard() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
               <div className="col-xl-3 col-md-6 mb-4">
                 <div className="card border-left-info shadow h-100 py-2">
-                  <a href="/facleavenotice" style={{ textDecoration: "none" }}>
+                  <Link to="/facleavenotice" style={{ textDecoration: "none" }}>
                     <div className="card-body">
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
@@ -233,13 +234,13 @@ function DashBoard() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
 
               <div className="col-xl-3 col-md-6 mb-4">
                 <div className="card border-left-warning shadow h-100 py-2">
-                  <a href="/material" style={{ textDecoration: "none" }}>
+                  <Link to="/material" style={{ textDecoration: "none" }}>
                     <div className="card-body">
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
@@ -255,7 +256,7 @@ function DashBoard() {
                         </div>
                       </div>
                     </div>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

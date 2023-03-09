@@ -1,4 +1,5 @@
-import React from "react";
+import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { Table } from "react-bootstrap";
 import { MdDelete } from "react-icons/md";
 // import './feedback.css';
@@ -6,6 +7,28 @@ import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
 
 const FacFeedback = () => {
   
+  const [facfeed, setFacfeed] = useState([]);
+
+  const getfacfeed = async () => {
+    // var data = JSON.parse(localStorage.getItem("info")).response.tokendata
+    //   .userId;
+// let data="64048040b38ee5a85a63223b";
+    let facultyfeed = await axios.get(
+      ` http://localhost:5000/api/use/staff/student-leave-notice`
+    );
+
+    // setFacfeed(feedres.data.feedback);
+    console.log("student", facultyfeed);
+  };
+
+  useEffect(() => {
+    getfacfeed();
+    // console.log("feed", feedstudent);
+  }, []);
+
+
+
+
   return (
     <>
  <div id="content-wrapper" className="d-flex flex-column">

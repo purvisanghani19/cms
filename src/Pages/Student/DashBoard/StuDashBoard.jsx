@@ -1,15 +1,12 @@
 import Chart from "react-apexcharts";
-import './dashboard.css';
-import {AiFillSound} from "react-icons/ai";
+import "./dashboard.css";
+import { AiFillSound } from "react-icons/ai";
 import WithLayout from "../../../components/common/comstudent/Stusidebar";
 import { GiNotebook } from "react-icons/gi";
 import { FaClipboardList, FaUserAlt } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-
-
 function StuDashBoard() {
-
   const options1 = {
     chart: {
       width: 380,
@@ -51,7 +48,7 @@ function StuDashBoard() {
       data: [35, 65, 28],
     },
   ];
-  
+
   const options2 = {
     chart: {
       height: 450,
@@ -99,12 +96,6 @@ function StuDashBoard() {
       ],
     },
   };
-
-  
-
-
-
-
 
   const options3 = {
     chart: {
@@ -179,11 +170,9 @@ function StuDashBoard() {
 
   return (
     <>
-      <div id="content-wrapper" 
-     
-      className="d-flex flex-column">
+      <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
-          <div className="container-fluid" style={{width:"100%"}}>
+          <div className="container-fluid" style={{ width: "100%" }}>
             <div className="row">
               <div className="col-xl-3  col-md-6 mb-4">
                 <div className="card border-left-danger shadow h-100 py-2">
@@ -213,7 +202,7 @@ function StuDashBoard() {
                       <div className="row no-gutters align-items-center">
                         <div className="col mr-2">
                           <div className="text-xs font-weight-bold text-success text-uppercase mb-1">
-                          My leave
+                            My leave
                           </div>
                           <div className="h5 mb-0 font-weight-bold text-gray-800">
                             2
@@ -259,9 +248,7 @@ function StuDashBoard() {
                           <div className="text-xs font-weight-bold text-warning text-uppercase mb-1">
                             Syllabus
                           </div>
-                          <div className="h5 mb-0 font-weight-bold text-gray-800">
-                         
-                          </div>
+                          <div className="h5 mb-0 font-weight-bold text-gray-800"></div>
                         </div>
                         <div className="col-auto">
                           <GiNotebook className="fa-2x text-gray-300" />
@@ -285,12 +272,11 @@ function StuDashBoard() {
                   borderRadius: "5px",
                   boxShadow: "0 .15rem 1.75rem 0 rgba(58,59,69,.15)",
                   marginTop: "50px",
-               
                 }}
               >
                 <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 className="m-0 font-weight-bold text-primary">
-                  Attandance
+                    Attandance
                   </h6>
                 </div>
                 <div className="pie">
@@ -298,14 +284,18 @@ function StuDashBoard() {
                     options={options1}
                     series={series1}
                     type="pie"
-                    style={{ paddingTop: "30px",width:"500px",height:"500px" }}
+                    style={{
+                      paddingTop: "30px",
+                      width: "500px",
+                      height: "500px",
+                    }}
                   />
                 </div>
               </div>
               <div
                 className="col-xl-6 col-md-6"
                 style={{
-                  justifyContent:"space-between",
+                  justifyContent: "space-between",
                   width: "550px",
                   height: "450px",
                   backgroundColor: "#fff",
@@ -318,7 +308,7 @@ function StuDashBoard() {
               >
                 <div className="card-header py-3 d-flex flex-row align-items-center justify-content-between">
                   <h6 className="m-0 font-weight-bold text-primary">
-                 Exam result
+                    Exam result
                   </h6>
                 </div>
                 <div className="line">
@@ -326,7 +316,11 @@ function StuDashBoard() {
                     options={options2}
                     series={series2}
                     type="line"
-                    style={{ paddingTop: "50px" ,width:"500px",height:"500px"}}
+                    style={{
+                      paddingTop: "50px",
+                      width: "500px",
+                      height: "500px",
+                    }}
                   />
                 </div>
               </div>
@@ -398,4 +392,4 @@ function StuDashBoard() {
   );
 }
 
-export default WithLayout (StuDashBoard);
+export default WithLayout(StuDashBoard);

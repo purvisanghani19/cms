@@ -7,7 +7,7 @@ import { BsFillEyeFill } from "react-icons/bs";
 const Studmaterial = () => {
   return (
     <>
-     <div id="content-wrapper" className="d-flex flex-column">
+      <div id="content-wrapper" className="d-flex flex-column">
         <div id="content">
           <div className="container-fluid">
             <div className="row">
@@ -26,7 +26,6 @@ const Studmaterial = () => {
                         <table class="table table-hover table-center mb-0 datatable">
                           <thead>
                             <tr>
-                            
                               <th>Name</th>
                               <th>Course</th>
                               <th>Title</th>
@@ -41,8 +40,8 @@ const Studmaterial = () => {
                               <td>Theory assignment</td>
                               <td>12/10/2022</td>
                               <td>
-                              <a href="/Viewstudmaterial">
-                                <BsFillEyeFill style={{color:"#263159"}}/>
+                                <a href="/Viewstudmaterial">
+                                  <BsFillEyeFill style={{ color: "#263159" }} />
                                 </a>
                               </td>
                             </tr>

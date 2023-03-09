@@ -28,7 +28,7 @@ const Contact = () => {
   };
   return (
     <>
-    <Navbar/>
+      <Navbar />
       <div id="contact" className="contact">
         <div className="contact_map">
           <iframe
@@ -82,7 +82,7 @@ const Contact = () => {
           </form>
         </div>
       </div>
-      <Footer/>
+      <Footer />
     </>
   );
 };
