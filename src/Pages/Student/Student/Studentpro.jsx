@@ -10,13 +10,13 @@ const Studentpro = () => {
 
 
   const getStudent = async () => {
-    var id=JSON.parse(localStorage.getItem("info")).response.tokendata.userId;
-  // console.log(id);
+    var data=JSON.parse(localStorage.getItem("info")).response.tokendata.user._id;
+  console.log(data);
 
-    let  stures  = await axios.get(`http://localhost:5000/api/use/admin/student/${id}`);
+    let  stures  = await axios.get(`http://localhost:5000/api/use/student/student/${data}`);
 
       console.log("stures",stures);
-      // setStudent(stures);
+      setStudent(stures.data.data);
 
   };
 
