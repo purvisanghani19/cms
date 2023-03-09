@@ -245,9 +245,9 @@ export const user = [
     name: "Contact",
     element: <Contact />,
   },
-  // {
-  //   path: "/login",
-  //   name: "login",
-  //   element: <Login />,
-  // },
+  {
+    path: "/login",
+    name: "login",
+    element: <Login />,
+  },
 ];
