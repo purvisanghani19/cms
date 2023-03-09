@@ -4,20 +4,20 @@ import "../../../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import WithLayout from "../../../components/common/comstudent/Stusidebar";
 import axios from "axios";
 
-
 const Studentpro = () => {
   const [student, setStudent] = useState([]);
 
-
   const getStudent = async () => {
-    var data=JSON.parse(localStorage.getItem("info")).response.tokendata.user._id;
-  console.log(data);
+    var data = JSON.parse(localStorage.getItem("info")).response.tokendata.user
+      ._id;
+    console.log(data);
 
-    let  stures  = await axios.get(`http://localhost:5000/api/use/student/student/${data}`);
+    let stures = await axios.get(
+      `http://localhost:5000/api/use/student/student/${data}`
+    );
 
-      console.log("stures",stures);
-      setStudent(stures.data.data);
-
+    console.log("stures", stures);
+    setStudent(stures.data.data);
   };
 
   useEffect(() => {
@@ -25,9 +25,8 @@ const Studentpro = () => {
   }, []);
   return (
     <>
-    
       <div
-      key ={student.id}
+        key={student.id}
         className="container-xl px-4 mt-4"
         style={{ marginLeft: "268px", textAlign: " start" }}
       >
@@ -41,7 +40,7 @@ const Studentpro = () => {
                 Student Profile Picture
               </div>
               <div className="card-body text-center">
-               <img src="" alt="profile image" />
+                <img src="" alt="profile image" />
               </div>
             </div>
           </div>
@@ -159,8 +158,6 @@ const Studentpro = () => {
           </div>
         </div>
       </div>
-    
-    
     </>
   );
 };

@@ -18,6 +18,13 @@ const WithLayout = (Stusidebar) => {
     const normalLink = "nav-link";
 
 
+    const handlelogout=(()=>{
+      // console.log(handlelogout);
+      localStorage.clear("token");
+      navigate("/login");
+    })
+
+
    
     return (
       <>
@@ -209,7 +216,7 @@ const WithLayout = (Stusidebar) => {
                         </a>
                       </li>
                       <li>
-                        <Link className="dropdown-item" href="">
+                        <Link className="dropdown-item" to="/login" onClick={handlelogout}>
                           Log out
                         </Link>
                       </li>
