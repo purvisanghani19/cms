@@ -12,6 +12,7 @@ const FacFeedback = () => {
   const getfacfeed = async () => {
     // var data = JSON.parse(localStorage.getItem("user")).response.data.usrId;
     // console.log("data", data)
+
     let facultyfeed = await axios.get(
       `http://localhost:5000/api/use/staff/staff-feedback/640abf278721e6222af370bf`,
       // {
@@ -22,7 +23,7 @@ const FacFeedback = () => {
     );
 
     console.log("facfeed", facultyfeed);
-    // setFacfeed(facultyfeed.data.feedback);
+    setFacfeed(facultyfeed.data.feedback);
   };
 
   useEffect(() => {
@@ -81,7 +82,7 @@ const FacFeedback = () => {
                   </thead>
                   <tbody>
                     {
-                      facfeed.map((item)=>{
+                      facfeed.map((item)=>(
                     <tr>
                       <td class="text-center">20410145</td>
                       <td class="text-center">
@@ -103,7 +104,7 @@ const FacFeedback = () => {
                                 color: "#212529",
                               }}
                             >
-                              {/* {item.fName +" "+lName} */}
+                              {item.fName +" "+item.lName}
                             </a>
                           </h2>
                         </td>
@@ -118,7 +119,7 @@ const FacFeedback = () => {
                         </div>
                       </td>
                     </tr>
-                      })
+                      ))
                     }
                     {/* <tr>
                       <td class="text-center">20410145</td>

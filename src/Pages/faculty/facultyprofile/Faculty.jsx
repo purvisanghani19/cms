@@ -13,7 +13,7 @@ const Faculty = () => {
     let res = await axios.get(
       `http://localhost:5000/api/use/staff/staff/${data}`
     );
-
+ 
     // console.log("res", res);
     setfaculty(res.data.staff);
   };
