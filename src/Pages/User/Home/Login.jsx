@@ -1,7 +1,6 @@
 // import axios from "axios";
 import React, { useState } from "react";
 import { useEffect } from "react";
-import { Navigate } from "react-router";
 import { useNavigate } from "react-router";
 import "./login.css";
 
@@ -14,7 +13,7 @@ const Login = () => {
   console.log({ userName, password });  
 
   useEffect(() => {
-    if (localStorage.getItem("info")) {
+    if (localStorage.getItem("user")) {
       // navigate("/studashboard")
       // alert("login sucessfully");
     }
@@ -33,8 +32,15 @@ const Login = () => {
       body: JSON.stringify(item),
     });
     result = await result.json();
-    localStorage.setItem("info", JSON.stringify(result));
+    localStorage.setItem("user", JSON.stringify(result));
+    console.log(result)
 
+    if(result.response.data.role === "STUDENT"){
+      // console.log("nidhiiii")
+      navigate("/studashboard");
+    }else if(result.response.data.role === "STAFF"){
+      navigate("/dashboard");
+    }
 
 
   };

@@ -8,7 +8,7 @@ const Studentpro = () => {
   const [student, setStudent] = useState([]);
 
   const getStudent = async () => {
-    var data = JSON.parse(localStorage.getItem("info")).response.tokendata.userId._id;
+    var data = JSON.parse(localStorage.getItem("user")).response.data.userId;
     console.log(data);
 
     let stures = await axios.get(

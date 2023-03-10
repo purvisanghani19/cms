@@ -12,9 +12,12 @@ import axios from "axios";
 
 const WithLayout = (Sidebar) => {
 
-  const logout=()=>{
-    console.log("hieeeeeee");
-  }
+  const handlelogout=(()=>{
+    // console.log(handlelogout);
+    localStorage.clear("token");
+
+  })
+
 
 
   return function WithPage() {
@@ -215,8 +218,8 @@ const WithLayout = (Sidebar) => {
                         </Link>
                       </li>
                       <li>
-                        <Link className="dropdown-item" to=""
-                        onClick={logout}
+                        <Link className="dropdown-item" to="/login"
+                        onClick={handlelogout}
                         >
                           Log out
                         </Link>

@@ -8,13 +8,13 @@ const Faculty = () => {
   const [faculty, setfaculty] = useState([]);
 
   const getFaculty = async () => {
-    var data = JSON.parse(localStorage.getItem("info")).response.tokendata
-      .userId;
+    var data = JSON.parse(localStorage.getItem("user")).response.data.userId;
+    // console.log(data);
     let res = await axios.get(
       `http://localhost:5000/api/use/staff/staff/${data}`
     );
 
-    console.log("res", res);
+    // console.log("res", res);
     setfaculty(res.data.staff);
   };
 
