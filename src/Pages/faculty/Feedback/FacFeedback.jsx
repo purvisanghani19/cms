@@ -10,15 +10,19 @@ const FacFeedback = () => {
   const [facfeed, setFacfeed] = useState([]);
 
   const getfacfeed = async () => {
-    // var data = JSON.parse(localStorage.getItem("info")).response.tokendata
-    //   .userId;
-// let data="64048040b38ee5a85a63223b";
+    // var data = JSON.parse(localStorage.getItem("user")).response.data.usrId;
+    // console.log("data", data)
     let facultyfeed = await axios.get(
-      ` http://localhost:5000/api/use/staff/student-leave-notice`
+      `http://localhost:5000/api/use/staff/staff-feedback/640abf278721e6222af370bf`,
+      // {
+      //   headers: {
+      //     Authorization: ""
+      //   }
+      // }
     );
 
-    // setFacfeed(feedres.data.feedback);
-    console.log("student", facultyfeed);
+    console.log("facfeed", facultyfeed);
+    // setFacfeed(facultyfeed.data.feedback);
   };
 
   useEffect(() => {
@@ -31,7 +35,7 @@ const FacFeedback = () => {
 
   return (
     <>
- <div id="content-wrapper" className="d-flex flex-column">
+   <div id="content-wrapper" className="d-flex flex-column">
     <div id="content">
       <div className="container-fluid">
         <div className="row">
@@ -68,15 +72,55 @@ const FacFeedback = () => {
                       <th class="text-center">ID</th>
                       <th class="text-center">Name</th>
                       <th class="text-center">Course</th>
-                      <th class="text-center">Semester</th>
-                      <th class="text-center">Division</th>
+                      {/* <th class="text-center">Semester</th>
+                      <th class="text-center">Division</th> */}
                       <th class="text-center">Title</th>
                       <th class="text-center">Date</th>
                       <th class="text-center">Action</th>
                     </tr>
                   </thead>
                   <tbody>
+                    {
+                      facfeed.map((item)=>{
                     <tr>
+                      <td class="text-center">20410145</td>
+                      <td class="text-center">
+                          <h2 class="table-avatar">
+                            <a
+                              href="teacher-details.html"
+                              class="avatar avatar-sm mr-2"
+                            >
+                              <img
+                                class="img-circle elevation-2 user-img"
+                              src="https://imgv3.fotor.com/images/slider-image/a-woman-in-a-suit-with-a-white-background.png"
+                                
+                              />
+                            </a>
+                            <a
+                              href="teacher-details.html"
+                              style={{
+                                textDecoration: "none",
+                                color: "#212529",
+                              }}
+                            >
+                              {/* {item.fName +" "+lName} */}
+                            </a>
+                          </h2>
+                        </td>
+                      <td class="text-center">{item.course}</td>
+                      <td class="text-center">{item.date}</td>
+                      <td class="text-center">{item.title}</td>
+                      {/* <td class="text-center">For college campus</td>
+                      <td class="text-center">21-12-2002</td> */}
+                      <td class="text-center">
+                        <div class="actions">
+                          <MdDelete style={{ color: "#db3d3d" }} />
+                        </div>
+                      </td>
+                    </tr>
+                      })
+                    }
+                    {/* <tr>
                       <td class="text-center">20410145</td>
                       <td class="text-center">
                           <h2 class="table-avatar">
@@ -112,44 +156,7 @@ const FacFeedback = () => {
                           <MdDelete style={{ color: "#db3d3d" }} />
                         </div>
                       </td>
-                    </tr>
-                    <tr>
-                      <td class="text-center">20410145</td>
-                      <td class="text-center">
-                          <h2 class="table-avatar">
-                            <a
-                              href="teacher-details.html"
-                              class="avatar avatar-sm mr-2"
-                            >
-                              <img
-                                class="img-circle elevation-2 user-img"
-                              src="https://imgv3.fotor.com/images/slider-image/a-woman-in-a-suit-with-a-white-background.png"
-                                
-                              />
-                            </a>
-                            <a
-                              href="teacher-details.html"
-                              style={{
-                                textDecoration: "none",
-                                color: "#212529",
-                              }}
-                            >
-                              Aaliyah
-                            </a>
-                          </h2>
-                        </td>
-                      <td class="text-center">BCA</td>
-              
-                      <td class="text-center">1</td>
-                      <td class="text-center">5</td>
-                      <td class="text-center">For college campus</td>
-                      <td class="text-center">21-12-2002</td>
-                      <td class="text-center">
-                        <div class="actions">
-                          <MdDelete style={{ color: "#db3d3d" }} />
-                        </div>
-                      </td>
-                    </tr>
+                    </tr> */}
                   </tbody>
                 </Table>
               </div>

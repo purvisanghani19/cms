@@ -27,7 +27,6 @@ const WithLayout = (Sidebar) => {
     const activeLink = "nav-link active";
     const normalLink = "nav-link";
     const profile = async()=>{
-  debugger
      await axios.get("http://127.0.0.1:4000/api/use/get-staff-profile/getallstafflist").then((result) => {
         console.log(result.data);
      }).catch((err)=>{

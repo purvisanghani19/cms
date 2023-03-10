@@ -10,7 +10,7 @@ const Login = () => {
   const [role, setRole] = useState("");
 
   const navigate = useNavigate();
-  console.log({ userName, password });  
+  // console.log({ userName, password });  
 
   useEffect(() => {
     if (localStorage.getItem("user")) {
@@ -33,7 +33,7 @@ const Login = () => {
     });
     result = await result.json();
     localStorage.setItem("user", JSON.stringify(result));
-    console.log(result)
+    // console.log(result)
 
     if(result.response.data.role === "STUDENT"){
       // console.log("nidhiiii")

@@ -11,10 +11,10 @@ const Addmateraial = () => {
   const [course, setCourse] = useState("");
   const [semester, setSemester] = useState("");
   const [division, setDivision] = useState("");
-  const [date, setDate] = useState("");
+  // const [date, setDate] = useState("");
   const [typeOfFile, setTypeOfFile] = useState("");
 
-  console.log(name, course, semester,division, date, typeOfFile);
+  console.log(name, course, semester,division, typeOfFile);
 
   const handlematerial = (e) => {
     e.preventDefault();
@@ -24,7 +24,7 @@ const Addmateraial = () => {
         course: course,
         semester:semester,
         division:division,
-        date: date,
+        // date: date,
         typeOfFile: typeOfFile,
       })
       .then((result) => {
@@ -131,7 +131,7 @@ const Addmateraial = () => {
                             </select>
                           </div>
                         </div>
-                        <div className="col-12 col-sm-4">
+                        {/* <div className="col-12 col-sm-4">
                           <div className="form-group local-forms">
                             <label className="lbladdmaterial">
                               Date <span className="login-danger">*</span>
@@ -145,7 +145,7 @@ const Addmateraial = () => {
                           onChange={(e) => setDate(e.target.value)}
                             />
                           </div>
-                        </div>
+                        </div> */}
                         <div className="col-12 col-sm-8">
                           <div className="form-group local-forms">
                             <label className="lbladdmaterial">

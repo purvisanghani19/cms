@@ -13,21 +13,21 @@ const Facfeedform = () => {
       const [lname, setLname] = useState("");
       const [course, setCourse] = useState("");
       const [title, setTitle] = useState("");
-      const [date, setDate] = useState("");
       const [message, setMessage] = useState("");
-    
-      console.log(fname, lname, course, title, date, message);
+
+  
+      console.log(fname, lname, course, title, message);
     
       const handlefeedform = (e) => {
         e.preventDefault();
         axios
-          .post("http://localhost:5000/api/use/staff/staff-feedback", {
+          .post("http://localhost:5000/api/use/staff/staff-feedback/", {
             fName: fname,
             lName: lname,
             course: course,
             title:title,
-            date: date,
-            message: message,  
+            message: message,
+
           })
           .then((result) => {
             console.log(result);
@@ -130,7 +130,7 @@ const Facfeedform = () => {
                         />
                       </div>
                     </div>
-                    <div className="col-12 col-sm-6">
+                    {/* <div className="col-12 col-sm-6">
                       <div className="form-group local-forms">
                         <label>
                           Date <span className="login-danger">*</span>
@@ -144,7 +144,7 @@ const Facfeedform = () => {
                           className="form-control"
                         />
                       </div>
-                    </div>
+                    </div> */}
                     <div className="col-12">
                       <div className="form-group local-forms">
                         <label>
@@ -160,6 +160,7 @@ const Facfeedform = () => {
                         />
                       </div>
                     </div>
+                 
 
                     <div className="col-12 ">
                       <div className="student-submit">
@@ -168,7 +169,6 @@ const Facfeedform = () => {
                           type="submit"
                           className="btn-leave"
                           onClick={handlefeedform}
-                         
                         >
                           Submit
                         </button>
