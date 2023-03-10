@@ -30,19 +30,40 @@ const FacFeedback = () => {
 
   useEffect(() => {
     getfacfeed();
-
   }, []);
 
+  // const deletematerial = async (id ,e) => {
+  //   e.preventDefault();
+  //   axios
+  //     .post("http://localhost:5000/api/use/staff/staff-feedback/", {
+  //       fName: fname,
+  //       lName: lname,
+  //       course: course,
+  //       title:title,
+  //       message: message,
+  //       createdBy: JSON.parse(localStorage.getItem('user'))?.response?.data?.userId
+  //     })
+  //     .then((result) => {
+  //       console.log(result);
+  //       alert("your feedback has been submmited");
+  //       navigate("/facfeedback");
+  //     })
+  //     .catch((error) => {
+  //       console.log(error);
+  //       alert("!!🥴oops try again");
+  //     }, []);
+  // };
 
 
 
 
-  const deletematerial = async (id, e) => {
-    // let deletemat = await axios.get(`localhost:5000/api/use/staff/staff-feedback` + id,
-    // );
+  const deletematerial = async (_id, e) => {
+    let deletemat = await axios.delete(`http://localhost:5000/api/use/staff/staff-feedback/${_id}`);
+
+    console.log(deletemat)
     // if (deletemat.message.message === "true") {
-
-    // }
+  
+    // }  
     // // alert(id);  
     // else (){
 

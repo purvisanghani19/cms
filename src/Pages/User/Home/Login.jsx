@@ -7,7 +7,7 @@ import "./login.css";
 const Login = () => {
   const [userName, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("");
+
 
   const navigate = useNavigate();
   // console.log({ userName, password });  
