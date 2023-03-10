@@ -72,20 +72,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <br />
-          {/* <label className="small mb-1">Role :</label> */}
-          <select
-            className="role-form"
-            aria-label="Default select example"
-            value={role}
-            onChange={(e) => setRole(e.target.value)}
-          >
-            <option value="" disabled selected>
-              Select your role
-            </option>
-            <option value="1">Student</option>
-            <option value="2">Faculty</option>
-            <option value="3">Admin</option>
-          </select>
+          
           <a className="submitlogin" align="center" onClick={handlelogin}>
             Login
           </a>

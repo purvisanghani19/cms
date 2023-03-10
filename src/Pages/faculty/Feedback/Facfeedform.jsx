@@ -4,6 +4,7 @@ import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
 import axios from "axios";
 import { BsFillArrowLeftCircleFill } from "react-icons/bs";
 import { useNavigate } from "react-router";
+import { Link } from "react-router-dom";
 
 const Facfeedform = () => {
 
@@ -54,7 +55,7 @@ const Facfeedform = () => {
           >
           <div className="d-flex" >
 
-          <a href="/feedback"><BsFillArrowLeftCircleFill className="feedaero" /></a>
+          <Link to="/facfeedback"><BsFillArrowLeftCircleFill className="feedaero" /></Link>
             <h3 className="feed-text">Add Feedback</h3>
           </div>
             <div className="row">

@@ -126,7 +126,7 @@ export const faculty = [
     element: <FacFeedback />,
   },
   {
-    path: "/addfacfeedback",
+    path: "/facfeedback/addfacfeedback",
     name: "add facfeedbackform",
     element: <Facfeedform />,
   },

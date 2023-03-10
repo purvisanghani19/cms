@@ -30,7 +30,7 @@ const Addmateraial = () => {
       .then((result) => {
         console.log(result);
         alert("your feedback has been submmited");
-        navigate("/facfeedback");
+        navigate("/material");
       })
       .catch((error) => {
         console.log(error);

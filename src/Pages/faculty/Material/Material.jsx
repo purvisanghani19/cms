@@ -11,18 +11,26 @@ const Material = () => {
   const [material,setMaterial]=useState();
 
   const getmaterial = async () => {
-    var data = JSON.parse(localStorage.getItem("user")).response.token;
+    // var data = JSON.parse(localStorage.getItem("user"));
     // console.log("materail",data)
     let getfacmaterial = await axios.get(
-      ` http://localhost:5000/api/use/staff/material${data}`
+      ` http://localhost:5000/api/use/staff/material`
     );
 
     console.log("material", getfacmaterial);
     // setFacfeed(feedres.data.feedback);
   };
 
+  
+
+
+
+
+
   useEffect(() => {
     getmaterial();
+
+     
     // console.log("feed", feedstudent);
   }, []);
 
