@@ -28,8 +28,7 @@ const Facfeedform = () => {
             course: course,
             title:title,
             message: message,
-            createdBy: JSON.parse(localStorage.getItem('user'))?.response?.data?.userId
-          })
+            createdBy: JSON.parse(localStorage.getItem('user'))?.response?.data?.userId})
           .then((result) => {
             console.log(result);
             alert("your feedback has been submmited");

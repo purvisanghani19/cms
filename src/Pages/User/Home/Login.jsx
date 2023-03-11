@@ -32,6 +32,7 @@ const Login = () => {
       body: JSON.stringify(item),
     });
     result = await result.json();
+  
     localStorage.setItem("user", JSON.stringify(result));
     // console.log(result)
 

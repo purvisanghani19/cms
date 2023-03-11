@@ -58,17 +58,14 @@ const FacFeedback = () => {
 
 
   const deletematerial = async (_id, e) => {
-    let deletemat = await axios.delete(`http://localhost:5000/api/use/staff/staff-feedback/${_id}`);
+    axios.delete(`http://localhost:5000/api/use/staff/staff-feedback/${_id}`)
+    .then(res =>{
+      getfacfeed();
+      console.log("deleted ", res)
+    }).catch(err => console.log(err))
 
-    console.log(deletemat)
-    // if (deletemat.message.message === "true") {
-  
-    // }  
-    // // alert(id);  
-    // else (){
-
-    // }
   }
+
 
   return (
     <>
