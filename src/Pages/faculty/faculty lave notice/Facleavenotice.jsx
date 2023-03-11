@@ -1,10 +1,31 @@
 import React from "react";
 import WithLayout from "../../../components/common/comfaculty/Sidebar/SideBar";
-import Button from "react-bootstrap/Button";
-import { Card } from "react-bootstrap";
 import "./facleave.css";
+import { useState } from "react";
+import { useEffect } from "react";
+import axios from "axios";
+import { Link } from "react-router-dom";
+import { BsFillEyeFill } from "react-icons/bs";
 
 const Facleavenotice = () => {
+
+  const [facultyleavenoti, setFacleave] = useState();
+
+  const getfacleave = async () => {
+    var data = JSON.parse(localStorage.getItem("user")).response.data.userId;
+    // console.log("facleave", data);
+
+    let facleaveget = await axios.get(
+      ` http://localhost:5000/api/use/admin/staff-leave-notice/${data}`);
+
+    console.log("facleave", facleaveget);
+    setFacleave(facleaveget.data.leavenotice);
+  };
+
+  useEffect(() => {
+    getfacleave();
+    // console.log("feed", feedstudent);
+  }, []);
   return (
     <>
       <div id="content-wrapper" className="d-flex flex-column">
@@ -14,71 +35,58 @@ const Facleavenotice = () => {
               <div class="page-header">
                 <div class="row align-items-center">
                   <div class="col">
-                    <h3 class="page-title" style={{ marginLeft: "17px" }}>
-                      Leave notice
-                    </h3>
+                    <h3 class="page-title">Faculty Leave notice</h3>
                   </div>
-                  <div
-                    class="col-auto text-right float-right ml-auto "
-                    style={{ textAlign: "start", marginRight: "32px" }}
-                  >
-                    <a href="/facleavenotice/addleave">
+                  <div class="col-auto text-right float-right ml-auto">
+                    <Link to="/facleavenotice/addleave">
                       <button
                         style={{
                           padding: "3px 25px",
+                          marginRight: "25px",
                           borderRadius: "5px",
-                          backgroundColor: "#17a2b8",
+                          backgroundColor: "#005d91",
                           border: "none",
                           color: "#fff",
-                          marginBottom: "10px",
-                          marginRight: "0px",
-                          height: "40px",
                         }}
                       >
-                        Add Leave
+                        Add leave
                       </button>
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
               <div class="row">
                 <div class="col-sm-12">
-                  <div className="shadow">
-                    <Card
-                      style={{
-                        paddingRight: "0px",
-                        paddingLeft: "0px",
-                        textAlign: "start",
-                      }}
-                    >
-                      <Card.Header
-                        style={{ backgroundColor: "#263159", color: "#fff" }}
-                      >
-                        Special title treatment
-                      </Card.Header>
-                      <Card.Body>
-                        <Card.Title>Date : 12/10/2022</Card.Title>
+                  <div class="card card-table">
+                    <div class="card-body">
+                      <div class="table-responsive">
+                        <table class="table table-hover table-center mb-0 datatable">
+                          <thead>
+                            <tr>
+                              <th>Date</th>
+                              <th>Reason</th>
+                              <th>Action</th>
+                            </tr>
+                          </thead>
+                          <tbody>
 
-                        <Card.Text>
-                          With supporting text below as a natural lead-in to
-                          additional content.
-                        </Card.Text>
-                        <a href="/facleavenotice/viewnotice">
-                          <Button
-                            style={{
-                              padding: "5px",
-                              width: "80px",
-                              borderRadius: "5px",
-                              backgroundColor: "#17a2b8",
-                              border: "none",
-                              color: "#fff",
-                            }}
-                          >
-                            View
-                          </Button>
-                        </a>
-                      </Card.Body>
-                    </Card>
+                            {
+                              facultyleavenoti && facultyleavenoti.map((item) => (
+                                <tr>
+                                    <td>{item.date}</td>
+                                    <td>{item.reason}</td>
+                                    <td>
+                                      <a href="/Leavestud/studentviewnotice">
+                                        <BsFillEyeFill style={{ color: "#263159" }} />
+                                      </a>
+                                    </td>
+                                </tr>
+                              ))
+                            }
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>

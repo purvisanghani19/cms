@@ -24,15 +24,14 @@ const Addmateraial = () => {
         course: course,
         semester:semester,
         division:division,
-        // date: date,
         typeOfFile: typeOfFile,
-      })
-      .then((result) => {
-        console.log(result);
+        createdBy: JSON.parse(localStorage.getItem('user'))?.response?.data?.userId})
+        .then((result) => {
+        // console.log(result);
         alert("your feedback has been submmited");
         navigate("/material");
       })
-      .catch((error) => {
+      .catch((error) => { 
         console.log(error);
         alert("!!🥴oops try again");
       }, []);

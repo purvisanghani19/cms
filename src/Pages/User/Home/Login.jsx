@@ -14,15 +14,15 @@ const Login = () => {
 
   useEffect(() => {
     if (localStorage.getItem("user")) {
-      var a=JSON.parse(localStorage.getItem("user"))
-      var r=a.response.data.role;
-      if(r === "STAFF"){
+      var a = JSON.parse(localStorage.getItem("user"))
+      var r = a.response.data.role;
+      if (r === "STAFF") {
         navigate("/dashboard");
-      }else if (r === "STUDENT"){
+      } else if (r === "STUDENT") {
         navigate("/studashboard");
-      }else{
+      } else {
         alert("you have to logout");
-      } 
+      }
     }
   }, []);
 
@@ -39,14 +39,14 @@ const Login = () => {
       body: JSON.stringify(item),
     });
     result = await result.json();
-  console.log(result);
+    console.log(result);
     localStorage.setItem("user", JSON.stringify(result));
     // console.log(result)
-    
-    if(result.response.data.role === "STUDENT"){
+
+    if (result.response.data.role === "STUDENT") {
       // console.log("nidhiiii")
       navigate("/studashboard");
-    }else if(result.response.data.role === "STAFF"){
+    } else if (result.response.data.role === "STAFF") {
       navigate("/dashboard");
     }
 
@@ -80,7 +80,7 @@ const Login = () => {
             onChange={(e) => setPassword(e.target.value)}
           />
           <br />
-          
+
           <a className="submitlogin" align="center" onClick={handlelogin}>
             Login
           </a>

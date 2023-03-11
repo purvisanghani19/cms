@@ -3,6 +3,7 @@ import WithLayout from '../../../components/common/comfaculty/Sidebar/SideBar';
 import Button from "react-bootstrap/Button";
 import Card from "react-bootstrap/Card";
 import './facleave.css';
+import { Link } from 'react-router-dom';
 
 
 const View = () => {
@@ -13,7 +14,7 @@ const View = () => {
           <div className="container-fluid">
             <div className="row">
               <div class="col-auto text-right float-left ml-auto" style={{textAlign:"start"}}>
-                <a href="/facleavenotice">
+                <Link to="/facleavenotice">
                   <button
                     style={{
                       padding: "3px 25px",
@@ -27,7 +28,7 @@ const View = () => {
                   >
                     Back
                   </button>
-                </a>
+                </Link>
               </div>
               <Card
                 style={{
