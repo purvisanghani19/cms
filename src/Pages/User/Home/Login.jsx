@@ -14,8 +14,15 @@ const Login = () => {
 
   useEffect(() => {
     if (localStorage.getItem("user")) {
-      // navigate("/studashboard")
-      // alert("login sucessfully");
+      var a=JSON.parse(localStorage.getItem("user"))
+      var r=a.response.data.role;
+      if(r === "STAFF"){
+        navigate("/dashboard");
+      }else if (r === "STUDENT"){
+        navigate("/studashboard");
+      }else{
+        alert("you have to logout");
+      } 
     }
   }, []);
 
@@ -32,10 +39,10 @@ const Login = () => {
       body: JSON.stringify(item),
     });
     result = await result.json();
-  
+  console.log(result);
     localStorage.setItem("user", JSON.stringify(result));
     // console.log(result)
-
+    
     if(result.response.data.role === "STUDENT"){
       // console.log("nidhiiii")
       navigate("/studashboard");

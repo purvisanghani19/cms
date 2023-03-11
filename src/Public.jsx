@@ -15,7 +15,7 @@ const useAuth = () => {
 
 const Public = () => {
     const auth = useAuth()
-    return auth ? <Navigate to="/dashboard"/> : <Outlet /> 
+    return auth ? <Navigate to="/dashboard"/> : <Navigate to="/login"/>
 }
 
 export default Public;

@@ -34,9 +34,8 @@ function App() {
             )
           })}
         </Route>
-        <Route path="/" element={<Public />}>
         <Route path="/login" element={<Login />}></Route>
-        </Route>
+        
       </Routes>
     </div>
   )

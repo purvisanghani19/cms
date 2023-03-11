@@ -15,7 +15,7 @@ const useAuth = () => {
 
 const Proroute = () => {
     const auth = useAuth()
-    return auth ? <Outlet /> :  <Navigate to="/login"/> 
+    return auth ? <Outlet/> :  <Navigate to="/login"/> 
 }
 
 export default Proroute;
