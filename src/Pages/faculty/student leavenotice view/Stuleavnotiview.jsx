@@ -15,16 +15,16 @@ import { useEffect } from 'react';
 const Stuleavnotiview = (props) => {
   const [leaveview, setLeaveview] = useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:4000/api/use/student/studentLeaveNotice/get").then(
-      (result) => {
-        result.json().then((resp) => {
-          // console.warn("result", resp);
-          setLeaveview(resp);
-        });
-      }
-    );
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:4000/api/use/student/studentLeaveNotice/get").then(
+  //     (result) => {
+  //       result.json().then((resp) => {
+  //         // console.warn("result", resp);
+  //         setLeaveview(resp);
+  //       });
+  //     }
+  //   );
+  // }, []);
   // console.log("result");
   return (
     <>
@@ -100,16 +100,16 @@ const Studentleavnotice = () => {
   const [modalShow, setModalShow] = useState(false);
   const [leavenotice , setLeavenotice]=useState([]);
 
-  useEffect(() => {
-    fetch("http://localhost:4000/api/use/student/studentLeaveNotice/get").then(
-      (result) => {
-        result.json().then((resp) => {
-          // console.warn("result", resp);
-          setLeavenotice(resp);
-        });
-      }
-    );
-  }, []);
+  // useEffect(() => {
+  //   fetch("http://localhost:4000/api/use/student/studentLeaveNotice/get").then(
+  //     (result) => {
+  //       result.json().then((resp) => {
+  //         // console.warn("result", resp);
+  //         setLeavenotice(resp);
+  //       });
+  //     }
+  //   );
+  // }, []);
   return (
     <>
           <h3 class="mt-5 heading-line stulevnotice-heading" style={{ textAlign: "start" }}>

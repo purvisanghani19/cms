@@ -28,9 +28,8 @@ const navigate=useNavigate("");
         course: course,
         sem: semester,
         div: division,
-        date: date,
-        message: message,  
-      })
+        message: message, 
+        createdBy: JSON.parse(localStorage.getItem('user'))?.response?.data?.userId})
       .then((result) => {
         console.log(result);
         alert("your feedback has been submmited");
@@ -150,7 +149,7 @@ const navigate=useNavigate("");
                         </select>
                       </div>
                     </div>
-                    <div className="col-12 col-sm-6">
+                    {/* <div className="col-12 col-sm-6">
                       <div className="form-group local-forms">
                         <label>
                           Date <span className="login-danger">*</span>
@@ -164,7 +163,7 @@ const navigate=useNavigate("");
                           className="form-control"
                         />
                       </div>
-                    </div>
+                    </div> */}
                     <div className="col-12">
                       <div className="form-group local-forms">
                         <label>

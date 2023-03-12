@@ -9,21 +9,30 @@ const Feedback = () => {
   const [feedstudent, setsFeedtudent] = useState([]);
 
   const getfeedstudent = async () => {
-    // var data = JSON.parse(localStorage.getItem("info")).response.tokendata
-    //   .userId;
-    let data = "64048040b38ee5a85a63223b";
+    var id = JSON.parse(localStorage.getItem("user")).response.data.userId;
+    // console.log("data",id)
     let feedres = await axios.get(
-      `http://localhost:5000/api/use/student/student-feedback/${data}`
+      `http://localhost:5000/api/use/student/student-feedback/${id}`
     );
 
+    // console.log("student", feedres);
     setsFeedtudent(feedres.data.feedback);
-    console.log("student", feedres);
   };
 
   useEffect(() => {
     getfeedstudent();
     // console.log("feed", feedstudent);
   }, []);
+
+
+  const deletestufeed = async (_id, e) => {
+    axios.delete(`http://localhost:5000/api/use/student/student-feedback/${_id}`)
+      .then(res => {
+        getfeedstudent();
+        // console.log("deleted ", res)
+      }).catch(err => console.log(err))
+
+  }
   return (
     <>
       <div id="content-wrapper" className="d-flex flex-column">
@@ -68,7 +77,7 @@ const Feedback = () => {
                             color: "#fff",
                           }}
                         >
-                          <th class="text-center">SPID</th>
+                          <th class="text-center">Name</th>
 
                           <th class="text-center">Message</th>
                           <th class="text-center">Date</th>
@@ -78,13 +87,13 @@ const Feedback = () => {
                       <tbody>
                         {feedstudent.map((item) => (
                           <tr>
-                            <td class="text-center">{item.spid}</td>
+                            <td class="text-center">{item.fName + " " + item.lName}</td>
 
                             <td class="text-center">{item.message}</td>
                             <td class="text-center">{item.date}</td>
                             <td class="text-center">
                               <div class="actions">
-                                <MdDelete style={{ color: "#db3d3d" }} />
+                                <MdDelete style={{ color: "#db3d3d" }} id={item._id} onClick={(e) => deletestufeed(item._id, e)} />
                               </div>
                             </td>
                           </tr>

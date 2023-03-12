@@ -9,14 +9,13 @@ const Leavestud = () => {
   const [studleave, setStudleave] = useState("");
 
   const getleavestud = async () => {
-    // var data = JSON.parse(localStorage.getItem("info"));
-    let abc = "64048040b38ee5a85a63223b";
+    var data = JSON.parse(localStorage.getItem("user"));
+console.log("data", data)
     let studentleave = await axios.get(
-      `http://localhost:5000/api/use/staff/student-leave-notice${abc}`
+      `http://localhost:5000/api/use/staff/student-leave-notice${data}`
     );
-
     // setStudleave(feedres.data.feedback);
-    console.log("studentleave", studentleave);
+    // console.log("studentleave", studentleave);
   };
 
   useEffect(() => {
@@ -34,7 +33,7 @@ const Leavestud = () => {
                   <h3 class="page-title">Student Leave notice</h3>
                 </div>
                 <div class="col-auto text-right float-right ml-auto">
-                  <a href="/Leavestud/Stuleaveform">
+                  <Link to="/Leavestud/Stuleaveform">
                     <button
                       style={{
                         padding: "3px 25px",
@@ -47,7 +46,7 @@ const Leavestud = () => {
                     >
                       Add leave
                     </button>
-                  </a>
+                  </Link>
                 </div>
               </div>
             </div>

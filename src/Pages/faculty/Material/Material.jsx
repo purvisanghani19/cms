@@ -18,7 +18,7 @@ const Material = () => {
       ` http://localhost:5000/api/use/staff/material/${data}`,
     );
 
-    console.log("facmaterial", getfacmaterial);
+    // console.log("facmaterial", getfacmaterial);
     setFacmat(getfacmaterial.data.material);
   };
 
@@ -77,6 +77,7 @@ const Material = () => {
                         {
                           facmat.map((item) => (
                             <tr>
+                            {item.id}
                     
                               <td class="text-center">
                                 <h2 class="table-avatar">

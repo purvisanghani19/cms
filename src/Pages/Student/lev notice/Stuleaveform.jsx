@@ -34,9 +34,8 @@ const Stuleaveform = () => {
         div: division,
         spid: spid,
         reason: reason,
-        date: date,
         message: message,
-      })
+        createdBy: JSON.parse(localStorage.getItem('user'))?.response?.data?.userId})
       .then((result) => {
         console.log(result);
         alert("your leave has been submmited");
@@ -195,7 +194,7 @@ const Stuleaveform = () => {
                           />
                         </div>
                       </div>
-                      <div className="col-12 col-sm-6">
+                      {/* <div className="col-12 col-sm-6">
                         <div className="form-group local-forms">
                           <label>
                             Date <span className="login-danger">*</span>
@@ -209,7 +208,7 @@ const Stuleaveform = () => {
                             className="form-control"
                           />
                         </div>
-                      </div>
+                      </div> */}
                       <div className="col-12 col-sm-6">
                         <div className="form-group local-forms">
                           <label>

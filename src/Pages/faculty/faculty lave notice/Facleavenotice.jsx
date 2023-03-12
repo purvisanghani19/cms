@@ -18,7 +18,7 @@ const Facleavenotice = () => {
     let facleaveget = await axios.get(
       ` http://localhost:5000/api/use/admin/staff-leave-notice/${data}`);
 
-    console.log("facleave", facleaveget);
+    // console.log("facleave", facleaveget);
     setFacleave(facleaveget.data.leavenotice);
   };
 
@@ -73,13 +73,14 @@ const Facleavenotice = () => {
                             {
                               facultyleavenoti && facultyleavenoti.map((item) => (
                                 <tr>
-                                    <td>{item.date}</td>
-                                    <td>{item.reason}</td>
-                                    <td>
-                                      <a href="/Leavestud/studentviewnotice">
-                                        <BsFillEyeFill style={{ color: "#263159" }} />
-                                      </a>
-                                    </td>
+                                {item.id}
+                                  <td>{item.date}</td>
+                                  <td>{item.reason}</td>
+                                  <td>
+                                    <Link to="/facleavenotice/viewnotice">
+                                      <BsFillEyeFill style={{ color: "#263159" }} />
+                                    </Link>
+                                  </td>
                                 </tr>
                               ))
                             }
